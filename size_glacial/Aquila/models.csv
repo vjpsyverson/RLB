@@ -1,0 +1,16 @@
+element,dimension,model,logL,K,AICc,Akaike.wt
+tarsometatarsus,length,directional,-10.5640249,2,29.12804979,0.04
+tarsometatarsus,length,random walk,-10.58245937,1,24.16491875,0.482
+tarsometatarsus,length,stasis,-8.091596453,2,24.18319291,0.478
+tarsometatarsus,proximal width,directional,-6.663357995,2,21.32671599,0.021
+tarsometatarsus,proximal width,random walk,-6.67750304,1,16.35500608,0.256
+tarsometatarsus,proximal width,stasis,-3.138690841,2,14.27738168,0.723
+tarsometatarsus,midshaft width,directional,-3.627775114,2,15.25555023,0.051
+tarsometatarsus,midshaft width,random walk,-3.930308043,1,10.86061609,0.46
+tarsometatarsus,midshaft width,stasis,-1.368754196,2,10.73750839,0.489
+tarsometatarsus,midshaft depth,directional,-2.416206187,2,12.83241237,0.09
+tarsometatarsus,midshaft depth,random walk,-2.822028009,1,8.644056017,0.727
+tarsometatarsus,midshaft depth,stasis,-1.698117588,2,11.39623518,0.184
+tarsometatarsus,distal width,directional,-5.055606849,2,18.1112137,0.066
+tarsometatarsus,distal width,random walk,-5.270588301,1,13.5411766,0.646
+tarsometatarsus,distal width,stasis,-3.5789641,2,15.1579282,0.288

@@ -1,0 +1,138 @@
+library(RPostgreSQL)
+quit()
+dbconnect(PostgreSQL,dbname="vsyverson")
+library(RPostgreSQL)
+dbconnect(PostgreSQL,dbname="vsyverson")
+require(RPostgreSQL)
+drv<-dbdriver("PostgreSQL")
+drv<-dbDriver("PostgreSQL")
+con<-dbConnect(drv,dbname="vsyverson",host="localhost",port=5432)
+dbExistsTable(con,sentences)
+dbExistsTable(con,mus_abbrs)
+con<-dbConnect(drv,dbname="vsyverson",host="localhost",port=5432,user="vsyverson")
+con
+con<-dbConnect(drv,dbname="vsyverson",host="localhost",port=5432,user="vsyverson")
+require(RPostgreSQL)
+con<-dbConnect(drv,dbname="vsyverson",host="localhost",port=5432,user="vsyverson")
+drv<-dbDriver("PostgreSQL")
+con<-dbConnect(drv,dbname="vsyverson",host="localhost",port=5432,user="vsyverson")
+con
+dbExistsTable(con,mus_abbrs)
+drv
+con<-dbConnect(dbDriver("PostgreSQL"),dbname="vsyverson")
+con<-dbConnect(dbDriver(""),dbname="vsyverson",host="localhost",port=5432,user="vsyverson")
+con<-dbConnect(dbDriver("PostgreSQL"),dbname="vsyverson",host="localhost",port=5432)
+dbExistsTable(con,mus_abbrs)
+con
+summary(con)
+?con
+drv
+con<-dbConnect(drv,dbname="vsyverson")
+dbDisconnect(con)
+dbUnloadDriver()
+dbUnloadDriver(drv)
+dbDisconnect(con)
+dbUnloadDriver(drv)
+summary(con)
+con
+drv
+con
+dbDisconnect(con)
+drv
+dbUnloadDriver(drv)
+dbDisconnect(con)
+drv
+drv<-dbDriver("PostgreSQL")
+drv
+con(drv,dbname="vsyverson")
+require(RPostgreSQL)
+con(drv,dbname="vsyverson")
+??con
+library(RPostgreSQL)
+require(RPostgreSQL)
+con(drv,dbname="vsyverson")
+dbConnect
+con<-dbConnect(drv,dbname="vsyverson")
+con<-dbConnect(drv,dbname="vsyverson",host="localhost")
+con<-dbConnect(drv,dbname="vsyverson",host="127.0.0.1")
+drv<-dbDriver("PostgreSQL")
+drv
+con<-dbConnect(drv,dbname="vsyverson",host="127.0.0.1")
+dbExistsTable(con,mus_abbrs)
+summary(con)
+con<-dbConnect(drv,dbname="vsyverson",host="localhost")
+summary(con)
+dbListConnections(drv)
+dbListTables(con)
+dbExistsTable(con, c("public", "mus_abbrs"))
+require(RPostgreSQL)
+setwd("/Users/vsyverson/Dropbox/Science/RLB")
+source("/RLB/csvs/makepaleoTS.R")
+getwd)_
+getwd()
+source("/csvs/makepaleoTS.R")
+source("csvs/makepaleoTS.R")
+ls()
+source("makepaleoTS.R")
+getwd()
+ls()
+dir()
+source(file="makepaleoTS.R")
+source(file="makepaleoTS.R")
+getwd()
+setwd("/Users/vsyverson/Documents")
+setwd("/Users/vsyverson/Dropbox/Science/RLB")
+source("makepaleoTS.R")
+setwd("/Users/vsyverson/Dropbox/Science/RLB")
+make.paleoTS<-function(file,agelookup=TRUE){#
+    rawdata<-read.csv(file) #
+    rawdata<-rawdata[!is.na(rawdata[,1]),]#
+    if(agelookup==TRUE){#
+        pitnumber<-rawdata[,1]#
+        spec.ages<-array(dim=dim(rawdata)[1])#
+        allpits<-levels(factor(sort(rawdata[,1])))#
+        for(i in 1:length(allpits)){#
+            in.pit.i<-which(pitnumber==allpits[i])#
+            if (allpits[i]%in%pit.ages[,1]){#
+                age<-pit.ages[which(pit.ages[,1]==allpits[i]),2]#
+                spec.ages[in.pit.i]<-age#
+                }#
+            }#
+        } else {#
+            spec.ages<-array(dim=dim(rawdata)[1])#
+            spec.ages<-rawdata[,1]#
+        }#
+    rawdata<-rawdata[order(spec.ages,decreasing=TRUE),]#
+    allnames<-list(rev(unique(spec.ages)),c("mm","vv","nn","tt"),colnames(rawdata)[2:length(colnames(rawdata))])#
+    output<-array(dim=c(length(unique(spec.ages)),4,dim(rawdata)[2]-1),dimnames=allnames)#
+    for (i in 1:length(unique(spec.ages))){#
+        if (!is.na(rev(unique(spec.ages))[i])){#
+            in.age.i<-which(spec.ages==rev(unique(spec.ages))[i])#
+            output[i,4,]<-mean(spec.ages[in.age.i])#
+            for (j in 2:(dim(rawdata)[2])){#
+                specs<-which(!is.na(rawdata[in.age.i,j]))#
+                output[i,1,j-1]<-mean(rawdata[specs,j],na.rm=T)#
+                output[i,2,j-1]<-var(rawdata[specs,j],na.rm=T)#
+                output[i,3,j-1]<-length(specs)#
+                }#
+            }#
+        }#
+    result<-list()#
+    for (j in 1:(dim(rawdata)[2]-1)){#
+        good<-which(!is.na(output[,1,j])&!is.na(output[,2,j])&!is.na(output[,3,j])&!is.na(output[,4,j]))#
+        good<-good[names(sort(output[good,4,j]))]#
+        result[[j]]<-as.paleoTS(mm=output[good,1,j],vv=output[good,2,j],nn=output[good,3,j],tt=output[good,4,j],oldest="last")#
+        names(result)[j]<-colnames(rawdata)[j+1]#
+        }#
+    return(result)#
+    }
+library(paleoTS)
+tyto<-read.csv("TytoTMT.csv")
+coragyps<-read.csv("CoragypsTMT.csv")
+tytoTS<-make.paleoTS("tytoTMT.csv",agelookup=F)
+coragypsTS<-make.paleoTS("coragypsTMT.csv",agelookup=F)
+tytoTS
+plot.paleoTS(tytoTS)
+save()
+quit9)
+quit()

@@ -1,0 +1,6 @@
+"","sapply.test.........statistic..","sapply.test.........parameter..","sapply.test.........p.value.."
+"LENGTH.Kruskal-Wallis chi-squared",24.1356541664139,4,7.50261512677824e-05
+"WIDTH.Kruskal-Wallis chi-squared",5.94693179640367,4,0.203146646915136
+"DEPTH.Kruskal-Wallis chi-squared",12.8728071130963,4,0.011914296450974
+"AREA.Kruskal-Wallis chi-squared",9.27449408389217,4,0.0545929126974678
+"ROBUSTNESS.Kruskal-Wallis chi-squared",7.10242057063773,4,0.130573748275697

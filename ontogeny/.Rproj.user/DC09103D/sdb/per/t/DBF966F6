@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "if (require(\"xlsx\",warn.conflicts=FALSE)==FALSE) {\n  install.packages(\"xlsx\",repos=\"http://cran.cnr.berkeley.edu/\");\n  library(\"xlsx\");\n}\nif (require(\"smatr\",warn.conflicts=FALSE)==FALSE) {\n  install.packages(\"smatr\",repos=\"http://cran.cnr.berkeley.edu/\");\n  library(\"smatr\");\n}\noptions(stringsAsFactors = FALSE,encoding=\"UTF-8\")\n\n#----\n#setwd(\"../Science/RLB/ontogeny\")\n\ntestData<-read.xlsx(\"Kilbourne_Felis_silvestris.xlsx\",sheetIndex = 1)\ncor.test(testData$LN.length.,testData$LN.circumf.,method=\"spearman\")\ntest<-sma(LN.circumf.~LN.length.,data=testData)\nsummary(test)\nplot(test)\n\nfileNames<-c(\"Kilbourne_Felis_silvestris.xlsx\",\"Kilbourne_Leptailurus_serval.xlsx\",\"Kilbourne_Panthera_tigris.xlsx\",\"Kilbourne_Puma_concolor.xlsx\")\n#fileNames<-c(\"SmilodonRMA.xlsx\",\"AtroxRMA.xlsx\")\ndataNames<-c(\"Length\",\"Circumference\")\n#dataNames<-c(\"LENGTH\",\"CIRCUMF\",\"WIDTH\",\"DEPTH\",\"AREA\")\nboneNames<-c(\"Femur\",\"Tibia\",\"Humerus\",\"Radius\")\n\n#write(\"\",file=\"results.txt\")\nwrite(paste(\"RMA results,\",date()),file=\"results.txt\",append=T)\nwrite(\"---- LN(LENGTH) ~ LN(CIRCUMFERENCE) ----\",file=\"results.txt\",append=T)\nfor(i in 1:length(fileNames)){\n  for(j in 1:length(boneNames)){\n    data<-read.xlsx(fileNames[i],sheetIndex=j)\n    for(k in 2:length(dataNames)){\n      result<-list()\n      result$name<-paste(fileNames[i],boneNames[j],dataNames[1],\"~\",dataNames[k])\n      x<-eval(parse(text=paste0(\"data$\",dataNames[1])))\n      y<-eval(parse(text=paste0(\"data$\",dataNames[k])))\n      result$corr.p.value<-cor.test(x,y,method=\"spearman\")$p.value\n      RMA<-sma(log(x)~log(y),data=data)\n      result$RMA.coef<-RMA$coef[[1]]\n      result$RMA.r2<-RMA$r2[[1]][1]\n      result$RMA.p.value<-RMA$pval[[1]][1]\n      capture.output(result,file=\"results.txt\",append=T)      \n    }\n  }\n}\n\n",
+    "created" : 1502252194358.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4070163079",
+    "id" : "DBF966F6",
+    "lastKnownWriteTime" : 1504938236,
+    "last_content_update" : 1504938236533,
+    "path" : "~/Dropbox/Science/RLB/ontogeny/rma_scripts.R",
+    "project_path" : "rma_scripts.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

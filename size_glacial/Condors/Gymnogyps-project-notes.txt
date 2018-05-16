@@ -1,0 +1,51 @@
+TMT: Catalog #, Pit #, Total length, Proximal width, Proximal depth, Midshaft width, Midshaft depth, Distal width, Distal depth
+Skull: 
+	Features noted by Fisher (1944, p 290-291): 
+		Greater absolute measurements except depth of bill; frontoparietal suture farther forward; columnar swelling above foramen magnum slopes dorsal/anterior; curved suture between parietal and squamosal/frontal; deeper temporal fossa and temporal muscle attachment; greater lateral flare of ventral process of squamosal; deeper muscle scar on postorbital process; postorbital process longer and more laterally directed; sometimes almost straight supraorbital crests rather than sigmoid; wider base of lachrymal; wide and robust occipital processes with wide blunt ends (compare occipital width/cranial length); opisthotic process similarly. 
+		Greatest differences in occipital width, opisthotic width, frontonasal hinge width, mandible height, premaxillary length, length of symphysis.
+
+In turkeys paper: scapula, humerus, ulna, radius, carpometacarpus, phalanx prox. dig. maj., femor, tarsometatarsus, tibiotarsus, pes phalanx 1 dig 3.
+
+(Prothero, pers.comm. 2007; Marcus & Berger, 1984)
+Pit 
+3: 15,000
+4: Mixed ages
+10: 9,000
+13: 14,000
+16: 35,000
+16: Mixed ages
+60: 23,000
+61: 12,000
+67: 12,000
+77: 32,000
+81: 12,000
+91: 28,000
+
+
+GSA ABSTRACT
+
+Legbone measurements: No age trend through time from RLB specimens. (Check Carpinteria?)
+Tarsometatarsi: shows no separation. G. cali tends, often but not reliably, to cluster at low end of both length and area measurements for G. amplus, but cannot be separated. This calls into question the TYPE SPECIMEN!!! which I should attempt to measure, since it consists entirely of one TMT (?).
+Tibiotarsi: I assume SBMNH550 didn't have one tibiotarsus 35 mm long and the other 22.2 -- should this have been 25 mm? Apart from this, same story as TMT. Here G. cali clusters reliably at the low end of the G. amplus range but decidedly still within it -- no separating possible.
+Femora: The separation is slightly better marked here for the length and for the area of proximal and distal heads. Not perfect but may resolve better in a principal component. Medial shaft area is like all measurements for other legbones. Also, excluding the unreliable "16=35k" datum, there is some overall downward femur length trend in time, maybe? Dubious but slightly possible. 
+Skulls: Really nice separation on many data. Cranial length, occipital width, length of occipital protrusions, and bill dimensions all distinguish skulls. Will probably cluster nicely along a principal component vector. This is the clearest statement in favour of the species distinction that I've seen yet. Why did Fisher not do this? Or Emslie? No age trends though.
+
+
+
+Content for poster:
+Title 72pt? vis from far away (names, etc) + abstract
+Short 1paragraph intro: climate change response? spanning last glacial-interglacial cycle; taxonomic issue if space
+Methods (lower left?). Results (upper middle).
+Plots: change in all measurements through time (=<4 most informative plots). Comparison of modern to fossil specimens.
+Discussion in R column.Conclusion.
+
+DATA SETS:
+crania: 53 RLB, 16 Modern, 1 midden
+maxillae: 49 RLB, 13 Modern, 1 midden
+humeri: 42 RLB, 29 Modern, 3 midden
+radii: 2 RLB, 24 Modern, 1 midden
+ulnae: 25 RLB, 25 Modern
+carpometacarpi: 95 RLB, 21 Modern, 2 midden
+femora: 75 RLB, 62 Modern, 2 midden
+tibiotarsi: 64 RLB, 20 Modern, 2 midden
+tarsometatarsi: 238 RLB, 20 Modern, 2 midden, 1 holotype

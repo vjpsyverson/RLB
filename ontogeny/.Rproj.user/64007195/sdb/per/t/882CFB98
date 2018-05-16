@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "if (require(\"xlsx\",warn.conflicts=FALSE)==FALSE) {\n  install.packages(\"xlsx\",repos=\"http://cran.cnr.berkeley.edu/\");\n  library(\"xlsx\");\n}\nif (require(\"smatr\",warn.conflicts=FALSE)==FALSE) {\n  install.packages(\"smatr\",repos=\"http://cran.cnr.berkeley.edu/\");\n  library(\"smatr\");\n}\n#----\nsetwd(\"../Science/RLB/ontogeny\")\n\ntestData<-read.xlsx(\"AtroxRMA.xlsx\",sheetIndex = 1)\ncor.test(testData$LN.length.,testData$LN.circumf.,method=\"spearman\")\ntest<-sma(LN.circumf.~LN.length.,data=testData)\nsummary(test)\nplot(test)\n\nfileNames<-c(\"EquusJuveniles.xlsx\")\nboneNames<-c(\"Tibia\",\"Radius\",\"Femur\")\ndataNames<-c(\"LENGTH\",\"CIRCUMF\",\"AREA\")\n\nwrite(paste(\"RMA results,\",date()),file=\"results.txt\",append=T)\nfor(i in 1:length(fileNames)){\n  for(j in 1:length(boneNames)){\n    data<-read.xlsx(fileNames[i],sheetIndex=j)\n    for(k in 2:3){\n      result<-list()\n      result$name<-paste(fileNames[i],boneNames[j],dataNames[1],\"~\",dataNames[k])\n      x<-eval(parse(text=paste0(\"data$\",dataNames[1])))\n      y<-eval(parse(text=paste0(\"data$\",dataNames[k])))\n      result$corr.p.value<-cor.test(x,y,method=\"spearman\")$p.value\n      RMA<-sma(x~y,data=data)\n      result$RMA.coef<-RMA$coef[[1]]\n      result$RMA.r2<-RMA$r2[[1]][1]\n      result$RMA.p.value<-RMA$pval[[1]][1]\n      capture.output(result,file=\"results.txt\",append=T)      \n    }\n  }\n}\n\n",
+    "created" : 1484859671840.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1391170155",
+    "id" : "882CFB98",
+    "lastKnownWriteTime" : 1488946133,
+    "last_content_update" : 1488946133,
+    "path" : "~/Dropbox/Science/RLB/ontogeny/rma_scripts.R",
+    "project_path" : "rma_scripts.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
