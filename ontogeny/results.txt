@@ -1,137 +1,172 @@
----- LN(LENGTH) ~ LN(CIRCUMFERENCE) ----
+
+RMA results, Fri Jun  1 16:30:17 2018
 $name
-[1] "SmilodonRMA.xlsx Femur LENGTH ~ CIRCUMF"
+[1] "Paramylodon.xlsx Femur X= CIRCUMF , Y= LENGTH"
 
 $corr.p.value
-[1] 1.564374e-13
-
-$RMA.coef
-          coef(SMA) lower limit upper limit
-elevation -1.908323   -2.782241   -1.034406
-slope      1.645321    1.460159    1.853963
-
-$RMA.r2
-[1] 0.9044296
-
-$RMA.p.value
-[1] 8.304328e-16
-
-$name
-[1] "SmilodonRMA.xlsx Tibia LENGTH ~ CIRCUMF"
-
-$corr.p.value
-[1] 5.779347e-18
-
-$RMA.coef
-          coef(SMA) lower limit upper limit
-elevation -1.016937   -1.573586  -0.4602874
-slope      1.441748    1.314647   1.5811372
-
-$RMA.r2
-[1] 0.9319049
-
-$RMA.p.value
-[1] 7.9472e-21
-
-$name
-[1] "SmilodonRMA.xlsx Humerus LENGTH ~ CIRCUMF"
-
-$corr.p.value
-[1] 1.564374e-13
-
-$RMA.coef
-          coef(SMA) lower limit upper limit
-elevation -1.908323   -2.782241   -1.034406
-slope      1.645321    1.460159    1.853963
-
-$RMA.r2
-[1] 0.9044296
-
-$RMA.p.value
-[1] 8.304328e-16
-
-$name
-[1] "SmilodonRMA.xlsx Radius LENGTH ~ CIRCUMF"
-
-$corr.p.value
-[1] 3.963104e-21
-
-$RMA.coef
-          coef(SMA) lower limit upper limit
-elevation -2.443815   -3.278154   -1.609475
-slope      1.711060    1.532923    1.909899
-
-$RMA.r2
-[1] 0.792769
-
-$RMA.p.value
-[1] 6.199677e-25
-
-$name
-[1] "AtroxRMA.xlsx Femur LENGTH ~ CIRCUMF"
-
-$corr.p.value
-[1] 0.000142306
+[1] 0.0001491899
 
 $RMA.coef
            coef(SMA) lower limit upper limit
-elevation -0.8577298   -2.514415    0.798956
-slope      1.3258679    1.026430    1.712661
+elevation -0.4392296  -2.1218284    1.243369
+slope      1.0824404   0.8350304    1.403155
 
 $RMA.r2
-[1] 0.8307138
+[1] 0.7191516
 
 $RMA.p.value
-[1] 5.743531e-06
+[1] 2.333325e-06
 
 $name
-[1] "AtroxRMA.xlsx Tibia LENGTH ~ CIRCUMF"
+[1] "Paramylodon.xlsx Tibia X= CIRCUMF , Y= LENGTH"
 
 $corr.p.value
-[1] 0.0004047363
+[1] 1.380563e-06
 
 $RMA.coef
           coef(SMA) lower limit upper limit
-elevation 2.1242732   1.0789340    3.169612
-slope     0.7670462   0.5674092    1.036924
+elevation -4.096237   -5.780038   -2.412436
+slope      1.689246    1.405443    2.030358
 
 $RMA.r2
-[1] 0.9061338
+[1] 0.7716919
 
 $RMA.p.value
-[1] 0.0002680965
+[1] 1.761452e-10
 
 $name
-[1] "AtroxRMA.xlsx Humerus LENGTH ~ CIRCUMF"
+[1] "Paramylodon.xlsx Humerus X= CIRCUMF , Y= LENGTH"
 
 $corr.p.value
-[1] 0.006965288
+[1] 0
 
 $RMA.coef
           coef(SMA) lower limit upper limit
-elevation -1.913616  -5.8520136    2.024781
-slope      1.625581   0.9902381    2.668565
+elevation 0.1276166  -0.9872066    1.242440
+slope     1.0125336   0.8202298    1.249923
 
 $RMA.r2
-[1] 0.7329514
+[1] 0.8745918
 
 $RMA.p.value
-[1] 0.00666513
+[1] 3.167904e-07
 
 $name
-[1] "AtroxRMA.xlsx Radius LENGTH ~ CIRCUMF"
+[1] "Paramylodon.xlsx Radius X= CIRCUMF , Y= LENGTH"
 
 $corr.p.value
-[1] 4.317642e-07
+[1] 0.1249018
+
+$RMA.coef
+           coef(SMA) lower limit upper limit
+elevation -0.4863371  -2.0799577    1.107284
+slope      1.1545756   0.8787405    1.516995
+
+$RMA.r2
+[1] 0.7674894
+
+$RMA.p.value
+[1] 8.625469e-06
+
+$name
+[1] "Paramylodon.xlsx Ulna X= CIRCUMF , Y= LENGTH"
+
+$corr.p.value
+[1] 0
 
 $RMA.coef
           coef(SMA) lower limit upper limit
-elevation 0.5159414  -0.5102773    1.542160
-slope     1.0822391   0.8851423    1.323224
+elevation -2.041967   -3.499127  -0.5848059
+slope      1.418203    1.172258   1.7157487
 
 $RMA.r2
-[1] 0.7904623
+[1] 0.935428
 
 $RMA.p.value
-[1] 6.398182e-09
+[1] 1.174306e-06
+
+$name
+[1] "Paramylodon.xlsx Femur X= CIRCUMF , Y= LENGTH"
+
+$corr.p.value
+[1] 0.0001491899
+
+$RMA.coef
+           coef(SMA) lower limit upper limit
+elevation -0.4392296  -2.1218284    1.243369
+slope      1.0824404   0.8350304    1.403155
+
+$RMA.r2
+[1] 0.7191516
+
+$RMA.p.value
+[1] 2.333325e-06
+
+$name
+[1] "Paramylodon.xlsx Tibia X= CIRCUMF , Y= LENGTH"
+
+$corr.p.value
+[1] 1.380563e-06
+
+$RMA.coef
+          coef(SMA) lower limit upper limit
+elevation -4.096237   -5.780038   -2.412436
+slope      1.689246    1.405443    2.030358
+
+$RMA.r2
+[1] 0.7716919
+
+$RMA.p.value
+[1] 1.761452e-10
+
+$name
+[1] "Paramylodon.xlsx Humerus X= CIRCUMF , Y= LENGTH"
+
+$corr.p.value
+[1] 0
+
+$RMA.coef
+          coef(SMA) lower limit upper limit
+elevation 0.1276166  -0.9872066    1.242440
+slope     1.0125336   0.8202298    1.249923
+
+$RMA.r2
+[1] 0.8745918
+
+$RMA.p.value
+[1] 3.167904e-07
+
+$name
+[1] "Paramylodon.xlsx Radius X= CIRCUMF , Y= LENGTH"
+
+$corr.p.value
+[1] 0.1249018
+
+$RMA.coef
+           coef(SMA) lower limit upper limit
+elevation -0.4863371  -2.0799577    1.107284
+slope      1.1545756   0.8787405    1.516995
+
+$RMA.r2
+[1] 0.7674894
+
+$RMA.p.value
+[1] 8.625469e-06
+
+$name
+[1] "Paramylodon.xlsx Ulna X= CIRCUMF , Y= LENGTH"
+
+$corr.p.value
+[1] 0.0001491899
+
+$RMA.coef
+           coef(SMA) lower limit upper limit
+elevation -0.4392296  -2.1218284    1.243369
+slope      1.0824404   0.8350304    1.403155
+
+$RMA.r2
+[1] 0.7191516
+
+$RMA.p.value
+[1] 2.333325e-06
 
