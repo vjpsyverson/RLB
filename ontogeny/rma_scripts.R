@@ -17,11 +17,12 @@ test<-sma(LN.circumf.~LN.length.,data=testData)
 summary(test)
 plot(test)
 
-fileNames<-c("Camelops.xlsx")
+fileNames<-c("M_exilis.xlsx","M_columbi.xlsx")
 #fileNames<-c("SmilodonRMA.xlsx","AtroxRMA.xlsx")
 #dataNames<-c("Length","Circumference")
-dataNames<-c("CIRCUMF","LENGTH")
-boneNames<-c("Ulna")
+dataNames<-c("CIRCUMF","DIAPHYSIS")
+boneNames<-c("Femur","Tibia","Humerus","Ulna")
+par(mfrow=c(2,4)) #change as necessary
 
 #
 write("",file="results.txt")
@@ -29,7 +30,7 @@ write("",file="results.txt")
 write(paste("RMA results,",date()),file="results.txt",append=T)
 for(i in 1:length(fileNames)){
   for(j in 1:length(boneNames)){
-    data<-read.xlsx(fileNames[i],sheetIndex=j)
+    data<-read.xlsx(fileNames[i],sheetName=boneNames[j])
     for(k in 2:length(dataNames)){
       result<-list()
       result$name<-paste(fileNames[i],boneNames[j],"X=",dataNames[1],", Y=",dataNames[k])
@@ -40,7 +41,9 @@ for(i in 1:length(fileNames)){
       result$RMA.coef<-RMA$coef[[1]]
       result$RMA.r2<-RMA$r2[[1]][1]
       result$RMA.p.value<-RMA$pval[[1]][1]
-      capture.output(result,file="results.txt",append=T)      
+      capture.output(result,file="results.txt",append=T)
+      plot(log(y)~log(x),main=paste(boneNames[j],"-",fileNames[i]),xlab=paste0("Ln(",dataNames[1],")"),ylab=paste0("Ln(",dataNames[k],")"))
+      abline(result$RMA.coef$`coef(SMA)`[1],result$RMA.coef$`coef(SMA)`[2])
     }
   }
 }
