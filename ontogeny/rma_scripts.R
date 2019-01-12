@@ -17,12 +17,12 @@ test<-sma(LN.circumf.~LN.length.,data=testData)
 summary(test)
 plot(test)
 
-fileNames<-c("M_exilis.xlsx","M_columbi.xlsx")
+fileNames<-c("Rerun_Mammuthus.xlsx")
 #fileNames<-c("SmilodonRMA.xlsx","AtroxRMA.xlsx")
 #dataNames<-c("Length","Circumference")
-dataNames<-c("CIRCUMF","DIAPHYSIS")
-boneNames<-c("Femur","Tibia","Humerus","Ulna")
-par(mfrow=c(2,4)) #change as necessary
+dataNames<-c("CIRCUMFERENCE","DIAPHYSIS")
+boneNames<-c("TIBIA","HUMERUS","ULNA")
+par(mfrow=c(1,3)) #change as necessary
 
 #
 write("",file="results.txt")

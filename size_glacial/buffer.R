@@ -212,32 +212,6 @@ test.array[,c(1,3,5,7)]<-t(sapply(test,"[[","Akaike.wt"))
 test.array[,c(2,4,6,8)]<-t(sapply(test,"[[","AICc"))
 write.csv(test.array,file="Akaike.csv")
 
-#general form of data processing
-taxon<-"asio"
-data<-read.csv(paste0("csvs/",taxon,"TMT.csv"))
-data$ROBUSTNESS<-(data$WIDTH*data$DEPTH)/data$LENGTH
-dataTS<-make.paleoTS(data,agelookup=F)
-age.fac<-factor(data$AGE,levels=rev(levels(factor(data$AGE))))
-
-par(mfrow=c(2,2)); for (i in 1:4) hist(data[,i+1],main=names(data)[i+1])
-par(mfrow=c(1,1)); plot(data$LENGTH,data$WIDTH/data$DEPTH,col=age.fac,pch=19)
-par(mfrow=c(2,2),mar=c(2,3,3,1),oma=c(1,0,0,0)); for (i in 1:4) {
-  plot.paleoTS(dataTS[[i]],main=tolower(names(dataTS)[i]),ylim=range(data[,i+1]))
-  points(data[,1],data[,i+1])
-}
-for (i in 1:4) print(kruskal.test(data[,i+1],age.fac))
-correction<-0.05/length(levels(age.fac))
-MWboot<-array(dim=c(length(levels(age.fac)),4));colnames(MWboot)<-names(data)[-1];rownames(MWboot)<-levels(age.fac)
-for (j in 1:4){
-  groups<-split(data[,j+1],age.fac)
-  for (i in 1:length(levels(age.fac))) {
-    x1<-unlist(groups[i]); x2<-unlist(groups[-i])
-    MWboot[i,j]<-round(wilcox.test(x1,x2)$p.value,4)
-  }
-}
-for(i in 1:length(MWboot)) if(MWboot[i]<=correction) MWboot[i]<-paste0(as.character(MWboot[i]),"*")
-write.csv(MWboot,paste0(taxon,"MWboot.csv"))
-lapply(dataTS,fit4models.punc,pool=F)
 
 #Katherine's thesis
 raw<-list(length=data.frame(),width=data.frame(),depth=data.frame(),area=data.frame(),robustness=data.frame())
