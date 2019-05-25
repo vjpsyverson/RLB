@@ -7,7 +7,8 @@
 
 make.paleoTS<-function(file,agelookup=TRUE){
 	if(class(file)=="string") {rawdata<-read.csv(file)}	else rawdata<-file
-	rawdata<-rawdata[!is.na(rawdata[,1]),]
+	rawdata<-rawdata[!is.na(rawdata[,1]),][order(rawdata[,1]),]
+	row.names(rawdata)<-1:nrow(rawdata)
 	if(agelookup==TRUE){
 		pitnumber<-rawdata[,1]
 		spec.ages<-array(dim=dim(rawdata)[1])
@@ -23,18 +24,16 @@ make.paleoTS<-function(file,agelookup=TRUE){
 			spec.ages<-array(dim=dim(rawdata)[1])
 			spec.ages<-rawdata[,1]
 		}
-	rawdata<-rawdata[order(spec.ages,decreasing=TRUE),]
-	allnames<-list(rev(unique(spec.ages)),c("mm","vv","nn","tt"),colnames(rawdata)[2:length(colnames(rawdata))])
+	allnames<-list(unique(spec.ages),c("mm","vv","nn","tt"),colnames(rawdata)[2:length(colnames(rawdata))])
 	output<-array(dim=c(length(unique(spec.ages)),4,dim(rawdata)[2]-1),dimnames=allnames)
 	for (i in 1:length(unique(spec.ages))){
-		if (!is.na(rev(unique(spec.ages))[i])){
-			in.age.i<-which(spec.ages==rev(unique(spec.ages))[i])
+		if (!is.na(unique(spec.ages))[i]){
+			in.age.i<-which(spec.ages==unique(spec.ages)[i])
 			output[i,4,]<-mean(spec.ages[in.age.i])
 			for (j in 2:(dim(rawdata)[2])){
-				specs<-which(!is.na(rawdata[in.age.i,j]))
-				output[i,1,j-1]<-mean(rawdata[specs,j],na.rm=T)
-				output[i,2,j-1]<-var(rawdata[specs,j],na.rm=T)
-				output[i,3,j-1]<-length(specs)
+				output[i,1,j-1]<-mean(rawdata[in.age.i,j],na.rm=T)
+				output[i,2,j-1]<-var(rawdata[in.age.i,j],na.rm=T)
+				output[i,3,j-1]<-length(in.age.i)
 				}
 			}
 		}

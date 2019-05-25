@@ -1,9 +1,9 @@
 #general form of data processing
 #taxon<-"athene"
 #data<-read.csv(paste0("csvs/",taxon,"TMT.csv"))
-taxon<-"Sturnella"
+taxon<-"Pica"
 path<-"smallbirds/"
-data<-read.xlsx(paste0(taxon,path,".xlsx"),1)[,c("AGE","LENGTH","WIDTH","DEPTH")]
+data<-read.xlsx(paste0(path,taxon,".xlsx"),1)[,c("AGE","LENGTH","WIDTH","DEPTH")]
 data$ROBUSTNESS<-(data$WIDTH*data$DEPTH)/data$LENGTH
 age.fac<-factor(data$AGE,levels=rev(levels(factor(data$AGE))))
 table(data$AGE)
