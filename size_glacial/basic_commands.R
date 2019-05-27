@@ -1,10 +1,11 @@
 #general form of data processing
 #taxon<-"athene"
 #data<-read.csv(paste0("csvs/",taxon,"TMT.csv"))
-taxon<-"Pica"
+taxon<-"Athene"
 path<-"smallbirds/"
-data<-read.xlsx(paste0(path,taxon,".xlsx"),1)[,c("AGE","LENGTH","WIDTH","DEPTH")]
+data<-read.xlsx(paste0(path,taxon,".xlsx"),1)[,c("PIT","AGE","LENGTH","WIDTH","DEPTH")]
 data$ROBUSTNESS<-(data$WIDTH*data$DEPTH)/data$LENGTH
+#data<-subset(data,data$PIT!="AMNH")[,-1]
 age.fac<-factor(data$AGE,levels=rev(levels(factor(data$AGE))))
 table(data$AGE)
 #basic stats
@@ -23,7 +24,8 @@ for(i in 1:3){
 #TS models
 dataTS<-make.paleoTS(data,agelookup=F)
 TSfit4<-lapply(dataTS,fit4models,pool=F)
-write.table(TSfit4,paste0(taxon,"TS.csv"),row.names = F)
+TSfit4.wt<-rbind(TSfit4$LENGTH$Akaike.wt,TSfit4$WIDTH$Akaike.wt,TSfit4$DEPTH$Akaike.wt,TSfit4$ROBUSTNESS$Akaike.wt);rownames(TSfit4.wt)<-names(TSfit4);colnames(TSfit4.wt)<-rownames(TSfit4$LENGTH)
+write.table(TSfit4.wt,paste0(taxon,"TS.csv"),row.names = F)
 #TS plots
 par(mfrow=c(2,2),mar=c(2,3,3,1),oma=c(1,0,0,0)); for (i in 1:4) {
   plot.paleoTS(dataTS[[i]],main=tolower(names(dataTS)[i]),ylim=range(data[,i+1]))
@@ -57,3 +59,4 @@ for (j in 1:4){
   }
 }
 write.csv(MWx,paste0(taxon,"MWx.csv"))
+MWresults<-cbind(MWx[,"LENGTH"],MWboot[,"LENGTH"],MWx[,"WIDTH"],MWboot[,"WIDTH"],MWx[,"DEPTH"],MWboot[,"DEPTH"],MWx[,"ROBUSTNESS"],MWboot[,"ROBUSTNESS"]);colnames(MWresults)<-c("Length.U","Length.p","Width.U","Width.p","Depth.U","Depth.p","Robustness.U","Robustness.p")
