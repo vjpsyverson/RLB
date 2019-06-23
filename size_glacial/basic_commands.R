@@ -1,11 +1,13 @@
 #general form of data processing
 #taxon<-"athene"
 #data<-read.csv(paste0("csvs/",taxon,"TMT.csv"))
-taxon<-"Athene"
+taxon<-"Sturnella"
 path<-"smallbirds/"
 data<-read.xlsx(paste0(path,taxon,".xlsx"),1)[,c("PIT","AGE","LENGTH","WIDTH","DEPTH")]
+#data<-read.xlsx(paste0(taxon,".xlsx"),1)[,c("PIT","AGE","LENGTH","WIDTH","DEPTH")]
 data$ROBUSTNESS<-(data$WIDTH*data$DEPTH)/data$LENGTH
-#data<-subset(data,data$PIT!="AMNH")[,-1]
+data<-subset(data,data$PIT!="AMNH")[,-1]
+data<-data[,-1]
 age.fac<-factor(data$AGE,levels=rev(levels(factor(data$AGE))))
 table(data$AGE)
 #basic stats
@@ -27,13 +29,14 @@ TSfit4<-lapply(dataTS,fit4models,pool=F)
 TSfit4.wt<-rbind(TSfit4$LENGTH$Akaike.wt,TSfit4$WIDTH$Akaike.wt,TSfit4$DEPTH$Akaike.wt,TSfit4$ROBUSTNESS$Akaike.wt);rownames(TSfit4.wt)<-names(TSfit4);colnames(TSfit4.wt)<-rownames(TSfit4$LENGTH)
 write.table(TSfit4.wt,paste0(taxon,"TS.csv"),row.names = F)
 #TS plots
-par(mfrow=c(2,2),mar=c(2,3,3,1),oma=c(1,0,0,0)); for (i in 1:4) {
+source("read.paleoTS.R") #for some reason the function is not loading with the package; this is from github
+par(mfrow=c(2,2),mar=c(2,3,3,1),oma=c(1,0,2,0)); for (i in 1:4) {
   plot.paleoTS(dataTS[[i]],main=tolower(names(dataTS)[i]),ylim=range(data[,i+1]))
   points(data[,1],data[,i+1])
-}
+}; mtext(paste0(taxon," (without AMNH specimens)"),outer=TRUE,cex=1.5)
 #significance tests
 correction<-0.05/length(levels(age.fac))
-KWtest<-array(dim=c(4,4));rownames(KWtest)<-names(data)[-1];colnames(KWtest)<-c("K-W chi-squared","df","p-value",paste0("significant (p<",correction,")"))
+KWtest<-array(dim=c(4,4));rownames(KWtest)<-names(data[-1]);colnames(KWtest)<-c("K-W chi-squared","df","p-value",paste0("significant (p<",correction,")"))
 for (i in 1:4) {
   test<-kruskal.test(data[,i+1],age.fac)
   KWtest[i,1:4]<-c(test$statistic,test$parameter,test$p.value,test$p.value<correction)
@@ -49,7 +52,6 @@ for (j in 1:4){
   }
 }
 for(i in 1:length(MWboot)) if(MWboot[i]<correction) MWboot[i]<-paste0(MWboot[i],"*")
-write.csv(MWboot,paste0(taxon,"MWboot.csv"))
 MWx<-MWboot
 for (j in 1:4){
   groups<-split(data[,j+1],age.fac)
@@ -58,5 +60,5 @@ for (j in 1:4){
     MWx[i,j]<-round(wilcox.test(x1,x2)$statistic,4)
   }
 }
-write.csv(MWx,paste0(taxon,"MWx.csv"))
 MWresults<-cbind(MWx[,"LENGTH"],MWboot[,"LENGTH"],MWx[,"WIDTH"],MWboot[,"WIDTH"],MWx[,"DEPTH"],MWboot[,"DEPTH"],MWx[,"ROBUSTNESS"],MWboot[,"ROBUSTNESS"]);colnames(MWresults)<-c("Length.U","Length.p","Width.U","Width.p","Depth.U","Depth.p","Robustness.U","Robustness.p")
+write.csv(MWresults,paste0(taxon,"MW.csv"))
