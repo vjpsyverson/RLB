@@ -29,7 +29,7 @@ The following represents a complete list of all the peer-reviewed manuscripts pu
 - Gillespy, P.D., D.R. Prothero, and J. French. 2018. Ontogenetic changes in distal and proximal limb bones of juvenile Pleistocene coyotes (Canis latrans) and dire wolves (Canis dirus) from the Rancho La Brea tar pits, California. New Mexico Museum of Natural History Bulletin 79:225-238.
 - Htun, T., D.R. Prothero, and V.J.P. Syverson. 2018. Postnatal allometric limb growth in juvenile camels from the Pleistocene of Rancho La Brea tar pits. New Mexico Museum of Natural History Bulletin 79:267-270.
 - Htun, T., D.R. Prothero, J.M. Hoffman, S. Lukowski, and V.J.P. Syverson. 2018. Allometric trends in growth and dwarfing in the extinct Pleistocene Channel Islands pygmy mammoth Mammuthus exilis. New Mexico Museum of Natural History Bulletin 79:261-265.
-###Other subjects
+### Other subjects
 - Prothero, D.R., and K. Raymond. 2008. Variability and sexual size dimorphism in Pleistocene ground sloths (Xenarthra), New Mexico Museum of Natural History and Science Bulletin 44:331-334.
 - Syverson, V., and D.R. Prothero. 2010. Evolutionary patterns in late Quaternary California condors. PalArch Journal of Vertebrate Paleontology 7(10):1-18. 
 - Raymond, K.R., and Prothero, D.R. 2010. Comparative variability in intermembranous vs. endochondral bones in Pleistocene mammals. Palaeontologica Electronica: http://palaeo-electronica.org/2010_1/184/index.html
