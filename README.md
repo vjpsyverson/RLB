@@ -7,11 +7,13 @@ The following represents a complete list of all the peer-reviewed manuscripts pu
 ### RLB vertebrate body sizes during the last glacial-interglacial cycle
 #### All taxa (reviews)
 - Prothero, D.R., V. Syverson, K.R. Raymond, M.A. Madan, A. Fragomeni, S. Molina, A. Sutyagina, S. DeSantis, and G.L. Gage. 2012. Stasis in the face of climatic change in late Pleistocene mammals and birds from Rancho La Brea, California. Quaternary Science Reviews 56: 1-10.
+- Prothero, D.R. 2012. Cenozoic mammals and climate change: the contrast between coarse-scale versus high-resolution studies explained by species sorting. Geosciences 2:24-41.
 - Prothero, D.R., V. Syverson, K.R. Raymond, M.A. Madan, A. Fragomeni, S. Molina, A. Sutyagina, S. DeSantis, and G.L. Gage. 2016. Bergmann’s rule, geographic clines and speciation: the view from the La Brea tar pits. *in* Allmon, W., and M. Yacobucci (eds.) Species and Speciation in the Fossil Record, p. 389-404.
 #### Mammals
 - Madan, M., Prothero, D.R., and Sutyagina, A. 2011. Did felids from Rancho La Brea change size or shape in the last Pleistocene? New Mexico Museum of Natural History Bulletin 53:554-563.
 - DeSantis, S.N., Prothero, D.R., and Gage, G.L. 2011. Size and shape stasis in late Pleistocene horses and camels from Rancho La Brea during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 53:505-510.
 - Prothero, D.R., and K.R. Raymond. 2011. Stasis in late Pleistocene ground sloths (*Paramylodon harlani*) from Rancho La Brea, California. New Mexico Museum of Natural History Bulletin 53:624-628.
+- Raymond, K.R., and D.R. Prothero. 2011. Did climate change affect size in late Pleistocene bison? New Mexico Museum of Natural History Bulletin 53:636-640.
 - Balassa, D., Prothero, D.R., and Syverson, V. 2020. After the saber-tooths: How did cougars and bobcats respond to the end of the Ice Ages? PLoS One (in press)
 #### Birds
 - Syverson, V., and D.R. Prothero. 2010. Evolutionary patterns in late Quaternary California condors. PalArch Journal of Vertebrate Paleontology 7(10):1-18.
