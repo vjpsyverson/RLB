@@ -1,1 +1,37 @@
-# RLB
+# RLB (Rancho La Brea) project
+This project represents an ongoing 10+ year collaboration between Dr. Donald Prothero and his assorted students (undergrad, grad, and ex-), including Dr. Val Syverson (@vjpsyverson), who hosts this repository. (If you're one of the coauthors and you want to be listed here, please contact me!)
+The main themes of the project have been (1) body size change in vertebrate populations at RLB during the last glacial-interglacial cycle and (2) comparisons of the ontogenetic trajectories of extinct mammals to those of their living relatives. The bibliography below and the file structure of this repository both reflect this. However, several of the papers have addressed other subjects as well.
+The files in this repository contain most of the data and R analysis routines used in this project, or at least all the parts of it in which @vjpsyverson has been involved. If you want to reanalyze the data or pick out specimens from the Page collections based on their measurements, the data should allow you to do that; if you want to borrow my R analysis code to save yourself a few steps in figuring out how to parse the data, you may also do that. If you're using any of it in a published project, though, please do contact either Val or Don and let us know what's up.
+## Project bibliography
+The following represents a complete list of all the peer-reviewed manuscripts published as a result of this project. (Last updated: 28 June 2019)
+### RLB vertebrate body sizes during the last glacial-interglacial cycle
+#### All taxa (reviews)
+- Prothero, D.R., V. Syverson, K.R. Raymond, M.A. Madan, A. Fragomeni, S. Molina, A. Sutyagina, S. DeSantis, and G.L. Gage. 2012. Stasis in the face of climatic change in late Pleistocene mammals and birds from Rancho La Brea, California. Quaternary Science Reviews 56: 1-10.
+- Prothero, D.R., V. Syverson, K.R. Raymond, M.A. Madan, A. Fragomeni, S. Molina, A. Sutyagina, S. DeSantis, and G.L. Gage. 2016. Bergmann’s rule, geographic clines and speciation: the view from the La Brea tar pits. *in* Allmon, W., and M. Yacobucci (eds.) Species and Speciation in the Fossil Record, p. 389-404.
+#### Mammals
+- Madan, M., Prothero, D.R., and Sutyagina, A. 2011. Did felids from Rancho La Brea change size or shape in the last Pleistocene? New Mexico Museum of Natural History Bulletin 53:554-563.
+- DeSantis, S.N., Prothero, D.R., and Gage, G.L. 2011. Size and shape stasis in late Pleistocene horses and camels from Rancho La Brea during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 53:505-510.
+- Prothero, D.R., and K.R. Raymond. 2011. Stasis in late Pleistocene ground sloths (*Paramylodon harlani*) from Rancho La Brea, California. New Mexico Museum of Natural History Bulletin 53:624-628.
+- Balassa, D., Prothero, D.R., and Syverson, V. 2020. After the saber-tooths: How did cougars and bobcats respond to the end of the Ice Ages? PLoS One (in press)
+#### Birds
+- Syverson, V., and D.R. Prothero. 2010. Evolutionary patterns in late Quaternary California condors. PalArch Journal of Vertebrate Paleontology 7(10):1-18.
+- Fragomeni, A., and Prothero, D.R., 2011. Stasis in late Quaternary birds from the La Brea tar pits during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 53:511-516.
+- Molina, S., and Prothero, D.R. 2011. Evolutionary stasis in late Pleistocene golden eagles. New Mexico Museum of Natural History Bulletin 53:564-569.
+- Madan, M.A., Prothero, D.R., and V.J.P. Syverson. 2015. Stasis in Great Horned Owls from the La Brea tar pits during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 65:221-225.
+- Gillespy, P., D. R. Prothero, and V.J.P. Syverson, 2016. Stasis in teratorns form the La Brea tar pits during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 74: 67-71
+- Long, K.L., D.R. Prothero, and V.J.P. Syverson, 2016. Stasis in Rancho La Brea black vultures (*Coragyps occidentalis*) over the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 74: 121-125.
+- Madan, M., D.R. Prothero, and V.J.P. Syverson, 2016. Stasis in barn owls from the La Brea tar pits during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 74: 153-157.
+- Madan, M., D.R. Prothero, and V.J.P. Syverson, 2019. Stasis in the smaller owls from Rancho La Brea during the last glacial-interglacial climate change. Paleontologica Electronica 22.3.70. https://doi.org/10.26879/960
+- Long, K.D., D.R. Prothero, and V.J.P. Syverson, 2020. How do small birds evolve in response to climate change? Data from the long-term record at La Brea tar pits. Integrative Zoology (in press).
+### Ontogenetic comparisons between extinct and extant mammals
+- Long, K.L., Prothero, D.R., Madan, M., and Syverson, V.J.P., 2017, Did sabertooth kittens grow up musclebound? A study of postnatal limb bone allometry in felids from the Pleistocene of Rancho La Brea. PLOS One: https://doi.org/10.1371/journal.pone.0183175
+- Annoor, T., D.R. Prothero, and V.J.P. Syverson. 2018. From colts to horses: a study of the allometric growth in limb bones in *Equus occidentalis* from La Brea tar pits. New Mexico Museum of Natural History Bulletin 79: 13-16.
+- Long, K., D.R. Prothero, M. Madan, and V.J.P. Syverson. 2018. Allometric shape changes during ontogeny of the Rancho La Brea ground sloth *Paramylodon harlani*. New Mexico Museum of Natural History Bulletin 79: 481-483.
+- Galvez, S., D.R. Prothero, and V.J.P. Syverson. 2018. How did bison calves grow up? Postnatal limb allometry in *Bison antiquus* from La Brea tar pits. New Mexico Museum of Natural History Bulletin 79: 213-217.
+- Gillespy, P.D., D.R. Prothero, and J. French. 2018. Ontogenetic changes in distal and proximal limb bones of juvenile Pleistocene coyotes (*Canis latrans*) and dire wolves (*Canis dirus*) from the Rancho La Brea tar pits, California. New Mexico Museum of Natural History Bulletin 79:225-238.
+- Htun, T., D.R. Prothero, and V.J.P. Syverson. 2018. Postnatal allometric limb growth in juvenile camels from the Pleistocene of Rancho La Brea tar pits. New Mexico Museum of Natural History Bulletin 79:267-270.
+- Htun, T., D.R. Prothero, J.M. Hoffman, S. Lukowski, and V.J.P. Syverson. 2018. Allometric trends in growth and dwarfing in the extinct Pleistocene Channel Islands pygmy mammoth *Mammuthus exilis*. New Mexico Museum of Natural History Bulletin 79:261-265.
+### Other subjects
+- Prothero, D.R., and K. Raymond. 2008. Variability and sexual size dimorphism in Pleistocene ground sloths (Xenarthra), New Mexico Museum of Natural History and Science Bulletin 44:331-334.
+- Syverson, V., and D.R. Prothero. 2010. Evolutionary patterns in late Quaternary California condors. PalArch Journal of Vertebrate Paleontology 7(10):1-18. 
+- Raymond, K.R., and Prothero, D.R. 2010. Comparative variability in intermembranous vs. endochondral bones in Pleistocene mammals. Palaeontologica Electronica: http://palaeo-electronica.org/2010_1/184/index.html
