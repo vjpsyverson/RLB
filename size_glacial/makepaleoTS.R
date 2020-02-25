@@ -10,9 +10,9 @@ make.paleoTS<-function(file,agelookup=TRUE){
 	rawdata<-rawdata[!is.na(rawdata[,1]),][order(rawdata[,1]),]
 	row.names(rawdata)<-1:nrow(rawdata)
 	if(agelookup==TRUE){
-		pitnumber<-rawdata[,1]
+		pitnumber<-as.character(rawdata[,1])
 		spec.ages<-array(dim=dim(rawdata)[1])
-		allpits<-levels(factor(sort(rawdata[,1])))
+		allpits<-as.character(rawdata[,1])
 		for(i in 1:length(allpits)){
 			in.pit.i<-which(pitnumber==allpits[i])
 			if (allpits[i]%in%pit.ages[,1]){
@@ -39,7 +39,7 @@ make.paleoTS<-function(file,agelookup=TRUE){
 		}
 	result<-list()
 	for (j in 1:(dim(rawdata)[2]-1)){
-		good<-which(!is.na(output[,1,j])&!is.na(output[,2,j])&!is.na(output[,3,j])&!is.na(output[,4,j]))
+	  good<-which(!is.na(output[,1,j])&!is.na(output[,2,j])&!is.na(output[,3,j])&!is.na(output[,4,j]))
 		good<-good[names(sort(output[good,4,j]))]
 		result[[j]]<-as.paleoTS(mm=output[good,1,j],vv=output[good,2,j],nn=output[good,3,j],tt=output[good,4,j],oldest="last")
 		names(result)[j]<-colnames(rawdata)[j+1]
