@@ -12,6 +12,7 @@ The following represents a complete list of all the peer-reviewed manuscripts pu
 - Madan, M., Prothero, D.R., and Sutyagina, A. 2011. Did felids from Rancho La Brea change size or shape in the last Pleistocene? New Mexico Museum of Natural History Bulletin 53:554-563.
 - DeSantis, S.N., Prothero, D.R., and Gage, G.L. 2011. Size and shape stasis in late Pleistocene horses and camels from Rancho La Brea during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 53:505-510.
 - Prothero, D.R., and K.R. Raymond. 2011. Stasis in late Pleistocene ground sloths (*Paramylodon harlani*) from Rancho La Brea, California. New Mexico Museum of Natural History Bulletin 53:624-628.
+- Balassa, D., Prothero, D.R., and Syverson, V. 2020. After the saber-tooths: How did cougars and bobcats respond to the end of the Ice Ages? PLoS One (in press)
 #### Birds
 - Syverson, V., and D.R. Prothero. 2010. Evolutionary patterns in late Quaternary California condors. PalArch Journal of Vertebrate Paleontology 7(10):1-18.
 - Fragomeni, A., and Prothero, D.R., 2011. Stasis in late Quaternary birds from the La Brea tar pits during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 53:511-516.
@@ -20,7 +21,8 @@ The following represents a complete list of all the peer-reviewed manuscripts pu
 - Gillespy, P., D. R. Prothero, and V.J.P. Syverson, 2016. Stasis in teratorns form the La Brea tar pits during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 74: 67-71
 - Long, K.L., D.R. Prothero, and V.J.P. Syverson, 2016. Stasis in Rancho La Brea black vultures (*Coragyps occidentalis*) over the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 74: 121-125.
 - Madan, M., D.R. Prothero, and V.J.P. Syverson, 2016. Stasis in barn owls from the La Brea tar pits during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 74: 153-157.
-- Madan, M., D.R. Prothero, and V.J.P. Syverson. Stasis in the smaller owls from Rancho La Brea during the last glacial-interglacial climate change. Paleontologica Electronica (in press).
+- Madan, M., D.R. Prothero, and V.J.P. Syverson, 2019. Stasis in the smaller owls from Rancho La Brea during the last glacial-interglacial climate change. Paleontologica Electronica 22.3.70. https://doi.org/10.26879/960
+- Long, K.D., D.R. Prothero, and V.J.P. Syverson, 2020. How do small birds evolve in response to climate change? Data from the long-term record at La Brea tar pits. Integrative Zoology (in press).
 ### Ontogenetic comparisons between extinct and extant mammals
 - Long, K.L., Prothero, D.R., Madan, M., and Syverson, V.J.P., 2017, Did sabertooth kittens grow up musclebound? A study of postnatal limb bone allometry in felids from the Pleistocene of Rancho La Brea. PLOS One: https://doi.org/10.1371/journal.pone.0183175
 - Annoor, T., D.R. Prothero, and V.J.P. Syverson. 2018. From colts to horses: a study of the allometric growth in limb bones in *Equus occidentalis* from La Brea tar pits. New Mexico Museum of Natural History Bulletin 79: 13-16.
