@@ -16,7 +16,7 @@ The following represents a complete list of all the peer-reviewed manuscripts pu
 - Raymond, K.R., and D.R. Prothero. 2011. Did climate change affect size in late Pleistocene bison? New Mexico Museum of Natural History Bulletin 53:636-640.
 - Balassa, D., Prothero, D.R., and Syverson, V. 2020. After the saber-tooths: How did cougars and bobcats respond to the end of the Ice Ages? PLoS One (in press)
 #### Birds
-- Syverson, V., and D.R. Prothero. 2010. Evolutionary patterns in late Quaternary California condors. PalArch Journal of Vertebrate Paleontology 7(10):1-18.
+- Syverson, V., and D.R. Prothero. 2010. Evolutionary patterns in late Quaternary California condors. PalArch Journal of Vertebrate Paleontology 7(10):1-18. Online at https://www.palarch.nl/2010/03/syverson-valerie-j-donald-r-prothero-2010-evolutionary-patterns-in-late-quaternary-california-condors-%e2%80%93-palarch%e2%80%99s-journal-of-vertebrate-palaeontology-7-1-1-18/
 - Fragomeni, A., and Prothero, D.R., 2011. Stasis in late Quaternary birds from the La Brea tar pits during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 53:511-516.
 - Molina, S., and Prothero, D.R. 2011. Evolutionary stasis in late Pleistocene golden eagles. New Mexico Museum of Natural History Bulletin 53:564-569.
 - Madan, M.A., Prothero, D.R., and V.J.P. Syverson. 2015. Stasis in Great Horned Owls from the La Brea tar pits during the last glacial-interglacial cycle. New Mexico Museum of Natural History Bulletin 65:221-225.
@@ -35,5 +35,5 @@ The following represents a complete list of all the peer-reviewed manuscripts pu
 - Htun, T., D.R. Prothero, J.M. Hoffman, S. Lukowski, and V.J.P. Syverson. 2018. Allometric trends in growth and dwarfing in the extinct Pleistocene Channel Islands pygmy mammoth *Mammuthus exilis*. New Mexico Museum of Natural History Bulletin 79:261-265.
 ### Other subjects
 - Prothero, D.R., and K. Raymond. 2008. Variability and sexual size dimorphism in Pleistocene ground sloths (Xenarthra), New Mexico Museum of Natural History and Science Bulletin 44:331-334.
-- Syverson, V., and D.R. Prothero. 2010. Evolutionary patterns in late Quaternary California condors. PalArch Journal of Vertebrate Paleontology 7(10):1-18. 
+- Syverson, V., and D.R. Prothero. 2010. Evolutionary patterns in late Quaternary California condors. PalArch Journal of Vertebrate Paleontology 7(10):1-18. Online at https://www.palarch.nl/2010/03/syverson-valerie-j-donald-r-prothero-2010-evolutionary-patterns-in-late-quaternary-california-condors-%e2%80%93-palarch%e2%80%99s-journal-of-vertebrate-palaeontology-7-1-1-18/
 - Raymond, K.R., and Prothero, D.R. 2010. Comparative variability in intermembranous vs. endochondral bones in Pleistocene mammals. Palaeontologica Electronica: http://palaeo-electronica.org/2010_1/184/index.html
