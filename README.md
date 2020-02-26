@@ -6,8 +6,8 @@ The files in this repository contain most of the data and R analysis routines us
 The following represents a complete list of all the peer-reviewed manuscripts published as a result of this project. (Last updated: 28 June 2019)
 ### RLB vertebrate body sizes during the last glacial-interglacial cycle
 #### All taxa (reviews)
-- Prothero, D.R., V. Syverson, K.R. Raymond, M.A. Madan, A. Fragomeni, S. Molina, A. Sutyagina, S. DeSantis, and G.L. Gage. 2012. Stasis in the face of climatic change in late Pleistocene mammals and birds from Rancho La Brea, California. Quaternary Science Reviews 56: 1-10.
-- Prothero, D.R. 2012. Cenozoic mammals and climate change: the contrast between coarse-scale versus high-resolution studies explained by species sorting. Geosciences 2:24-41.
+- Prothero, D.R., V. Syverson, K.R. Raymond, M.A. Madan, A. Fragomeni, S. Molina, A. Sutyagina, S. DeSantis, and G.L. Gage. 2012. Stasis in the face of climatic change in late Pleistocene mammals and birds from Rancho La Brea, California. Quaternary Science Reviews 56: 1-10. https://doi.org/10.1016/j.quascirev.2012.08.015
+- Prothero, D.R. 2012. Cenozoic mammals and climate change: the contrast between coarse-scale versus high-resolution studies explained by species sorting. Geosciences 2:24-41. https://doi.org/10.3390/geosciences2020025
 - Prothero, D.R., V. Syverson, K.R. Raymond, M.A. Madan, A. Fragomeni, S. Molina, A. Sutyagina, S. DeSantis, and G.L. Gage. 2016. Bergmann’s rule, geographic clines and speciation: the view from the La Brea tar pits. *in* Allmon, W., and M. Yacobucci (eds.) Species and Speciation in the Fossil Record, p. 389-404.
 #### Mammals
 - Madan, M., Prothero, D.R., and Sutyagina, A. 2011. Did felids from Rancho La Brea change size or shape in the last Pleistocene? New Mexico Museum of Natural History Bulletin 53:554-563.
