@@ -1,6 +1,6 @@
-if (require("xlsx",warn.conflicts=FALSE)==FALSE) {
-  install.packages("xlsx",repos="http://cran.cnr.berkeley.edu/");
-  library("xlsx");
+if (require("openxlsx",warn.conflicts=FALSE)==FALSE) {
+  install.packages("openxlsx",repos="http://cran.cnr.berkeley.edu/");
+  library("openxlsx");
 }
 if (require("smatr",warn.conflicts=FALSE)==FALSE) {
   install.packages("smatr",repos="http://cran.cnr.berkeley.edu/");
@@ -11,26 +11,28 @@ options(stringsAsFactors = FALSE,encoding="UTF-8")
 #----
 #setwd("../Science/RLB/ontogeny")
 
-testData<-read.xlsx("Kilbourne_Felis_silvestris.xlsx",sheetIndex = 1)
+testData<-read.xlsx("Kilbourne_Felis_silvestris.xlsx",sheet = 1)
 cor.test(testData$LN.length.,testData$LN.circumf.,method="spearman")
 test<-sma(LN.circumf.~LN.length.,data=testData)
 summary(test)
 plot(test)
 
-fileNames<-c("Rerun_Mammuthus.xlsx")
+fileNames<-c("SJCStockoceros.xlsx")
 #fileNames<-c("SmilodonRMA.xlsx","AtroxRMA.xlsx")
-#dataNames<-c("Length","Circumference")
-dataNames<-c("CIRCUMFERENCE","DIAPHYSIS")
-boneNames<-c("TIBIA","HUMERUS","ULNA")
-par(mfrow=c(1,3)) #change as necessary
+dataNames<-c("Circumference","Length")
+#dataNames<-c("CIRCUMFERENCE","LENGTH")
+boneNames<-c("Humeri","RadUlna","Femur","Tibia")
+par(mfrow=c(2,2)) #plot output -- adjust as appropriate
 
 #
 write("",file="results.txt")
 #
 write(paste("RMA results,",date()),file="results.txt",append=T)
+results<-list()
 for(i in 1:length(fileNames)){
   for(j in 1:length(boneNames)){
-    data<-read.xlsx(fileNames[i],sheetName=boneNames[j])
+    sheetNumber<-which(getSheetNames(fileNames[i])==boneNames[j])
+    data<-read.xlsx(fileNames[i],sheet=sheetNumber)
     for(k in 2:length(dataNames)){
       result<-list()
       result$name<-paste(fileNames[i],boneNames[j],"X=",dataNames[1],", Y=",dataNames[k])
