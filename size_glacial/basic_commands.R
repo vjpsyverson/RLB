@@ -1,14 +1,18 @@
-require(xlsx);require(paleoTS)
+require(openxlsx);require(paleoTS)
 #general form of data processing
 #taxon<-"athene"
 #data<-read.csv(paste0("csvs/",taxon,"TMT.csv"))
-taxon<-"Corvus"
-path<-"smallbirds/"
-data<-read.xlsx(paste0(path,taxon,".xlsx"),1)[,c("PIT","AGE","LENGTH","WIDTH","DEPTH")]
+taxon<-"Neophrontops"
+path<-"vultures/"
+data<-read.xlsx(paste0(path,taxon,".xlsx"),1)[,c("AGE","Length","Area","Midshaft")]
+names(data)<-c("AGE","LENGTH","DEPTH","WIDTH")
+data$DEPTH<-data$WIDTH
+data$ROBUSTNESS<-(pi*(data$WIDTH/2)^2)/data$LENGTH
+data<-data[-which(is.na(data$WIDTH)),]
+#data$ROBUSTNESS<-(data$WIDTH*data$DEPTH)/data$LENGTH
 #data<-read.xlsx(paste0(taxon,".xlsx"),1)[,c("PIT","AGE","LENGTH","WIDTH","DEPTH")]
-data$ROBUSTNESS<-(data$WIDTH*data$DEPTH)/data$LENGTH
 #data<-subset(data,data$PIT!="AMNH")[,-1]
-data<-data[,-1]
+#data<-data[,-1]
 age.fac<-factor(data$AGE,levels=rev(levels(factor(data$AGE))))
 table(data$AGE)
 #basic stats

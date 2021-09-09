@@ -17,17 +17,18 @@ test<-sma(LN.circumf.~LN.length.,data=testData)
 summary(test)
 plot(test)
 
-fileNames<-c("SJCStockoceros.xlsx")
+fileNames<-c("SJCStockoceros_Revised.xlsx")
 #fileNames<-c("SmilodonRMA.xlsx","AtroxRMA.xlsx")
 dataNames<-c("Circumference","Length")
 #dataNames<-c("CIRCUMFERENCE","LENGTH")
-boneNames<-c("Humeri","RadUlna","Femur","Tibia")
-par(mfrow=c(2,2)) #plot output -- adjust as appropriate
+boneNames<-c("HUMERUS")
 
 #
 write("",file="results.txt")
 #
 write(paste("RMA results,",date()),file="results.txt",append=T)
+par(mfrow=c(1,1)) #plot output -- adjust as appropriate
+
 results<-list()
 for(i in 1:length(fileNames)){
   for(j in 1:length(boneNames)){
