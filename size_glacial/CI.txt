@@ -1,0 +1,2941 @@
+95% Highest density regions for Date1
+$`93.9%`
+[1] 42812 48129
+
+
+95% Highest density regions for Date2
+$`93%`
+[1] 41995 51673
+
+
+95% Highest density regions for Date3
+$`94.5%`
+[1] 45300 54999
+
+
+95% Highest density regions for Date4
+$`92.9%`
+[1] 43217 50763
+
+
+95% Highest density regions for Date5
+$`94.4%`
+[1] 43178 47328
+
+
+95% Highest density regions for Date6
+$`0.5%`
+[1] 43476 43561
+
+$`94%`
+[1] 43837 47702
+
+
+95% Highest density regions for Date7
+$`93.2%`
+[1] 44551 49091
+
+
+95% Highest density regions for Date8
+$`93.3%`
+[1] 44508 48978
+
+
+95% Highest density regions for Date9
+$`93.1%`
+[1] 43383 50699
+
+
+95% Highest density regions for Date10
+$`73.2%`
+[1] 45708 52509
+
+$`21.5%`
+[1] 53838 54900
+
+
+95% Highest density regions for Date11
+$`94.5%`
+[1] 37552 40883
+
+
+95% Highest density regions for Date12
+$`94.5%`
+[1] 37628 41354
+
+
+95% Highest density regions for Date13
+$`94.4%`
+[1] 36552 39455
+
+
+95% Highest density regions for Date14
+$`94.6%`
+[1] 38902 41278
+
+
+95% Highest density regions for Date15
+$`94.6%`
+[1] 38063 41326
+
+
+95% Highest density regions for Date16
+$`94.2%`
+[1] 39802 42216
+
+
+95% Highest density regions for Date17
+$`94.6%`
+[1] 39050 41304
+
+
+95% Highest density regions for Date18
+$`3.6%`
+[1] 32307 32574
+
+$`91.2%`
+[1] 32801 34286
+
+
+95% Highest density regions for Date19
+$`94.4%`
+[1] 41764 44173
+
+
+95% Highest density regions for Date20
+$`94.5%`
+[1] 34433 36133
+
+
+95% Highest density regions for Date21
+$`94.7%`
+[1] 37370 39209
+
+
+95% Highest density regions for Date22
+$`94.7%`
+[1] 39844 41249
+
+
+95% Highest density regions for Date23
+$`94.7%`
+[1] 39908 41282
+
+
+95% Highest density regions for Date24
+$`94.7%`
+[1] 41387 42372
+
+
+95% Highest density regions for Date25
+$`94.5%`
+[1] 41335 42712
+
+
+95% Highest density regions for Date26
+$`94.6%`
+[1] 39492 41051
+
+
+95% Highest density regions for Date27
+$`94.7%`
+[1] 39952 41328
+
+
+95% Highest density regions for Date28
+$`1.4%`
+[1] 2969 2975
+
+$`40%`
+[1] 2997 3081
+
+$`53.6%`
+[1] 3090 3155
+
+
+95% Highest density regions for Date29
+$`22.2%`
+[1] 5295 5322
+
+$`73%`
+[1] 5419 5437
+
+
+95% Highest density regions for Date30
+$`72.4%`
+[1] 6444 6563
+
+$`21.1%`
+[1] 6588 6604
+
+$`1.4%`
+[1] 6620 6620
+
+
+95% Highest density regions for Date31
+$`16.7%`
+[1] 8016 8059
+
+$`78.4%`
+[1] 8062 8169
+
+
+95% Highest density regions for Date32
+$`94.5%`
+[1] 30752 31165
+
+
+95% Highest density regions for Date33
+$`2.7%`
+[1] 30464 30562
+
+$`92.3%`
+[1] 30726 31152
+
+
+95% Highest density regions for Date34
+$`43.7%`
+[1]  959 1011
+
+$`51.8%`
+[1] 1013 1057
+
+
+95% Highest density regions for Date35
+$`3%`
+[1] 2183 2194
+
+$`10.1%`
+[1] 2206 2227
+
+$`81.9%`
+[1] 2307 2350
+
+
+95% Highest density regions for Date36
+$`1.1%`
+[1] 2184 2191
+
+$`2.7%`
+[1] 2211 2224
+
+$`91.2%`
+[1] 2309 2361
+
+
+95% Highest density regions for Date37
+$`10.7%`
+[1] 2114 2159
+
+$`5.4%`
+[1] 2168 2178
+
+$`78.9%`
+[1] 2235 2300
+
+
+95% Highest density regions for Date38
+$`24.9%`
+[1] 2120 2179
+
+$`70.1%`
+[1] 2233 2302
+
+
+95% Highest density regions for Date39
+$`67.2%`
+[1] 46110 52711
+
+$`27.3%`
+[1] 53509 55000
+
+
+95% Highest density regions for Date40
+$`44.3%`
+[1] 2363 2540
+
+$`4.3%`
+[1] 2561 2571
+
+$`14.2%`
+[1] 2583 2616
+
+$`32.3%`
+[1] 2633 2699
+
+
+95% Highest density regions for Date41
+$`57%`
+[1] 2354 2496
+
+$`9.9%`
+[1] 2597 2612
+
+$`28.2%`
+[1] 2643 2687
+
+
+95% Highest density regions for Date42
+$`3.4%`
+[1]  0 13
+
+$`1.7%`
+[1] 16 21
+
+$`23.7%`
+[1] 148 190
+
+$`20.9%`
+[1] 194 216
+
+$`45.5%`
+[1] 267 299
+
+
+95% Highest density regions for Date43
+$`27.9%`
+[1] 2056 2180
+
+$`2.7%`
+[1] 2198 2203
+
+$`64.4%`
+[1] 2230 2303
+
+
+95% Highest density regions for Date44
+$`8.1%`
+[1] 310 335
+
+$`1.3%`
+[1] 337 339
+
+$`85.7%`
+[1] 349 454
+
+
+95% Highest density regions for Date45
+$`22%`
+[1] 532 560
+
+$`73%`
+[1] 593 629
+
+
+95% Highest density regions for Date46
+$`12.1%`
+[1] 295 329
+
+$`82.9%`
+[1] 362 430
+
+
+95% Highest density regions for Date47
+$`12.2%`
+[1] 308 342
+
+$`82.9%`
+[1] 347 458
+
+
+95% Highest density regions for Date48
+$`9.6%`
+[1] 304 332
+
+$`85.4%`
+[1] 356 443
+
+
+95% Highest density regions for Date49
+$`31.8%`
+[1] 559 593
+
+$`63.3%`
+[1] 628 662
+
+
+95% Highest density regions for Date50
+$`26.2%`
+[1] 530 558
+
+$`68.8%`
+[1] 594 627
+
+
+95% Highest density regions for Date51
+$`73.3%`
+[1] 2780 2880
+
+$`21.7%`
+[1] 2905 2921
+
+
+95% Highest density regions for Date52
+$`89.6%`
+[1] 512 539
+
+
+95% Highest density regions for Date53
+$`87.1%`
+[1] 652 674
+
+
+95% Highest density regions for Date54
+$`48%`
+[1] 316 399
+
+$`1.7%`
+[1] 406 407
+
+$`45.3%`
+[1] 423 469
+
+
+95% Highest density regions for Date55
+$`31.3%`
+[1] 526 554
+
+$`63.9%`
+[1] 607 622
+
+
+95% Highest density regions for Date56
+$`89.9%`
+[1] 522 552
+
+
+95% Highest density regions for Date57
+$`88.9%`
+[1] 480 511
+
+
+95% Highest density regions for Date58
+$`20.2%`
+[1] 537 557
+
+$`75.2%`
+[1] 595 626
+
+
+95% Highest density regions for Date59
+$`46.7%`
+[1]   8 151
+
+$`2.2%`
+[1] 173 177
+
+$`9%`
+[1] 184 202
+
+$`37.3%`
+[1] 207 278
+
+
+95% Highest density regions for Date60
+$`8%`
+[1]  0 30
+
+$`9.2%`
+[1] 141 157
+
+$`48.5%`
+[1] 162 223
+
+$`29.4%`
+[1] 259 289
+
+
+95% Highest density regions for Date61
+$`37.7%`
+[1] 10579 10811
+
+$`7.7%`
+[1] 10848 10870
+
+$`24.1%`
+[1] 10954 11013
+
+$`25.5%`
+[1] 11022 11068
+
+
+95% Highest density regions for Date62
+$`93%`
+[1] 11152 11247
+
+
+95% Highest density regions for Date63
+$`1.7%`
+[1]  0 11
+
+$`0.2%`
+[1] 19 19
+
+$`12%`
+[1] 150 189
+
+$`9.5%`
+[1] 196 212
+
+$`71.8%`
+[1] 268 312
+
+
+95% Highest density regions for Date64
+$`94.1%`
+[1] 39842 42399
+
+
+95% Highest density regions for Date65
+$`93.6%`
+[1] 40826 45253
+
+
+95% Highest density regions for Date66
+$`92.3%`
+[1] 38236 51700
+
+
+95% Highest density regions for Date67
+$`94.6%`
+[1] 28684 29788
+
+
+95% Highest density regions for Date68
+$`94.8%`
+[1] 29677 30946
+
+
+95% Highest density regions for Date69
+$`94.5%`
+[1] 28988 31134
+
+
+95% Highest density regions for Date70
+$`93.5%`
+[1] 41323 46374
+
+
+95% Highest density regions for Date71
+$`92.8%`
+[1] 37318 46440
+
+
+95% Highest density regions for Date72
+$`93.4%`
+[1] 35450 43193
+
+
+95% Highest density regions for Date73
+$`94.2%`
+[1] 41029 44375
+
+
+95% Highest density regions for Date74
+$`93.9%`
+[1] 40678 44871
+
+
+95% Highest density regions for Date75
+$`94.7%`
+[1] 10382 11222
+
+
+95% Highest density regions for Date76
+$`0.4%`
+[1] 12104 12119
+
+$`2%`
+[1] 12169 12241
+
+$`2%`
+[1] 12248 12312
+
+$`2.8%`
+[1] 12321 12397
+
+$`87.6%`
+[1] 12429 13079
+
+
+95% Highest density regions for Date77
+$`1.7%`
+[1]  0 11
+
+$`0.2%`
+[1] 19 19
+
+$`12%`
+[1] 150 189
+
+$`9.5%`
+[1] 196 212
+
+$`71.8%`
+[1] 268 312
+
+
+95% Highest density regions for Date78
+$`1.3%`
+[1] 11834 11854
+
+$`41.8%`
+[1] 11877 12207
+
+$`12.1%`
+[1] 12217 12278
+
+$`9.5%`
+[1] 12291 12333
+
+$`30.2%`
+[1] 12343 12468
+
+
+95% Highest density regions for Date79
+$`7.7%`
+[1] 1128 1160
+
+$`87.4%`
+[1] 1176 1285
+
+
+95% Highest density regions for Date80
+$`46.7%`
+[1] 315 411
+
+$`44.1%`
+[1] 422 483
+
+$`4.4%`
+[1] 485 490
+
+
+95% Highest density regions for Date81
+$`1.2%`
+[1] 10877 10942
+
+$`93.7%`
+[1] 11073 12473
+
+
+95% Highest density regions for Date82
+$`0.2%`
+[1] 10825 10836
+
+$`1.3%`
+[1] 10874 10946
+
+$`78.7%`
+[1] 11071 12337
+
+$`14.7%`
+[1] 12341 12470
+
+
+95% Highest density regions for Date83
+$`67.1%`
+[1] 11247 12108
+
+$`9%`
+[1] 12112 12177
+
+$`1.1%`
+[1] 12183 12190
+
+$`2.8%`
+[1] 12234 12253
+
+$`2.7%`
+[1] 12306 12324
+
+$`3.9%`
+[1] 12355 12381
+
+$`8.2%`
+[1] 12388 12444
+
+
+95% Highest density regions for Date84
+$`55.5%`
+[1] 13499 13819
+
+$`14.9%`
+[1] 13821 13860
+
+$`24.6%`
+[1] 13937 14001
+
+
+95% Highest density regions for Date85
+$`91.8%`
+[1] 37315 47715
+
+
+95% Highest density regions for Date86
+$`93.5%`
+[1] 41062 46066
+
+
+95% Highest density regions for Date87
+$`0.9%`
+[1] 11284 11293
+
+$`71.5%`
+[1] 11307 11654
+
+$`22.7%`
+[1] 11661 11736
+
+
+95% Highest density regions for Date88
+$`93.2%`
+[1] 34583 42056
+
+
+95% Highest density regions for Date89
+$`4.1%`
+[1] 10775 10974
+
+$`1.2%`
+[1] 10996 11048
+
+$`87.2%`
+[1] 11058 12625
+
+$`2.2%`
+[1] 12640 12668
+
+
+95% Highest density regions for Date90
+$`91.8%`
+[1] 10194 13860
+
+$`2.4%`
+[1] 13937 13997
+
+
+95% Highest density regions for Date91
+$`0.8%`
+[1] 11281 11295
+
+$`94.2%`
+[1] 11306 11827
+
+
+95% Highest density regions for Date92
+$`0.7%`
+[1] 12101 12159
+
+$`3.3%`
+[1] 12161 12401
+
+$`86.9%`
+[1] 12426 13607
+
+$`1.2%`
+[1] 13638 13646
+
+$`2.5%`
+[1] 13715 13733
+
+
+95% Highest density regions for Date93
+$`92.8%`
+[1] 40116 45587
+
+
+95% Highest density regions for Date94
+$`93.7%`
+[1] 34047 42144
+
+
+95% Highest density regions for Date95
+$`93.8%`
+[1] 43254 49823
+
+
+95% Highest density regions for Date96
+$`89.5%`
+[1] 505 530
+
+
+95% Highest density regions for Date97
+$`24.7%`
+[1] 321 377
+
+$`0.8%`
+[1] 388 388
+
+$`62.2%`
+[1] 427 482
+
+$`7.4%`
+[1] 485 490
+
+
+95% Highest density regions for Date98
+$`12.1%`
+[1] 293 319
+
+$`6.9%`
+[1] 379 385
+
+$`76.2%`
+[1] 391 425
+
+
+95% Highest density regions for Date99
+$`2.1%`
+[1] 157 163
+
+$`21.6%`
+[1] 288 315
+
+$`16.1%`
+[1] 400 405
+
+$`3.5%`
+[1] 409 409
+
+$`52%`
+[1] 411 421
+
+
+95% Highest density regions for Date100
+$`90%`
+[1] 498 527
+
+
+95% Highest density regions for Date101
+$`90.3%`
+[1] 494 524
+
+
+95% Highest density regions for Date102
+$`9.6%`
+[1] 295 320
+
+$`85.5%`
+[1] 378 426
+
+
+95% Highest density regions for Date103
+$`93.1%`
+[1] 676 731
+
+
+95% Highest density regions for Date104
+$`90.3%`
+[1] 499 530
+
+
+95% Highest density regions for Date105
+$`10.2%`
+[1] 302 328
+
+$`84.9%`
+[1] 371 429
+
+
+95% Highest density regions for Date106
+$`0.8%`
+[1] 159 161
+
+$`16.4%`
+[1] 290 316
+
+$`77.9%`
+[1] 397 423
+
+
+95% Highest density regions for Date107
+$`1.7%`
+[1] 0 8
+
+$`6.3%`
+[1] 152 172
+
+$`5.7%`
+[1] 177 185
+
+$`7.9%`
+[1] 200 207
+
+$`73.4%`
+[1] 277 309
+
+
+95% Highest density regions for Date108
+$`8.2%`
+[1]  0 39
+
+$`14%`
+[1]  71 114
+
+$`8.6%`
+[1] 138 154
+
+$`40.3%`
+[1] 168 227
+
+$`23.9%`
+[1] 254 283
+
+
+95% Highest density regions for Date109
+$`8.5%`
+[1]  0 23
+
+$`54.8%`
+[1] 145 218
+
+$`32%`
+[1] 265 291
+
+
+95% Highest density regions for Date110
+$`7.3%`
+[1]  0 43
+
+$`16.2%`
+[1]  60 117
+
+$`8.8%`
+[1] 135 157
+
+$`36.5%`
+[1] 163 229
+
+$`1.8%`
+[1] 244 246
+
+$`24.3%`
+[1] 249 288
+
+
+95% Highest density regions for Date111
+$`2.1%`
+[1]  0 12
+
+$`0.4%`
+[1] 19 20
+
+$`14.9%`
+[1] 149 189
+
+$`11.3%`
+[1] 196 213
+
+$`66.4%`
+[1] 267 310
+
+
+95% Highest density regions for Date112
+$`7.3%`
+[1]  0 43
+
+$`16.2%`
+[1]  60 117
+
+$`8.8%`
+[1] 135 157
+
+$`36.5%`
+[1] 163 229
+
+$`1.8%`
+[1] 244 246
+
+$`24.3%`
+[1] 249 288
+
+
+95% Highest density regions for Date113
+$`16.2%`
+[1]  975 1036
+
+$`50.4%`
+[1] 1047 1133
+
+$`12.9%`
+[1] 1136 1152
+
+$`15.6%`
+[1] 1159 1175
+
+
+95% Highest density regions for Date114
+$`9.4%`
+[1] 301 335
+
+$`85.7%`
+[1] 350 453
+
+
+95% Highest density regions for Date115
+$`2.8%`
+[1]  0 10
+
+$`16.1%`
+[1] 151 187
+
+$`10.3%`
+[1] 198 209
+
+$`65.9%`
+[1] 270 305
+
+
+95% Highest density regions for Date116
+$`8.5%`
+[1]  0 23
+
+$`54.8%`
+[1] 145 218
+
+$`32%`
+[1] 265 291
+
+
+95% Highest density regions for Date117
+$`93.7%`
+[1] 312 462
+
+$`1.6%`
+[1] 466 467
+
+
+95% Highest density regions for Date118
+$`7.2%`
+[1]  0 23
+
+$`46.3%`
+[1] 145 218
+
+$`41.5%`
+[1] 265 301
+
+
+95% Highest density regions for Date119
+$`9%`
+[1]  0 24
+
+$`56.7%`
+[1] 144 219
+
+$`29.4%`
+[1] 264 290
+
+
+95% Highest density regions for Date120
+$`8%`
+[1]  0 30
+
+$`9.2%`
+[1] 141 157
+
+$`48.5%`
+[1] 162 223
+
+$`29.4%`
+[1] 259 289
+
+
+95% Highest density regions for Date121
+$`7.6%`
+[1]  0 27
+
+$`50.8%`
+[1] 142 221
+
+$`36.7%`
+[1] 261 298
+
+
+95% Highest density regions for Date122
+$`8.7%`
+[1]  1 44
+
+$`20%`
+[1]  59 117
+
+$`10.3%`
+[1] 129 153
+
+$`30.6%`
+[1] 169 230
+
+$`25.5%`
+[1] 241 282
+
+
+95% Highest density regions for Date123
+$`5.5%`
+[1]  0 33
+
+$`1.3%`
+[1] 74 77
+
+$`0.3%`
+[1] 86 86
+
+$`1.5%`
+[1] 108 111
+
+$`9.4%`
+[1] 140 157
+
+$`47.7%`
+[1] 163 224
+
+$`29.4%`
+[1] 256 288
+
+
+95% Highest density regions for Date124
+$`5.9%`
+[1]  0 34
+
+$`1.9%`
+[1] 72 80
+
+$`10.5%`
+[1]  82 113
+
+$`9.4%`
+[1] 139 155
+
+$`43%`
+[1] 167 225
+
+$`24.5%`
+[1] 255 284
+
+
+95% Highest density regions for Date125
+$`3.4%`
+[1]  0 13
+
+$`1.7%`
+[1] 16 21
+
+$`23.7%`
+[1] 148 190
+
+$`20.9%`
+[1] 194 216
+
+$`45.5%`
+[1] 267 299
+
+
+95% Highest density regions for Date126
+$`9%`
+[1]  0 24
+
+$`56.7%`
+[1] 144 219
+
+$`29.4%`
+[1] 264 290
+
+
+95% Highest density regions for Date127
+$`9%`
+[1]  0 24
+
+$`56.7%`
+[1] 144 219
+
+$`29.4%`
+[1] 264 290
+
+
+95% Highest density regions for Date128
+$`3.4%`
+[1]  0 13
+
+$`1.7%`
+[1] 16 21
+
+$`23.7%`
+[1] 148 190
+
+$`20.9%`
+[1] 194 216
+
+$`45.5%`
+[1] 267 299
+
+
+95% Highest density regions for Date129
+$`5.5%`
+[1]  0 33
+
+$`1.3%`
+[1] 74 77
+
+$`0.3%`
+[1] 86 86
+
+$`1.5%`
+[1] 108 111
+
+$`9.4%`
+[1] 140 157
+
+$`47.7%`
+[1] 163 224
+
+$`29.4%`
+[1] 256 288
+
+
+95% Highest density regions for Date130
+$`11.9%`
+[1] 156 166
+
+$`83.2%`
+[1] 285 309
+
+
+95% Highest density regions for Date131
+$`8.5%`
+[1] 333 353
+
+$`86.6%`
+[1] 446 499
+
+
+95% Highest density regions for Date132
+$`37.9%`
+[1]  957 1005
+
+$`57.3%`
+[1] 1022 1056
+
+
+95% Highest density regions for Date133
+$`67%`
+[1] 45877 53022
+
+$`27.3%`
+[1] 53118 55000
+
+
+95% Highest density regions for Date134
+$`69.4%`
+[1] 45274 52846
+
+$`24.7%`
+[1] 53325 55000
+
+
+95% Highest density regions for Date135
+$`12.6%`
+[1] 291 332
+
+$`82.4%`
+[1] 357 442
+
+
+95% Highest density regions for Date136
+$`1.7%`
+[1] 0 8
+
+$`6.3%`
+[1] 152 172
+
+$`5.7%`
+[1] 177 185
+
+$`7.9%`
+[1] 200 207
+
+$`73.4%`
+[1] 277 309
+
+
+95% Highest density regions for Date137
+$`89.4%`
+[1] 510 537
+
+
+95% Highest density regions for Date138
+$`22.6%`
+[1] 671 696
+
+$`72.5%`
+[1] 704 722
+
+
+95% Highest density regions for Date139
+$`94.7%`
+[1] 15278 15590
+
+
+95% Highest density regions for Date140
+$`76.7%`
+[1] 10192 10430
+
+$`18.4%`
+[1] 10463 10487
+
+
+95% Highest density regions for Date141
+$`2.5%`
+[1] 482 486
+
+$`92.6%`
+[1] 490 514
+
+
+95% Highest density regions for Date142
+$`1.6%`
+[1] 10516 10534
+
+$`93.4%`
+[1] 10560 10762
+
+
+95% Highest density regions for Date143
+$`94.7%`
+[1] 31955 33106
+
+
+95% Highest density regions for Date144
+$`93.9%`
+[1] 1070 1167
+
+$`1.2%`
+[1] 1175 1175
+
+
+95% Highest density regions for Date145
+$`92.8%`
+[1] 661 729
+
+
+95% Highest density regions for Date146
+$`93.6%`
+[1] 29714 35408
+
+
+95% Highest density regions for Date147
+$`93.7%`
+[1] 29143 35630
+
+
+95% Highest density regions for Date148
+$`28.2%`
+[1] 2740 2784
+
+$`66.8%`
+[1] 2821 2844
+
+
+95% Highest density regions for Date149
+$`89.9%`
+[1] 2728 2777
+
+
+95% Highest density regions for Date150
+$`17.2%`
+[1] 2517 2587
+
+$`0.4%`
+[1] 2589 2589
+
+$`10.2%`
+[1] 2615 2634
+
+$`67.2%`
+[1] 2699 2749
+
+
+95% Highest density regions for Date151
+$`3.3%`
+[1] 1077 1095
+
+$`12.6%`
+[1] 1121 1162
+
+$`9.7%`
+[1] 1175 1194
+
+$`69.6%`
+[1] 1197 1277
+
+
+95% Highest density regions for Date152
+$`46.6%`
+[1] 3393 3493
+
+$`4.6%`
+[1] 3505 3508
+
+$`34%`
+[1] 3531 3551
+
+$`9.8%`
+[1] 3553 3557
+
+
+95% Highest density regions for Date153
+$`27.4%`
+[1] 518 556
+
+$`67.8%`
+[1] 597 624
+
+
+95% Highest density regions for Date154
+$`21%`
+[1] 1277 1315
+
+$`74.2%`
+[1] 1322 1345
+
+
+95% Highest density regions for Date155
+$`26%`
+[1] 654 695
+
+$`69%`
+[1] 704 722
+
+
+95% Highest density regions for Date156
+$`0.1%`
+[1] 2218 2219
+
+$`7.7%`
+[1] 2315 2370
+
+$`48.9%`
+[1] 2385 2414
+
+$`38.3%`
+[1] 2418 2424
+
+
+95% Highest density regions for Date157
+$`91%`
+[1] 2713 2756
+
+
+95% Highest density regions for Date158
+$`5.5%`
+[1] 2182 2197
+
+$`21.2%`
+[1] 2199 2228
+
+$`68.6%`
+[1] 2306 2343
+
+
+95% Highest density regions for Date159
+$`32.6%`
+[1] 925 975
+
+$`10.7%`
+[1] 985 991
+
+$`51.7%`
+[1] 1032 1051
+
+
+95% Highest density regions for Date160
+$`4.7%`
+[1] 1004 1022
+
+$`66.8%`
+[1] 1057 1129
+
+$`23.6%`
+[1] 1161 1175
+
+
+95% Highest density regions for Date161
+$`93.5%`
+[1] 7942 8015
+
+
+95% Highest density regions for Date162
+$`48.6%`
+[1] 9730 9960
+
+$`9.2%`
+[1]  9990 10011
+
+$`6.3%`
+[1] 10025 10038
+
+$`30.9%`
+[1] 10064 10122
+
+
+95% Highest density regions for Date163
+$`87.8%`
+[1] 2347 2489
+
+$`3.6%`
+[1] 2606 2608
+
+$`3.7%`
+[1] 2661 2663
+
+
+95% Highest density regions for Date164
+$`1.8%`
+[1] 3183 3191
+
+$`93.2%`
+[1] 3209 3357
+
+
+95% Highest density regions for Date165
+$`93.9%`
+[1] 2758 2850
+
+
+95% Highest density regions for Date166
+$`94.1%`
+[1]  957 1059
+
+
+95% Highest density regions for Date167
+$`74.9%`
+[1] 2344 2469
+
+$`20.1%`
+[1] 2476 2488
+
+
+95% Highest density regions for Date168
+$`1.7%`
+[1] 2184 2190
+
+$`3.9%`
+[1] 2213 2224
+
+$`89.4%`
+[1] 2310 2353
+
+
+95% Highest density regions for Date169
+$`91.4%`
+[1] 9487 9540
+
+
+95% Highest density regions for Date170
+$`91.2%`
+[1] 505 542
+
+
+95% Highest density regions for Date171
+$`4.9%`
+[1]  0 33
+
+$`1.3%`
+[1] 73 77
+
+$`0.9%`
+[1] 85 87
+
+$`1.3%`
+[1] 108 111
+
+$`53.1%`
+[1] 140 224
+
+$`33.6%`
+[1] 256 294
+
+
+95% Highest density regions for Date172
+$`13.8%`
+[1] 531 562
+
+$`81.5%`
+[1] 589 641
+
+
+95% Highest density regions for Date173
+$`27.2%`
+[1] 527 556
+
+$`67.9%`
+[1] 597 624
+
+
+95% Highest density regions for Date174
+$`6.3%`
+[1] 1001 1025
+
+$`88.8%`
+[1] 1055 1175
+
+
+95% Highest density regions for Date175
+$`51.3%`
+[1] 794 874
+
+$`9.8%`
+[1] 880 889
+
+$`34%`
+[1] 897 927
+
+
+95% Highest density regions for Date176
+$`24.5%`
+[1] 319 380
+
+$`6.9%`
+[1] 383 392
+
+$`63.8%`
+[1] 426 495
+
+
+95% Highest density regions for Date177
+$`24.5%`
+[1] 319 380
+
+$`6.9%`
+[1] 383 392
+
+$`63.8%`
+[1] 426 495
+
+
+95% Highest density regions for Date178
+$`1.4%`
+[1] 1549 1553
+
+$`1.1%`
+[1] 1559 1562
+
+$`92.6%`
+[1] 1568 1704
+
+
+95% Highest density regions for Date179
+$`91.4%`
+[1] 502 540
+
+
+95% Highest density regions for Date180
+$`79.3%`
+[1] 12476 12624
+
+$`15.8%`
+[1] 12645 12661
+
+
+95% Highest density regions for Date181
+$`93%`
+[1] 685 730
+
+
+95% Highest density regions for Date182
+$`2.1%`
+[1] 575 577
+
+$`93%`
+[1] 652 674
+
+
+95% Highest density regions for Date183
+$`94%`
+[1] 45855 50226
+
+
+95% Highest density regions for Date184
+$`2.9%`
+[1]  0 12
+
+$`0.8%`
+[1] 18 20
+
+$`21%`
+[1] 149 189
+
+$`15.8%`
+[1] 195 213
+
+$`54.5%`
+[1] 267 302
+
+
+95% Highest density regions for Date185
+$`36.7%`
+[1] 3002 3083
+
+$`58.3%`
+[1] 3088 3159
+
+
+95% Highest density regions for Date186
+$`89.6%`
+[1] 508 535
+
+
+95% Highest density regions for Date187
+$`76.1%`
+[1] 2150 2269
+
+$`19%`
+[1] 2292 2312
+
+
+95% Highest density regions for Date188
+$`2.1%`
+[1] 156 165
+
+$`18.4%`
+[1] 285 318
+
+$`0.9%`
+[1] 381 381
+
+$`0.9%`
+[1] 383 383
+
+$`72.7%`
+[1] 392 424
+
+
+95% Highest density regions for Date189
+$`12.5%`
+[1] 292 328
+
+$`1.1%`
+[1] 364 365
+
+$`81.5%`
+[1] 368 429
+
+
+95% Highest density regions for Date190
+$`55.2%`
+[1] 1530 1589
+
+$`12.3%`
+[1] 1595 1599
+
+$`27.5%`
+[1] 1678 1685
+
+
+95% Highest density regions for Date191
+$`90.5%`
+[1] 469 515
+
+
+95% Highest density regions for Date192
+$`88.9%`
+[1] 498 522
+
+
+95% Highest density regions for Date193
+$`50.1%`
+[1] 2158 2240
+
+$`2.2%`
+[1] 2242 2243
+
+$`42.7%`
+[1] 2301 2336
+
+
+95% Highest density regions for Date194
+$`84.6%`
+[1] 661 681
+
+
+95% Highest density regions for Date195
+$`55.8%`
+[1] 2349 2438
+
+$`36.4%`
+[1] 2446 2464
+
+$`2.8%`
+[1] 2484 2484
+
+
+95% Highest density regions for Date196
+$`5.5%`
+[1] 2182 2197
+
+$`21.2%`
+[1] 2199 2228
+
+$`68.6%`
+[1] 2306 2343
+
+
+95% Highest density regions for Date197
+$`8.8%`
+[1] 156 165
+
+$`86.4%`
+[1] 285 310
+
+
+95% Highest density regions for Date198
+$`89.2%`
+[1] 475 507
+
+
+95% Highest density regions for Date199
+$`0.7%`
+[1] 0 3
+
+$`4.4%`
+[1] 154 169
+
+$`50.9%`
+[1] 282 315
+
+$`3.3%`
+[1] 403 403
+
+$`35.9%`
+[1] 411 420
+
+
+95% Highest density regions for Date200
+$`89.5%`
+[1] 504 527
+
+
+95% Highest density regions for Date201
+$`94.5%`
+[1]  9902 12760
+
+
+95% Highest density regions for Date202
+$`94.7%`
+[1] 14294 15536
+
+
+95% Highest density regions for Date203
+$`94.6%`
+[1] 15062 15597
+
+
+95% Highest density regions for Date204
+$`1.9%`
+[1] 14540 14706
+
+$`93%`
+[1] 14812 16459
+
+
+95% Highest density regions for Date205
+$`94.7%`
+[1] 15855 17369
+
+
+95% Highest density regions for Date206
+$`94.3%`
+[1] 14262 18675
+
+
+95% Highest density regions for Date207
+$`94.3%`
+[1] 17118 17427
+
+
+95% Highest density regions for Date208
+$`94.8%`
+[1] 17041 18022
+
+
+95% Highest density regions for Date209
+$`22.7%`
+[1] 17324 17558
+
+$`72.3%`
+[1] 17562 17770
+
+
+95% Highest density regions for Date210
+$`0.1%`
+[1] 12497 12535
+
+$`92.8%`
+[1] 12609 22242
+
+
+95% Highest density regions for Date211
+$`94.7%`
+[1] 17097 18147
+
+
+95% Highest density regions for Date212
+$`1.7%`
+[1] 17153 17210
+
+$`93.1%`
+[1] 17275 18207
+
+
+95% Highest density regions for Date213
+$`94.6%`
+[1] 17916 18219
+
+
+95% Highest density regions for Date214
+$`94.5%`
+[1] 22430 24078
+
+
+95% Highest density regions for Date215
+$`94.3%`
+[1] 21915 25597
+
+
+95% Highest density regions for Date216
+$`94.2%`
+[1] 22643 26421
+
+
+95% Highest density regions for Date217
+$`94.6%`
+[1] 24341 26914
+
+
+95% Highest density regions for Date218
+$`4.6%`
+[1]  0 34
+
+$`1.4%`
+[1] 72 80
+
+$`4%`
+[1]  82 101
+
+$`3.4%`
+[1] 103 113
+
+$`49.5%`
+[1] 139 225
+
+$`32.1%`
+[1] 255 297
+
+
+95% Highest density regions for Date219
+$`4.6%`
+[1] 14512 14716
+
+$`90.3%`
+[1] 14802 15702
+
+
+95% Highest density regions for Date220
+$`94.7%`
+[1] 15779 16831
+
+
+95% Highest density regions for Date221
+$`94%`
+[1] 16457 20288
+
+
+95% Highest density regions for Date222
+$`94.6%`
+[1] 23067 24529
+
+
+95% Highest density regions for Date223
+$`93.7%`
+[1] 23792 28580
+
+
+95% Highest density regions for Date224
+$`94.3%`
+[1] 29140 32945
+
+
+95% Highest density regions for Date225
+$`91.8%`
+[1] 24130 39185
+
+
+95% Highest density regions for Date226
+$`93.7%`
+[1] 28205 34418
+
+
+95% Highest density regions for Date227
+$`93.9%`
+[1] 29747 35160
+
+
+95% Highest density regions for Date228
+$`94.7%`
+[1] 32081 33537
+
+
+95% Highest density regions for Date229
+$`94%`
+[1] 31598 36040
+
+
+95% Highest density regions for Date230
+$`93.7%`
+[1] 35759 42878
+
+
+95% Highest density regions for Date231
+$`1.4%`
+[1] 5660 5697
+
+$`90%`
+[1] 5703 6315
+
+$`3.6%`
+[1] 6373 6388
+
+
+95% Highest density regions for Date232
+$`1.9%`
+[1] 9787 9843
+
+$`83%`
+[1]  9889 10297
+
+$`7.5%`
+[1] 10322 10336
+
+$`2.5%`
+[1] 10359 10363
+
+
+95% Highest density regions for Date233
+$`94.6%`
+[1] 17893 20308
+
+
+95% Highest density regions for Date234
+$`0.2%`
+[1] 14627 14675
+
+$`94%`
+[1] 14838 19507
+
+
+95% Highest density regions for Date235
+$`94.5%`
+[1] 17095 19048
+
+
+95% Highest density regions for Date236
+$`94.6%`
+[1] 18226 18919
+
+
+95% Highest density regions for Date237
+$`91.6%`
+[1] 17425 19623
+
+$`2.9%`
+[1] 19744 19780
+
+
+95% Highest density regions for Date238
+$`0.1%`
+[1] 11414 11417
+
+$`0.2%`
+[1] 11507 11524
+
+$`1%`
+[1] 11613 11679
+
+$`92.5%`
+[1] 11681 13242
+
+$`1%`
+[1] 13280 13288
+
+
+95% Highest density regions for Date239
+$`94%`
+[1] 12750 16602
+
+
+95% Highest density regions for Date240
+$`94.5%`
+[1] 27681 29840
+
+
+95% Highest density regions for Date241
+$`94.6%`
+[1] 34030 34655
+
+
+95% Highest density regions for Date242
+$`69.8%`
+[1] 8017 8788
+
+$`0.9%`
+[1] 8802 8806
+
+$`7.1%`
+[1] 8828 8866
+
+$`3.6%`
+[1] 8879 8897
+
+$`13.5%`
+[1] 8914 8980
+
+
+95% Highest density regions for Date243
+$`94%`
+[1] 24308 28599
+
+
+95% Highest density regions for Date244
+$`94.7%`
+[1] 27091 28473
+
+
+95% Highest density regions for Date245
+$`1%`
+[1] 26523 26644
+
+$`93.8%`
+[1] 26901 29175
+
+
+95% Highest density regions for Date246
+$`91.6%`
+[1] 22850 35350
+
+
+95% Highest density regions for Date247
+$`94.8%`
+[1] 30121 31022
+
+
+95% Highest density regions for Date248
+$`92.9%`
+[1] 27123 37555
+
+
+95% Highest density regions for Date249
+$`10.2%`
+[1] 7173 7202
+
+$`84.9%`
+[1] 7253 7324
+
+
+95% Highest density regions for Date250
+$`0.7%`
+[1] 12496 12535
+
+$`86.2%`
+[1] 12609 13523
+
+$`7.9%`
+[1] 13542 13590
+
+
+95% Highest density regions for Date251
+$`2%`
+[1] 13242 13279
+
+$`93%`
+[1] 13288 13786
+
+
+95% Highest density regions for Date252
+$`71.7%`
+[1] 13335 14649
+
+$`23.1%`
+[1] 14651 14844
+
+
+95% Highest density regions for Date253
+$`0.6%`
+[1] 13525 13541
+
+$`94.3%`
+[1] 13592 14152
+
+
+95% Highest density regions for Date254
+$`0.4%`
+[1] 13612 13629
+
+$`1.1%`
+[1] 13658 13703
+
+$`93.3%`
+[1] 13743 14981
+
+
+95% Highest density regions for Date255
+$`0.1%`
+[1] 30499 30522
+
+$`94.1%`
+[1] 30736 34495
+
+
+95% Highest density regions for Date256
+$`94%`
+[1] 33054 39221
+
+
+95% Highest density regions for Date257
+$`94.4%`
+[1] 36366 39287
+
+
+95% Highest density regions for Date258
+$`0.2%`
+[1] 11279 11299
+
+$`94.2%`
+[1] 11302 13795
+
+
+95% Highest density regions for Date259
+$`0.2%`
+[1] 9773 9866
+
+$`92.1%`
+[1]  9884 24061
+
+
+95% Highest density regions for Date260
+$`0.6%`
+[1] 8780 8832
+
+$`0.3%`
+[1] 8860 8886
+
+$`0.3%`
+[1] 8891 8918
+
+$`0.2%`
+[1] 8939 8956
+
+$`93.1%`
+[1]  8974 11191
+
+
+95% Highest density regions for Date261
+$`94.3%`
+[1] 16967 17331
+
+
+95% Highest density regions for Date262
+$`94.4%`
+[1] 27202 27598
+
+
+95% Highest density regions for Date263
+$`94.7%`
+[1] 28723 29844
+
+
+95% Highest density regions for Date264
+$`94.2%`
+[1] 27777 30906
+
+
+95% Highest density regions for Date265
+$`93.9%`
+[1] 27328 31146
+
+
+95% Highest density regions for Date266
+$`94.4%`
+[1] 29724 30287
+
+
+95% Highest density regions for Date267
+$`94.2%`
+[1] 29896 30181
+
+
+95% Highest density regions for Date268
+$`94.8%`
+[1] 29971 30978
+
+
+95% Highest density regions for Date269
+$`94.8%`
+[1] 29993 30985
+
+
+95% Highest density regions for Date270
+$`94.2%`
+[1] 30901 31178
+
+
+95% Highest density regions for Date271
+$`94.5%`
+[1] 31078 31563
+
+
+95% Highest density regions for Date272
+$`94.7%`
+[1] 31120 31621
+
+
+95% Highest density regions for Date273
+$`94.7%`
+[1] 31133 31614
+
+
+95% Highest density regions for Date274
+$`94.7%`
+[1] 31172 31679
+
+
+95% Highest density regions for Date275
+$`94.7%`
+[1] 31213 31745
+
+
+95% Highest density regions for Date276
+$`94.7%`
+[1] 31219 31812
+
+
+95% Highest density regions for Date277
+$`94.7%`
+[1] 31265 31817
+
+
+95% Highest density regions for Date278
+$`94.6%`
+[1] 31254 31861
+
+
+95% Highest density regions for Date279
+$`94.6%`
+[1] 31320 32070
+
+
+95% Highest density regions for Date280
+$`94.6%`
+[1] 31375 32119
+
+
+95% Highest density regions for Date281
+$`94.6%`
+[1] 31447 32153
+
+
+95% Highest density regions for Date282
+$`28.2%`
+[1] 31641 32300
+
+$`66.7%`
+[1] 32456 32848
+
+
+95% Highest density regions for Date283
+$`94.8%`
+[1] 31387 33181
+
+
+95% Highest density regions for Date284
+$`94.7%`
+[1] 31332 33250
+
+
+95% Highest density regions for Date285
+$`94.7%`
+[1] 31740 32912
+
+
+95% Highest density regions for Date286
+$`94.8%`
+[1] 31806 32970
+
+
+95% Highest density regions for Date287
+$`94.8%`
+[1] 31872 32956
+
+
+95% Highest density regions for Date288
+$`94.7%`
+[1] 31864 33046
+
+
+95% Highest density regions for Date289
+$`94.8%`
+[1] 31912 33012
+
+
+95% Highest density regions for Date290
+$`94.8%`
+[1] 31837 33112
+
+
+95% Highest density regions for Date291
+$`94.7%`
+[1] 31783 33207
+
+
+95% Highest density regions for Date292
+$`94.8%`
+[1] 31409 33797
+
+
+95% Highest density regions for Date293
+$`94.7%`
+[1] 31927 33077
+
+
+95% Highest density regions for Date294
+$`94.7%`
+[1] 32015 33074
+
+
+95% Highest density regions for Date295
+$`94.7%`
+[1] 32028 33116
+
+
+95% Highest density regions for Date296
+$`94.8%`
+[1] 31727 33798
+
+
+95% Highest density regions for Date297
+$`94.7%`
+[1] 31936 33537
+
+
+95% Highest density regions for Date298
+$`94.8%`
+[1] 31784 33874
+
+
+95% Highest density regions for Date299
+$`94.8%`
+[1] 32010 33637
+
+
+95% Highest density regions for Date300
+$`94.8%`
+[1] 32097 33600
+
+
+95% Highest density regions for Date301
+$`94.8%`
+[1] 32044 33726
+
+
+95% Highest density regions for Date302
+$`94.8%`
+[1] 32063 33710
+
+
+95% Highest density regions for Date303
+$`94%`
+[1] 31083 35652
+
+
+95% Highest density regions for Date304
+$`94.4%`
+[1] 34217 36279
+
+
+95% Highest density regions for Date305
+$`93.3%`
+[1] 31994 41923
+
+
+95% Highest density regions for Date306
+$`93.7%`
+[1] 34428 41125
+
+
+95% Highest density regions for Date307
+$`94.7%`
+[1] 40019 41586
+
+
+95% Highest density regions for Date308
+$`82.5%`
+[1] 42147 43407
+
+$`12.3%`
+[1] 43709 43788
+
+
+95% Highest density regions for Date309
+$`94.7%`
+[1] 43010 44735
+
+
+95% Highest density regions for Date310
+$`94.4%`
+[1] 43196 45761
+
+
+95% Highest density regions for Date311
+$`94.5%`
+[1] 43289 45875
+
+
+95% Highest density regions for Date312
+$`94.4%`
+[1] 44458 46776
+
+
+95% Highest density regions for Date313
+$`94.2%`
+[1] 45147 48284
+
+
+95% Highest density regions for Date314
+$`93.9%`
+[1] 44918 49024
+
+
+95% Highest density regions for Date315
+$`80.2%`
+[1] 42903 52563
+
+$`14.1%`
+[1] 53767 54762
+
+
+95% Highest density regions for Date316
+$`94.5%`
+[1] 5904 8013
+
+
+95% Highest density regions for Date317
+$`0%`
+[1] 13013 13016
+
+$`93.3%`
+[1] 13067 20370
+
+
+95% Highest density regions for Date318
+$`93.1%`
+[1] 18228 24374
+
+$`0.7%`
+[1] 24432 24462
+
+
+95% Highest density regions for Date319
+$`1.8%`
+[1] 21476 21599
+
+$`93%`
+[1] 21677 23024
+
+
+95% Highest density regions for Date320
+$`68.6%`
+[1] 22406 23443
+
+$`26.2%`
+[1] 23519 23737
+
+
+95% Highest density regions for Date321
+$`46.9%`
+[1] 23047 23461
+
+$`48.1%`
+[1] 23498 23745
+
+
+95% Highest density regions for Date322
+$`94.2%`
+[1] 22343 24767
+
+
+95% Highest density regions for Date323
+$`94.7%`
+[1] 23047 23901
+
+
+95% Highest density regions for Date324
+$`38.5%`
+[1] 23337 23647
+
+$`56.4%`
+[1] 23654 23844
+
+
+95% Highest density regions for Date325
+$`93.6%`
+[1] 20564 27737
+
+
+95% Highest density regions for Date326
+$`92.6%`
+[1] 19386 29094
+
+
+95% Highest density regions for Date327
+$`0.8%`
+[1] 23445 23517
+
+$`93.9%`
+[1] 23733 25732
+
+
+95% Highest density regions for Date328
+$`92.3%`
+[1] 19504 29997
+
+
+95% Highest density regions for Date329
+$`94.6%`
+[1] 24663 26303
+
+
+95% Highest density regions for Date330
+$`87.8%`
+[1] 19580 32340
+
+$`3.9%`
+[1] 32489 32844
+
+
+95% Highest density regions for Date331
+$`94.5%`
+[1] 26058 27719
+
+
+95% Highest density regions for Date332
+$`94.6%`
+[1] 26002 27914
+
+
+95% Highest density regions for Date333
+$`94.5%`
+[1] 27176 27689
+
+
+95% Highest density regions for Date334
+$`94.5%`
+[1] 27190 27707
+
+
+95% Highest density regions for Date335
+$`94.5%`
+[1] 27266 28537
+
+
+95% Highest density regions for Date336
+$`94%`
+[1] 25849 30351
+
+
+95% Highest density regions for Date337
+$`94.7%`
+[1] 27592 28957
+
+
+95% Highest density regions for Date338
+$`94.5%`
+[1] 27357 29564
+
+
+95% Highest density regions for Date339
+$`94.8%`
+[1] 27818 30214
+
+
+95% Highest density regions for Date340
+$`94.7%`
+[1] 28701 30226
+
+
+95% Highest density regions for Date341
+$`93.1%`
+[1] 26341 34581
+
+
+95% Highest density regions for Date342
+$`0.6%`
+[1] 30460 30565
+
+$`93.5%`
+[1] 30724 34561
+
+
+95% Highest density regions for Date343
+$`89.3%`
+[1] 31904 37864
+
+$`5%`
+[1] 37890 38056
+
+
+95% Highest density regions for Date344
+$`94.2%`
+[1] 32191 38430
+
+
+95% Highest density regions for Date345
+$`1.1%`
+[1] 32294 32559
+
+$`93%`
+[1] 32809 38770
+
+
+95% Highest density regions for Date346
+$`94.1%`
+[1] 45772 54999
+
+
+95% Highest density regions for Date347
+$`94.3%`
+[1] 39330 41737
+
+
+95% Highest density regions for Date348
+$`93.9%`
+[1] 39864 42967
+
+
+95% Highest density regions for Date349
+$`94.7%`
+[1] 39793 41173
+
+
+95% Highest density regions for Date350
+$`94.6%`
+[1] 37399 41380
+
+
+95% Highest density regions for Date351
+$`94.7%`
+[1] 39354 40384
+
+
+95% Highest density regions for Date352
+$`94.5%`
+[1] 36249 39909
+
+
+95% Highest density regions for Date353
+$`94.5%`
+[1] 39212 40524
+
+
+95% Highest density regions for Date354
+$`94.4%`
+[1] 40038 42407
+
+
+95% Highest density regions for Date355
+$`94.7%`
+[1] 39687 41235
+
+
+95% Highest density regions for Date356
+$`94.7%`
+[1] 40365 42196
+
+
+95% Highest density regions for Date357
+$`94.7%`
+[1] 40426 42211
+
+
+95% Highest density regions for Date358
+$`94.5%`
+[1] 38213 42057
+
+
+95% Highest density regions for Date359
+$`93.5%`
+[1] 39642 42742
+
+
+95% Highest density regions for Date360
+$`94.5%`
+[1] 33822 35882
+
+
+95% Highest density regions for Date361
+$`94%`
+[1] 39905 43041
+
+
+95% Highest density regions for Date362
+$`94.5%`
+[1] 36751 39490
+
+
+95% Highest density regions for Date363
+$`94.3%`
+[1] 36256 37389
+
+
+95% Highest density regions for Date364
+$`94.1%`
+[1] 43111 47757
+
+
+95% Highest density regions for Date365
+$`93.5%`
+[1] 41830 46927
+
+
+95% Highest density regions for Date366
+$`94.5%`
+[1] 38219 41194
+
+
+95% Highest density regions for Date367
+$`94.5%`
+[1] 38612 41389
+
+
+95% Highest density regions for Date368
+$`94.5%`
+[1] 37568 41539
+
+
+95% Highest density regions for Date369
+$`94.5%`
+[1] 39204 40709
+
+
+95% Highest density regions for Date370
+$`94.4%`
+[1] 39120 42278
+
+
+95% Highest density regions for Date371
+$`94.3%`
+[1] 39067 42420
+
+
+95% Highest density regions for Date372
+$`94.5%`
+[1] 38584 42179
+
+
+95% Highest density regions for Date373
+$`94.7%`
+[1] 39495 40915
+
+
+95% Highest density regions for Date374
+$`94.6%`
+[1] 37647 40536
+
+
+95% Highest density regions for Date375
+$`94.5%`
+[1] 39405 40921
+
+
+95% Highest density regions for Date376
+$`94.6%`
+[1] 39598 41651
+
+
+95% Highest density regions for Date377
+$`94.7%`
+[1] 39983 41989
+
+
+95% Highest density regions for Date378
+$`94.7%`
+[1] 39809 41870
+
+
+95% Highest density regions for Date379
+$`94.6%`
+[1] 39653 41706
+
+
+95% Highest density regions for Date380
+$`94.7%`
+[1] 39791 41857
+
+
+95% Highest density regions for Date381
+$`94.6%`
+[1] 39673 41725
+
+
+95% Highest density regions for Date382
+$`94.4%`
+[1] 35549 37376
+
+
+95% Highest density regions for Date383
+$`94.6%`
+[1] 35343 36147
+
+
+95% Highest density regions for Date384
+$`94.4%`
+[1] 38945 42268
+
+
+95% Highest density regions for Date385
+$`94.5%`
+[1] 39698 41896
+
+
+95% Highest density regions for Date386
+$`94.6%`
+[1] 40048 41237
+
+
+95% Highest density regions for Date387
+$`94.5%`
+[1] 36285 39740
+
+
+95% Highest density regions for Date388
+$`94.7%`
+[1] 37228 39052
+
+
+95% Highest density regions for Date389
+$`94.3%`
+[1] 39067 42420
+
+
+95% Highest density regions for Date390
+$`94.2%`
+[1] 39393 41857
+
+
+95% Highest density regions for Date391
+$`94.3%`
+[1] 42865 46050
+
+
+95% Highest density regions for Date392
+$`94.6%`
+[1] 42505 44364
+
+
