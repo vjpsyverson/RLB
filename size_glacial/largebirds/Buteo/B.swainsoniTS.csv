@@ -1,3 +1,4 @@
-"GRW" "URW" "Stasis" "StrictStasis"
-0.004 0.098 0.098 0.8
-0.003 0.098 0.896 0.003
+"","GRW","URW","Stasis","StrictStasis"
+"LENGTH",0.004,0.098,0.098,0.8
+"WIDTH",0.003,0.098,0.896,0.003
+"ROBUSTNESS",0.004,0.132,0.86,0.004
