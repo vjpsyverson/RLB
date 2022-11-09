@@ -1,0 +1,65 @@
+---
+title: "RLB Climate notebook"
+output: html_notebook
+---
+Load the libraries and functions.
+```{r}
+source("functions.R")
+```
+Connect to the database.
+```{r}
+PostgreSQL(max.con = 16,fetch.default.rec = 500,force.reload = FALSE)
+driver<-dbDriver("PostgreSQL");con<-dbConnect(driver,user="vsyverson",password="gymnogyps",dbname="rlb")
+test<-fetch(dbSendQuery(con,"select * from helloworld;"))
+test;rm(test)
+```
+The previous line should return the cheerful contents of the table "helloworld" from database "rlb", confirming that the connection is good. 
+Tables in the database are assembled and cleaned by the scripts in "database-cleaning.R" in this folder, not in this notebook. 
+
+---
+## 14C ages
+
+The following code pulls the 14C ages from the database, converts pit number to a factor, removes NAs, and runs rcarbon::calibrate(), returning the data formatted as (1) a list "pit.ages.cal" with age calibrations grouped by pit number and (2) a data frame "all.ages" containing calibrations for all the dates in the input table.
+```{r}
+ages<-dbGetQuery(con,"select * from c14samples;")
+ages$pit<-factor(ages$pit)
+ages$uncal14cage<-as.numeric(ages$uncal14cage);ages$uncal14cerror=as.numeric(ages$uncal14cerror)
+ages.clean<-ages
+calpits<-split(ages.clean,ages.clean$pit)
+pit.ages.cal<-lapply(calpits,calibrate.pit.ages)
+all.ages<-calibrate(x=as.numeric(ages.clean$uncal14cage),errors=as.numeric(ages.clean$uncal14cerror))
+all.ages<-calibrate.pit.ages(ages.clean)
+```
+Summarize the calibrated ages using Bayesian CKDE algorithm of Brown (2017). This is annoying because you have to call the objects by name and not index for some reason.
+
+```{r}
+pit.randomdates<-sampleDates(pit.ages.cal$`23`)
+pit.kde<-ckde(pit.randomdates,timeRange=c(100000,1000),bw=100)
+
+```
+
+---
+## Specimen data
+
+The table "species" contains all the species from RLB and associated papers with a list of the elements of each. Query it as follows:
+```{r}
+test<-dbGetQuery(con,"select * from species where 'M1'=any(Elements)")
+test;rm(test)
+```
+The table "tablenames" contains the full names for all the individual data tables, assembled automatically when the database is populated. Check names by querying it:
+```{r}
+test<-dbGetQuery(con,"SELECT * FROM tablenames WHERE tablenames LIKE '%buteo%';")
+test;rm(test)
+```
+You can call tables using these names (but unlist them first!).
+```{r}
+tables.to.get<-unlist(dbGetQuery(con,"SELECT * FROM tablenames WHERE tablenames LIKE '%astragalus%';"))
+astragalus.tables<-setNames(as.list(c(1:length(tables.to.get))),tables.to.get)
+for (i in 1:length(tables.to.get)){
+  query<-paste0("SELECT * FROM ",tables.to.get[i],";",collapse = "")
+  astragalus.tables[[i]]<-dbGetQuery(con,query)
+}
+summary(astragalus.tables)
+```
+
+

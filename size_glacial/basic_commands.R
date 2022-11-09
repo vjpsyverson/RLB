@@ -1,4 +1,4 @@
-require(openxlsx);require(paleoTS)
+source("functions.R")
 #general form of data processing
 #taxon<-"athene"
 #data<-read.csv(paste0("csvs/",taxon,"TMT.csv"))
@@ -12,7 +12,7 @@ data$ROBUSTNESS<-(pi*(data$WIDTH/2)^2)/data$LENGTH
 #data$ROBUSTNESS<-(data$WIDTH*data$DEPTH)/data$LENGTH
 #data<-read.xlsx(paste0(taxon,".xlsx"),1)[,c("PIT","AGE","LENGTH","WIDTH","DEPTH")]
 #data<-subset(data,data$PIT!="AMNH")[,-1]
-data<-data[-c(107),]
+data<-subset(data,data$AGE!=0)
 
 age.fac<-factor(data$AGE,levels=rev(levels(factor(data$AGE))))
 table(data$AGE)
@@ -37,7 +37,6 @@ for (i in 1:nvar) {
 #TS models
 pit.ages<-read.csv("pitages_Fuller2015.csv",stringsAsFactors = F)
 dataTS<-make.paleoTS(data,agelookup=F)
-#dataTS<-make.paleoTS(data,agelookup=F)
 TSfit4<-lapply(dataTS,fit4models,pool=F)
 #TSfit4.wt<-rbind(TSfit4$LENGTH$Akaike.wt,TSfit4$WIDTH$Akaike.wt,TSfit4$DEPTH$Akaike.wt,TSfit4$ROBUSTNESS$Akaike.wt);rownames(TSfit4.wt)<-names(TSfit4);colnames(TSfit4.wt)<-rownames(TSfit4$LENGTH)
 TSfit4.wt<-rbind(TSfit4$LENGTH$Akaike.wt,TSfit4$WIDTH$Akaike.wt,TSfit4$ROBUSTNESS$Akaike.wt);rownames(TSfit4.wt)<-names(TSfit4);colnames(TSfit4.wt)<-rownames(TSfit4$LENGTH)
@@ -62,7 +61,7 @@ for (j in 1:nvar){
   groups<-split(data[,j+1],age.fac)
   for (i in 1:length(levels(age.fac))) {
     x1<-unlist(groups[i]); x2<-unlist(groups[-i])
-    MWboot[i,j]<-round(wilcox.test(x1,x2)$p.value,4)
+    MWboot[i,j]<-round(wilcox.test(x1,x2)$p.value,6)
   }
 }
 for(i in 1:length(MWboot)) if(MWboot[i]<correction) MWboot[i]<-paste0(MWboot[i],"*")
@@ -94,4 +93,10 @@ points(ageRanges[,2],1:11,col="white",pch=20,cex=2)
 text(y=1:11,x=ageRanges[,2],labels=rownames(ageRanges),cex=0.8)
 write.csv(ageRanges,"ageRanges_Fuller2015_cal.csv")
 
-
+################################
+#new dates (from )
+#check pit C14 age distributions for normality
+C14ages.numeric<-C14ages
+C14ages.numeric$Uncal14CAge<-gsub(",","",C14ages.numeric$Uncal14CAge)
+C14ages.numeric$Uncal14CAge<-gsub(">","",C14ages.numeric$Uncal14CAge)
+C14ages.numeric$Uncal14CAge<-as.numeric(C14ages.numeric$Uncal14CAge)
