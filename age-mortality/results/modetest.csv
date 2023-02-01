@@ -1,5 +1,13 @@
-"","Camelops.NSpecs","Camelops.NModes","Camelops.ModeCI1","Camelops.ModeCI2","Camelops.ModeCI3","Canis.NSpecs","Canis.NModes","Canis.ModeCI1","Canis.ModeCI2","Canis.ModeCI3","Smilodon.NSpecs","Smilodon.NModes","Smilodon.ModeCI1","Smilodon.ModeCI2","Smilodon.ModeCI3"
-"Femur","73","3","(220,345)","(395,420)","(480,500)","123","2","(136.23,214)",NA,NA,"633","2","(245,400)",NA,NA
-"Humerus","63","2","(170,255)","(310,380)",NA,"323","1","(139.83,208)",NA,NA,"500","2","(240,290)","(305,366)",NA
-"Radius","60","2","(288,391)","(428,490)",NA,"325","2","(122,157)","(161,197)",NA,"206","1","(135,236)",NA,NA
-"Tibia","56","2","(265,355)","(425,481)",NA,"327","2","(132,170)","(185,230)",NA,"464","2","(200,296)",NA,NA
+"","","NSpecs","DipTest","FoldTestUnimodal","NModes","ModeCI1","ModeCI2","ModeCI3"
+"Femur","Camelops","73","0.0411 (p>0.05/n)","FALSE (p>0.05/n)","3","(220,345)","(395,420)","(480,500)"
+"Humerus","Camelops","63","0.0746 (p>0.05/n)","FALSE (p<0.05/n)","2","(170,255)","(310,380)",NA
+"Radius","Camelops","60","0.0639 (p>0.05/n)","FALSE (p>0.05/n)","2","(288,391)","(428,490)",NA
+"Tibia","Camelops","56","0.0863 (p<0.05/n)","FALSE (p>0.05/n)","2","(265,355)","(425,481)",NA
+"Femur","Smilodon","633","0.0414 (p<0.05/n)","TRUE (p>0.05/n)","2","(245,400)",NA,NA
+"Humerus","Smilodon","500","0.0684 (p<0.05/n)","FALSE (p<0.05/n)","2","(240,290)","(305,366)",NA
+"Radius","Smilodon","206","0.0752 (p<0.05/n)","TRUE (p<0.05/n)","1","(1,236)",NA,NA
+"Tibia","Smilodon","464","0.0291 (p<0.05/n)","TRUE (p<0.05/n)","2","(200,296)",NA,NA
+"femur","Canis","123","0.0345 (p>0.05/n)","FALSE (p>0.05/n)","2","(136.23,214)",NA,NA
+"humerus","Canis","323","0.0681 (p<0.05/n)","TRUE (p<0.05/n)","1","(1,208)",NA,NA
+"radius","Canis","325","0.0677 (p<0.05/n)","FALSE (p<0.05/n)","2","(122,157)","(161,197)",NA
+"tibia","Canis","327","0.0612 (p<0.05/n)","FALSE (p<0.05/n)","2","(132,170)","(185,230)",NA

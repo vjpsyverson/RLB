@@ -1,0 +1,126 @@
+```{r}
+require(openxlsx);require(diptest);require(mclust);require(LaplacesDemon);require(Rfolding)
+```
+
+Camelops tooth wear plot
+```{r}
+tooth<-openxlsx::read.xlsx("measurements/CamelopsJaws.xlsx")[,"TOOTH.WEAR"]
+dens<-density(tooth)
+#pdf(file="high res ms figures/fig4-camelops-tooth.pdf",width=3.4,height=3)
+par(mar=c(4,4,2,1),mgp=c(2,1,0),cex=0.9)
+plot(dens,ylim=c(0,max(c(hist(tooth,plot=F,breaks=c(0:18))$density),dens$y)),
+     main="Camelops tooth wear",xlab = "Tooth wear stage")
+hist(tooth,add=T,prob=T,breaks=0:18)
+lines(dens)
+#dev.off()
+```
+Camelops limb bone plots
+```{r}
+Camelops<-list()
+for (i in 1:4){
+  data<-openxlsx::read.xlsx("measurements/Camelops.xlsx",i)[,2]
+  print(length(data))
+  Camelops[[i]]<-data
+}
+names(Camelops)<-c("Humerus","Radius","Femur","Tibia")
+openxlsx::getSheetNames("measurements/Camelops.xlsx")
+Camelops<-Camelops[order(names(Camelops))]
+data<-Camelops
+#pdf(file="high res ms figures/fig5-camelops-bone.pdf",width=7,height=5.5)
+par(mfrow=c(2,2),mar=c(2,2,2,2),ask=F,mgp=c(2,1,0),cex=0.9)
+for (i in 1:4) {
+  dens<-density(data[[i]],na.rm=T)
+  plot(dens,ylim=c(0,max(c(hist(data[[i]],breaks="FD",plot=F)$density),dens$y)),
+    main=paste("Camelops",names(data)[[i]]),sub="")
+  hist(data[[i]],breaks="FD",add=T,prob=T)
+  lines(dens)
+}
+#dev.off()
+```
+Smilodon limb bone plots
+```{r}
+Smilodon<-list()
+for (i in 1:4){
+  data<-openxlsx::read.xlsx("measurements/Smilodon.xlsx",i)[,5]
+  print(length(data))
+  Smilodon[[i]]<-data}
+names(Smilodon)<-openxlsx::getSheetNames("measurements/Smilodon.xlsx")
+Smilodon<-Smilodon[order(names(Smilodon))]
+data<-Smilodon
+#pdf(file="high res ms figures/fig7-smilodon-bone.pdf",width=7,height=5.5)
+par(mfrow=c(2,2),mar=c(2,2,2,2),ask=F,mgp=c(2,1,0),cex=0.9)
+for (i in 1:4) {
+  dens<-density(data[[i]],na.rm=T)
+  plot(dens,ylim=c(0,max(c(hist(data[[i]],breaks="FD",plot=F)$density),dens$y)),
+    main=paste("Smilodon",names(data)[[i]]),sub="")
+  hist(data[[i]],breaks="FD",add=T,prob=T)
+  lines(dens)
+}
+#dev.off()
+```
+Canis limb bone plots
+```{r}
+Canis<-list()
+for (i in 1:4){
+  data<-openxlsx::read.xlsx("measurements/Canis.xlsx",i)[,2]
+  print(length(data))
+  Canis[[i]]<-data}
+names(Canis)<-openxlsx::getSheetNames("measurements/Canis.xlsx")
+Canis<-Canis[order(names(Canis))]
+data<-Canis
+#pdf(file="high res ms figures/fig6-canis-bone.pdf",width=7,height=5.5)
+par(mfrow=c(2,2),mar=c(2,2,2,2),ask=F,mgp=c(2,1,0),cex=0.9)
+for (i in 1:4) {
+  dens<-density(data[[i]],na.rm=T)
+  plot(dens,ylim=c(0,max(c(hist(data[[i]],breaks="FD",plot=F)$density),dens$y)),
+    main=paste("Canis",names(data)[[i]]),sub="")
+  hist(data[[i]],breaks="FD",add=T,prob=T)
+  lines(dens)
+}
+#dev.off()
+```
+Multimodality test results (output to results/modetest.csv)
+```{r}
+all_data<-list(Camelops,Smilodon,Canis)
+all_results<-list()
+for (k in 1:3){
+  data<-all_data[[k]]
+  results<-array(dim=c(4,7))
+  colnames(results)<-c("NSpecs","DipTest","FoldTestUnimodal","NModes","ModeCI1","ModeCI2","ModeCI3")
+  rownames(results)<-names(data)
+  for (i in 1:4){
+    test<-dip.test(data[[i]],simulate.p.value = T)
+    if(test$p.value<(0.05/12)){
+      dip<-paste0(round(test$statistic,digits = 4)," (p<0.05/n)")
+    } else {
+      dip<-paste0(round(test$statistic,digits = 4)," (p>0.05/n)")
+    }
+    test<-folding.test(data.frame(na.omit(data[[i]])))
+    if(test$pvalue<(0.05/12)){
+      fold<-paste0(test$unimodal," (p<0.05/n)")
+    } else {
+      fold<-paste0(test$unimodal," (p>0.05/n)")
+    }
+    test<-capture.output(p.interval(na.omit(data[[i]]),MM=TRUE))
+    if (length(test)>5) {
+      intoutput<-unlist(strsplit(test[[6]]," +"))
+      intoutput<-intoutput[5:length(intoutput)]
+      } else {
+      intoutput<-paste0("(",paste(unlist(strsplit(test[[2]],"+"))[2],
+                                  unlist(strsplit(test[[2]]," +"))[3],sep=","),")")
+      }
+    result<-c(length(data[[i]]),
+              dip,
+              fold,
+              length(Modes(data[[i]])$modes),
+              intoutput)
+    results[i,1:length(result)]<-result
+  }
+  all_results[[k]]<-results
+}
+write.csv(rbind(cbind(rep("Camelops",4),all_results[[1]]),
+                cbind(rep("Smilodon",4),all_results[[2]]),
+                cbind(rep("Canis",4),all_results[[3]])),
+          file="results/modetest.csv")
+```
+

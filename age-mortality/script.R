@@ -1,5 +1,11 @@
 require(openxlsx);require(diptest);require(mclust);require(LaplacesDemon)
 
+tooth<-openxlsx::read.xlsx("measurements/CamelopsJaws.xlsx")[,1]
+dens<-density(tooth)
+plot(dens,add=T,ylim=c(0,max(c(hist(tooth,plot=F)$density),dens$y)))
+hist(tooth,freq=T,add=T)
+lines(dens)
+
 Camelops<-list()
 for (i in 1:4){
 data<-openxlsx::read.xlsx("measurements/Camelops.xlsx",i)[,2]
@@ -58,7 +64,7 @@ for (i in 1:4) {
   dens<-density(data[[i]],na.rm=T)
   plot(dens,ylim=c(0,max(c(hist(data[[i]],plot=F)$density),dens$y)),
     main=paste("Smilodon",names(data)[[i]]),sub="")
-  hist(data[[i]],add=T,prob=T)
+  hist(data[[i]],add=T,freq=T)
   lines(dens)
 }
 
