@@ -1,0 +1,70 @@
+"Source","Region","Interval","Start (14C ka)","End (14C ka)","Start (cal ka)","End (cal ka)"
+"global timescale","global","MIS 4",NA,NA,71,57
+"global timescale","global","MIS 3",NA,NA,57,29
+"global timescale","global","LGM",NA,NA,29,21
+"global timescale","global","HS-1",NA,NA,21,14.69
+"global timescale","global","B-A",NA,NA,14.69,12.89
+"global timescale","global","YD",NA,NA,12.89,11.7
+"global timescale","global","Holocene",NA,NA,11.7,0
+"Heusser, 1998_(pollen, Western US)","Southern California","conifer forest",NA,NA,59,14
+"Heusser, 1998_(pollen, Western US)","Southern California","transition",NA,NA,14,10
+"Heusser, 1998_(pollen, Western US)","Southern California","oak_chaparral",NA,NA,10,0
+"Heusser, 1995_(pollen, Santa Barbara Basin))","Santa Barbara Basin","oak_chaparral",NA,NA,14.9,0
+"Heusser, 1995_(pollen, Santa Barbara Basin))","Santa Barbara Basin","pine_forest",NA,NA,20,14.9
+"Heusser, 1995_(pollen, Santa Barbara Basin))","Santa Barbara Basin","juniper_sagebrush",NA,NA,26,20
+"Heusser, 1995_(pollen, Santa Barbara Basin))","Santa Barbara Basin","juniper_pine",NA,NA,44,26
+"Heusser, 1995_(pollen, Santa Barbara Basin))","Santa Barbara Basin","juniper_oak",NA,NA,56,44
+"Heusser, 1995_(pollen, Santa Barbara Basin))","Santa Barbara Basin","pine_juniper",NA,NA,70,56
+"Heusser and Sirocko, 1997_(pollen seasonality,_Santa Barbara Basin)","Santa Barbara Basin","low",NA,NA,24,20.4
+"Heusser and Sirocko, 1997_(pollen seasonality,_Santa Barbara Basin)","Santa Barbara Basin","high",NA,NA,20.4,8.8
+"Heusser and Sirocko, 1997_(pollen seasonality,_Santa Barbara Basin)","Santa Barbara Basin","low",NA,NA,8.8,0
+"Kirby et al., 2013_(grain size, d2H,_Lake Elsinore)","Lake Elsinore","wet",NA,NA,19,15
+"Kirby et al., 2013_(grain size, d2H,_Lake Elsinore)","Lake Elsinore","mid",NA,NA,15,12.7
+"Kirby et al., 2013_(grain size, d2H,_Lake Elsinore)","Lake Elsinore","dry",NA,NA,12.7,11.6
+"Heusser et al., 2015_(pollen, Lake Elsinore)","Lake Elsinore","variable",NA,NA,32.6,27.6
+"Heusser et al., 2015_(pollen, Lake Elsinore)","Lake Elsinore","`_drought",NA,NA,27.6,25.7
+"Heusser et al., 2015_(pollen, Lake Elsinore)","Lake Elsinore","mid",NA,NA,25.7,23.3
+"Heusser et al., 2015_(pollen, Lake Elsinore)","Lake Elsinore","cold/_dry",NA,NA,23.3,19.7
+"Heusser et al., 2015_(pollen, Lake Elsinore)","Lake Elsinore","cold/_wet",NA,NA,19.7,14.4
+"Heusser et al., 2015_(pollen, Lake Elsinore)","Lake Elsinore","trans.",NA,NA,14.4,12.5
+"Heusser et al., 2015_(pollen, Lake Elsinore)","Lake Elsinore","`_modern",NA,NA,12.5,10.8
+"Feakins et al., 2019_(plant wax,_Lake Elsinore)","Lake Elsinore","hot/_dry",NA,NA,32,27.5
+"Feakins et al., 2019_(plant wax,_Lake Elsinore)","Lake Elsinore","drought",NA,NA,27.5,25.5
+"Feakins et al., 2019_(plant wax,_Lake Elsinore)","Lake Elsinore","trans.",NA,NA,25.5,20
+"Feakins et al., 2019_(plant wax,_Lake Elsinore)","Lake Elsinore","cold/_wet",NA,NA,20,14.5
+"Feakins et al., 2019_(plant wax,_Lake Elsinore)","Lake Elsinore","warming",NA,NA,14.5,12
+"Feakins et al., 2019_(plant wax,_Lake Elsinore)","Lake Elsinore","hot/_dry",NA,NA,12,9
+"Kirby et al., 2019_(grain size, d18O,_Lake Elsinore)","Lake Elsinore","dry",NA,NA,10.55,6.65
+"Kirby et al., 2019_(grain size, d18O,_Lake Elsinore)","Lake Elsinore","wet",NA,NA,6.65,2.65
+"Kirby et al., 2019_(grain size, d18O,_Lake Elsinore)","Lake Elsinore","dry",NA,NA,2.65,0.55
+"Ward et al., 2005_(ppCO2, RLB)","RLB","low",50,14.7,54,18
+"Ward et al., 2005_(ppCO2, RLB)","RLB","mid",14.7,11,18,12.9
+"Ward et al., 2005_(ppCO2, RLB)","RLB","modern",11,0,12.9,0
+"Fuller et al., 2014_(P23-1 deposition, RLB)","RLB","hiatus",8,3.5,8.9,3.8
+"Fuller et al., 2014_(P23-1 deposition, RLB)","RLB","hiatus",26.2,20.5,30.4,24.7
+"Fuller et al., 2014_(P23-1 deposition, RLB)","RLB","hiatus",18.5,16,22.5,19.3
+"Holden et al., 2017_(insect fauna, RLB)","RLB","modern",NA,NA,50,28
+"Holden et al., 2017_(insect fauna, RLB)","RLB","hiatus",NA,NA,28,16
+"Holden et al., 2017_(insect fauna, RLB)","RLB","modern",NA,NA,16,8
+"Holden et al., 2017_(insect fauna, RLB)","RLB","missing",NA,NA,8,3.5
+"Holden et al., 2017_(insect fauna, RLB)","RLB","modern",NA,NA,3.5,0
+"Fox et al., 2023_(small herbivore diet, RLB)","RLB","C3",NA,NA,55,15
+"Fox et al., 2023_(small herbivore diet, RLB)","RLB","C4",NA,NA,15,0
+"O'Keefe et al., 2023_(multiple, RLB)","RLB","HS-1",NA,NA,15.6,14.6
+"O'Keefe et al., 2023_(multiple, RLB)","RLB","megafaunal_woodland",NA,NA,14.6,13.3
+"O'Keefe et al., 2023_(multiple, RLB)","RLB","wildfires",NA,NA,13.3,12.9
+"O'Keefe et al., 2023_(multiple, RLB)","RLB","chaparral",NA,NA,12.9,0
+"This study (5 bins)","RLB","MIS 3",NA,NA,50,29
+"This study (5 bins)","RLB","LGM",NA,NA,29,20
+"This study (5 bins)","RLB","Deglacial",NA,NA,20,15
+"This study (5 bins)","RLB","Transition",NA,NA,15,11
+"This study (5 bins)","RLB","Holocene",NA,NA,11,4
+"This study (9 bins)","RLB","MIS 3 A",NA,NA,50,39.5
+"This study (9 bins)","RLB","MIS 3 B",NA,NA,39.5,29
+"This study (9 bins)","RLB","LGM A",NA,NA,29,25.5
+"This study (9 bins)","RLB","LGM B",NA,NA,25.5,20
+"This study (9 bins)","RLB","DG_A",NA,NA,20,17.5
+"This study (9 bins)","RLB","DG_B",NA,NA,17.5,15
+"This study (9 bins)","RLB","Trans._A",NA,NA,15,13.3
+"This study (9 bins)","RLB","Trans._B",NA,NA,13.3,11
+"This study (9 bins)","RLB","Holocene",NA,NA,11,4

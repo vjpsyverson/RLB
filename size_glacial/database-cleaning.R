@@ -1,72 +1,11 @@
 #scripts
-#get C14 samples data from xlsx
-fileName<-"all_C14_ages.xlsx"
-sheetNames<-getSheetNames("all_C14_ages.xlsx")
-for (i in 1:length(sheetnames)){
-  gotsheet<-as.data.frame(read.xlsx(fileName,sheet=sheetNames[i]),stringsAsFactors=F,na.string=c("<NA>","N/A","n.a.","NA","-"))
-  assign(strip(sheetNames[i]),gotsheet)
-}
-#rename and clean
-names(Holden2016)<-c("SampNo","CatNo","Pit","Taxon","Element","Material","Uncal14CAge","Uncal14CError")
-Holden2017<-cbind(Holden2017,NA)
-names(Holden2017)<-c("Taxon","CatNo","SampNo","MassC","Pit","Uncal14CAge","Uncal14CError","d13C","Cal14CAge","Cal14C-2S","Cal14C+2S","ProbWithin2S","Element")
-Holden2017$Pit<-gsub("Pit ","",Holden2017$Pit)
-Fuller2015[,2]<-paste0(Fuller2015[,1],Fuller2015[,2])
-Fuller2015<-Fuller2015[,-1]
-names(Fuller2015)<-c("CatNo","Pit","Taxon","Element","SampNo","Uncal14CAge","Uncal14CError","Accuracy","Reference")
-Fuller2020<-cbind(Fuller2020,23)
-names(Fuller2020)<-c("SampNo","CatNo","Taxon","Development","Element","Position","CollagenYield","Uncal14CAge","Uncal14CError","Cal14CAge_2SRange","Cal14C-2S","Cal14C+2S","MedianProbability","Reference","Pit")
-names.C14ages<-c("CatNo","Pit","Taxon","Element","SampNo","Uncal14CAge","Uncal14CError")
-head(Holden2016[,names.C14ages])
-#make single table
-C14ages<-data.frame(rbind(
-  Holden2016[,names.C14ages],
-  Holden2017[,names.C14ages],
-  Fuller2015[,names.C14ages],
-  Fuller2020[,names.C14ages]),stringsAsFactors = F)
-C14ages$Element[which(C14ages$Element=="-")]<-NA
-C14ages$Uncal14CAge[grep("limit",C14ages$Uncal14CAge)]<-gsub("[^0-9]", "", C14ages$Uncal14CAge[grep("limit",C14ages$Uncal14CAge)])
-C14ages$Uncal14CAge<-as.numeric(gsub(",", "", C14ages$Uncal14CAge))
-C14ages$Uncal14CError[which(C14ages$Uncal14CError=="N/A")]<-NA
-C14ages$Uncal14CError<-as.numeric(gsub(",", "", C14ages$Uncal14CError))
-C14ages<-C14ages[-unique(which(is.na(C14ages$Uncal14CAge)),which(is.na(C14ages$Uncal14CError))),]
-#send to db
-dbSendQuery(con,"drop table C14Samples;")
-dbSendQuery(con,"create table C14Samples (
-    CatNo varchar(50),
-    Pit varchar(10),
-    Taxon varchar(100),
-    Element varchar(100),
-    SampNo varchar(50),
-    Uncal14CAge integer,
-    Uncal14CError integer
-            );")
-insertBatch(con,"c14samples",C14ages)
-test<-dbGetQuery(con,"select * from c14samples limit 10;")
-test;rm(test)
-###remember to calibrate ages before using them!
-require(Bchron)
-ages<-fetch(dbSendQuery(con,"select * from c14samples;"))
-#ages<-C14ages.numeric
-#ages$Uncal14CError<-as.numeric(gsub(",","",ages$Uncal14CError))
-ages$Pit<-factor(ages$Pit)
-ages.clean<-ages[-c(which(is.na(ages$Uncal14CAge)),which(is.na(ages$Uncal14CErr))),]
-calpits<-split(ages.clean,ages.clean$Pit)
-
-pit.ages.cal<-lapply(calpits,calibrate.pit.ages)
-all.ages<-calibrate.pit.ages(ages.clean)
-sink(file="CI.txt")
-summary(all.ages)
-sink()
-file.show("CI.txt")
-
-
+source("functions.R")
 #get all bone measurements data from xlsx
-taxonList<-read.csv("taxa.csv")
+taxonList<-read.csv("/home/vsyverson/Github/RLB/size_glacial/taxa.csv")
 measurements<-vector(mode="list",nrow(taxonList))
 allColNames.ij<-vector()
 for (i in 1:nrow(taxonList)){
-  path<-paste(taxonList$Folder[i],taxonList$Genus[i],taxonList$Filename[i],sep="/")
+  path<-paste("/home/vsyverson/Github/RLB/size_glacial",taxonList$Folder[i],taxonList$Genus[i],taxonList$Filename[i],sep="/")
   sheetNames<-getSheetNames(path)
   names(measurements)[i]<-paste(taxonList$Genus[i],taxonList$Species[i],sep="_")
   if(length(sheetNames)==1){
@@ -85,7 +24,7 @@ for (i in 1:nrow(taxonList)){
 
 #rename fucking everything
 allColNames<-unique(unlist(allColNames.ij))
-usableColNames<-c("Collection","CatNo","Pit","Taxon","Element","Length","Width","Depth","ProxWidth","ProxDepth","MidWidth","MidDepth","DistWidth","DistDepth",)
+usableColNames<-c("Collection","CatNo","Pit","Taxon","Element","Length","Width","Depth","ProxWidth","ProxDepth","MidWidth","MidDepth","DistWidth","DistDepth")
 cleaned<-measurements
 #P. atrox & Smilodon astragali (4.1, 5.3): measurement names?
 i<-5;j<-3
@@ -108,11 +47,11 @@ for (i in 1:length(cleaned)){
 colnames(cleaned[[i]][[j]])[1]<-"CatNo"
 head(cleaned[[1]][[1]])
 
-allpitnames<-array();for (i in 1:length(cleaned)){for(j in 1:length(cleaned[i])){allpitnames<-c(allpitnames,cleaned[[i]][[j]]$Pit)}}
-sort(as.numeric(unique(allpitnames)))
-table(allpitnames)
-Table2<-data.frame(Pits=as.numeric(subset(names(table(allpitnames)),table(allpitnames)>10)),
-                   Counts=as.numeric(subset(table(allpitnames),table(allpitnames)>10)))
+allPitNames<-array();for (i in 1:length(cleaned)){for(j in 1:length(cleaned[i])){allPitNames<-c(allPitNames,cleaned[[i]][[j]]$Pit)}}
+sort(as.numeric(unique(allPitNames)))
+table(allPitNames)
+Table2<-data.frame(Pits=as.numeric(subset(names(table(allPitNames)),table(allPitNames)>10)),
+                   Counts=as.numeric(subset(table(allPitNames),table(allPitNames)>10)))
 Table2<-Table2[order(Table2$Pits),]
 
 testword<-"77"
@@ -185,6 +124,10 @@ for (i in 1:length(cleaned)){
 }
 dbSendQuery(con,paste("drop table tablenames;"))
 dbWriteTable(con,"tablenames",data.frame(tablenames),row.names=F)
+
+save(cleaned,file="/home/vsyverson/Github/RLB/size_glacial/2023Paleobio/measurements.RData")
+load("~/Github/RLB/size_glacial/2023Paleobio/measurements.RData")
+cleaned<-meas
 
 #put all element names into table
 SuppTable1<-data.frame(Taxa=NA,Elements=NA,Dimensions=NA,Count=NA)

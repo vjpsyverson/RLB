@@ -1,5 +1,5 @@
 ---
-title: "RLB Climate notebook"
+title: "RLB database loader"
 output: html_notebook
 ---
 Load the libraries and functions.
@@ -14,7 +14,7 @@ test<-fetch(dbSendQuery(con,"select * from helloworld;"))
 test;rm(test)
 ```
 The previous line should return the cheerful contents of the table "helloworld" from database "rlb", confirming that the connection is good. 
-Tables in the database are assembled and cleaned by the scripts in "database-cleaning.R" in this folder, not in this notebook. 
+Tables in the database were assembled and cleaned by the scripts in "database-cleaning.R" in this folder, not in this notebook. 
 
 ---
 ## 14C ages
