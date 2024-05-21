@@ -227,3 +227,60 @@ bootTS<-function(data,reps=1000,timebins=climateBins){
   }
   return(result)
 }
+
+getStat <- function(data,index,statistic){
+  #return indicated statistic 
+  noNA <- !is.na(data[,index]) & !is.na(data$repno)
+  samplestat <- as.vector(by(data[noNA,index],data[noNA,]$repno,match.fun(statistic)))
+  return(samplestat)
+}
+
+assembleRepTS <- function(repdata,dimensions) {
+  result <- vector(mode = "list",length = length(dimensions))
+  names(result) <- colnames(all)[dimensions]
+  binNames <- as.vector(by(as.numeric(repdata$Bin),repdata$Bin,mean))
+  sampages <- as.vector(by(repdata,repdata$Bin,getStat,index = which(colnames(repdata) == "AssignedAge"),statistic = "mean"))
+  for (i in 1:length(dimensions)) {
+    #mean of that dimension in each climate bin
+    sampmeans <- as.numeric(by(repdata, repdata$Bin, getStat, index = dimensions[i], statistic = "mean", simplify = F))
+    #count for each bin in each replicate
+    sampcounts <- as.numeric(by(repdata, repdata$Bin, getStat, index = dimensions[i], statistic = "length", simplify = F))
+    sampcounts[is.na(sampcounts)] <- 0
+    #average variance of that dimension in each climate bin in each replicate
+    sampsds <- as.numeric(by(repdata, repdata$Bin, getStat, index = dimensions[i],statistic = "sd", simplify = F))
+    sampsds[is.na(sampsds)] <- 0
+    sampvars <- sapply(sampsds,function(x) mean(x^2,na.rm = T))
+    #return table of values and paleoTS object
+    result[[i]]$table <- data.frame(mean = sampmeans, var = sampvars, 
+                                    count = sampcounts, age = sampages)
+    rownames(result[[i]]$table) <- binNames
+    #drop any bin with count = 0 from paleoTS
+    notempty <- subset(result[[i]]$table,result[[i]]$table$count > 0)
+    result[[i]]$paleoTS <- paleoTS::as.paleoTS(
+      mm = notempty$mean, 
+      vv = notempty$var, 
+      nn = notempty$count,
+      tt = notempty$age, 
+      label = colnames(repdata)[dimensions[i]])
+    result[[i]]$dist <- table(repdata[,c("Pit","Bin")])
+  }
+  return(result)
+}
+
+bootReps <- function(data, reps = 1000, timebins = climateBins) {
+  #return n = reps paleoTS time series
+  #run bootstrap replication function
+  all <- bootstrapElement(data,nreps = reps,bins = timebins)
+  #assign replicate numbers in order
+  all$repno <- sort(rep(1:reps,nrow(all)/reps))
+  dimensions <- which(!colnames(all) %in% c("CatNo","Side","Sex","Collection","Pit","AssignedAge","Bin","repno"))
+  #return table of values and paleoTS object
+  result <- by(all, all$repno, assembleRepTS, dimensions = dimensions)
+  #  result <- vector(mode = "list",length = reps)
+  #  for (i in 1:reps) {
+  #    result[[i]] <- assembleRepTS(subset(all,all$repno == i), 
+  #                                 dimensions = dimensions)
+  #  }
+  return(result)
+}
+

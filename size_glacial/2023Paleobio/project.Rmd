@@ -1098,62 +1098,61 @@ rm(TSresults10,TSresults10.pca,TSresults5,TSresults5.pca)
 
 ## define new functions
 ```{r}
-getStat <- function(data,index,statistic){
-  #return indicated statistic 
-  noNA <- !is.na(data[,index]) & !is.na(data$repno)
-  samplestat <- as.vector(by(data[noNA,index],data[noNA,]$repno,match.fun(statistic)))
-  return(samplestat)
-}
+source("functions.R")
+```
 
-assembleRepTS <- function(repdata,dimensions) {
-  result <- vector(mode = "list",length = length(dimensions))
-  names(result) <- colnames(all)[dimensions]
-  binNames <- as.vector(by(as.numeric(repdata$Bin),repdata$Bin,mean))
-  sampages <- as.vector(by(repdata,repdata$Bin,getStat,index = which(colnames(repdata) == "AssignedAge"),statistic = "mean"))
-  for (i in 1:length(dimensions)) {
-  #mean of that dimension in each climate bin
-    sampmeans <- as.numeric(by(repdata, repdata$Bin, getStat, index = dimensions[i], statistic = "mean", simplify = F))
-    #count for each bin in each replicate
-    sampcounts <- as.numeric(by(repdata, repdata$Bin, getStat, index = dimensions[i], statistic = "length", simplify = F))
-    sampcounts[is.na(sampcounts)] <- 0
-    #average variance of that dimension in each climate bin in each replicate
-    sampsds <- as.numeric(by(repdata, repdata$Bin, getStat, index = dimensions[i],statistic = "sd", simplify = F))
-    sampsds[is.na(sampsds)] <- 0
-    sampvars <- sapply(sampsds,function(x) mean(x^2,na.rm = T))
-    #return table of values and paleoTS object
-    result[[i]]$table <- data.frame(mean = sampmeans, var = sampvars, 
-                                    count = sampcounts, age = sampages)
-    rownames(result[[i]]$table) <- binNames
-    #drop any bin with count = 0 from paleoTS
-    notempty <- subset(result[[i]]$table,result[[i]]$table$count > 0)
-    result[[i]]$paleoTS <- paleoTS::as.paleoTS(
-      mm = notempty$mean, 
-      vv = notempty$var, 
-      nn = notempty$count,
-      tt = notempty$age, 
-      label = colnames(repdata)[dimensions[i]])
-    result[[i]]$dist <- table(repdata[,c("Pit","Bin")])
+## make all time series bootstrap replicates
+```{r}
+TSboot5.pca <- TSboot10.pca <- meas.pca <- TSboot5 <- TSboot10 <- 
+  vector(mode = "list",length = length(meas))
+names(TSboot5.pca) <- names(TSboot10.pca) <- names(meas.pca) <- names(TSboot5) <- names(TSboot10) <- names(meas)
+
+M <- 1
+N <- 1
+for (m in M:length(meas)) {
+  TSboot5[[m]] <- TSboot10[[m]] <- TSboot5.pca[[m]] <- TSboot10.pca[[m]] <- vector(mode = "list",length = length(meas[[m]]))
+  names(TSboot5[[m]]) <- names(TSboot10[[m]]) <- names(TSboot5.pca[[m]]) <- names(TSboot10.pca[[m]]) <- names(meas[[m]])
+  for (n in N:length(meas[[m]])) {
+    TSboot5[[m]][[n]] <- bootReps(data = meas[[m]][[n]],reps = 1000,timebins = climateBins)
+    TSboot10[[m]][[n]] <- bootReps(data = meas[[m]][[n]],reps = 1000,timebins = halfBins)
+    names(TSboot5[[m]][n]) <- "meas.short"
+    names(TSboot10[[m]][n]) <- "meas.long"
+    if (all(c(m,n) == c(6,3))) { #skip PCA for bison calcanea, there's only one dimension
+      TSboot5.pca[[m]][[n]] <- TSboot5[[m]][[n]]
+      TSboot10.pca[[m]][[n]] <- TSboot10[[m]][[n]]
+    } else {
+      meas.pca[[m]][[n]] <- data.frame(Pit = meas[[m]][[n]][,"Pit"],
+                                     pca.results[[m]][[n]]$x)
+      TSboot5.pca[[m]][[n]] <- bootReps(data = meas.pca[[m]][[n]],
+                                  reps = 1000,timebins = climateBins)
+      TSboot10.pca[[m]][[n]] <- bootReps(data = meas.pca[[m]][[n]],
+                                  reps = 1000,timebins = halfBins)
+    }
+    names(TSboot5.pca[[m]][n]) <- "pca.short"
+    names(TSboot10.pca[[m]][n]) <- "pca.long"
   }
-  return(result)
 }
+```
 
-bootReps <- function(data, reps = 1000, timebins = climateBins) {
-  #return n = reps paleoTS time series
-  #run bootstrap replication function
-  all <- bootstrapElement(data,nreps = reps,bins = timebins)
-  #assign replicate numbers in order
-  all$repno <- sort(rep(1:reps,nrow(all)/reps))
-  dimensions <- which(!colnames(all) %in% c("CatNo","Side","Sex","Collection","Pit","AssignedAge","Bin","repno"))
-  #return table of values and paleoTS object
-  result <- by(all, all$repno, assembleRepTS, dimensions = dimensions)
-#  result <- vector(mode = "list",length = reps)
-#  for (i in 1:reps) {
-#    result[[i]] <- assembleRepTS(subset(all,all$repno == i), 
-#                                 dimensions = dimensions)
-#  }
-  return(result)
-}
 
+```{r}
+save(TSboot5,file = "rep_TS/TSboot5.RData")
+save(TSboot10,file = "rep_TS/TSboot10.RData")
+save(TSboot5.pca,file = "rep_TS/TSboot5.pca.RData")
+save(TSboot10.pca,file = "rep_TS/TSboot10.pca.RData")
+rm(TSboot5,TSboot5.pca,TSboot10,TSboot10.pca)
+```
+
+## get model outcomes for all replicates of all time series
+don't forget to report model parameter estimates
+```{r}
+TSbootmodels5 <- TSbootmodels10 <- TSbootmodels5.pca <- TSbootmodels10.pca <- vector(mode="list",length=length(meas))
+Z <- 1;M <- 1;N <- 1;P <- 1;Q <- 1
+m <- n <- z <- p <- q <- 1
+#m=species, n=element, z=replicate, p/q=dimension
+```
+
+```{r}
 modelRepTS <- function(ts) {
   library(paleoTS)
   tsLength <- length(ts$tt)
@@ -1177,57 +1176,24 @@ modelRepTS <- function(ts) {
 }
 ```
 
-## make all time series bootstrap replicates
 ```{r}
-TSboot5.pca <- TSboot10.pca <- meas.pca <- TSboot5 <- TSboot10 <- vector(mode="list",length=length(meas))
+failTS <- vector(mode="list")
+failTS.index <- data.frame(array(data = NA, dim = c(1,5)))
+# datacheck/debug block
+i <- length(failTS) + 1
+failTS.index[i,] <- c(m,n,z,p,q)
+TSboot5[[m]][[n]][[z]][[p]]$table
+failTS[[i]] <- TSboot5[[m]][[n]][[z]][[p]]$paleoTS
 
-M <- 1
-N <- 1
-for (m in M:length(meas)) {
-  TSboot5[[m]] <- TSboot10[[m]] <- TSboot5.pca[[m]] <- TSboot10.pca[[m]] <- vector(mode="list",length = length(meas[[m]]))
-  for (n in N:length(meas[[m]])) {
-    options(warn = 2)
-    TSboot5[[m]][[n]] <- bootReps(data = meas[[m]][[n]],reps = 1000,timebins = climateBins)
-    TSboot10[[m]][[n]] <- bootReps(data = meas[[m]][[n]],reps = 1000,timebins = halfBins)
-    if (all(c(m,n) == c(6,3))) { #skip PCA for bison calcanea, there's only one dimension
-      TSboot5.pca[[m]][[n]] <- TSboot5[[m]][[n]]
-      TSboot10.pca[[m]][[n]] <- TSboot10[[m]][[n]]
-    } else {
-      meas.pca[[m]][[n]] <- data.frame(Pit = meas[[m]][[n]][,"Pit"],
-                                     pca.results[[m]][[n]]$x)
-      TSboot5.pca[[m]][[n]] <- bootReps(data = meas.pca[[m]][[n]],
-                                  reps = 1000,timebins = climateBins)
-      TSboot10.pca[[m]][[n]] <- bootReps(data = meas.pca[[m]][[n]],
-                                  reps = 1000,timebins = halfBins)
-    }
-  }
-}
+
 ```
-
-
-```{r}
-save(TSboot5,file = "rep_TS/TSboot5.RData")
-save(TSboot10,file = "rep_TS/TSboot10.RData")
-save(TSboot5.pca,file = "rep_TS/TSboot5.pca.RData")
-save(TSboot10.pca,file = "rep_TS/TSboot10.pca.RData")
-rm(TSboot5,TSboot5.pca,TSboot10,TSboot10.pca)
-```
-
-## get model outcomes for all replicates of all time series
-don't forget to report model parameter estimates
-```{r}
-TSbootmodels5 <- TSbootmodels10 <- TSbootmodels5.pca <- TSbootmodels10.pca <- vector(mode="list",length=length(meas))
-Z <- 1;M <- 1;N <- 1;P <- 1;Q <- 1
-m <- n <- z <- p <- q <- 1
-#m=species, n=element, z=replicate, p/q=dimension
-```
-
 
 ```{r}
 load("rep_TS/TSboot5.RData")
 for (m in M:length(TSboot5)) {
   for (n in N:length(TSboot5[[m]])) {
     for (z in Z:length(TSboot5[[m]][[n]])) {
+      TSbootmodels5[[m]][[n]][[z]] <- vector(mode = "list",length = 1000)
       for (p in P:length(TSboot5[[m]][[n]][[z]])) {
         TSbootmodels5[[m]][[n]][[z]][[p]] <- 
           modelRepTS(TSboot5[[m]][[n]][[z]][[p]]$paleoTS)
