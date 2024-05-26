@@ -1157,14 +1157,17 @@ modelRepTS <- function(ts) {
   library(paleoTS)
   tsLength <- length(ts$tt)
   if (any(ts$vv == 0)) { pool <- TRUE } else { pool <- FALSE } 
-  if (tsLength <= 5) {
-    punc <- fitGpunc(ts,minb = 2,pool = pool)
+  if (tsLength <= 5) { minb <- 2 } else { minb <- 3 }
+  cl <- list(fnscale = -1.00000001)
+  if (ts$vv[tsLength] == 0) { 
+    punc <- fitGpunc(pool.var(ts,ret.paleoTS = TRUE),
+                     minb = minb,pool = pool, cl = cl)
   } else {
-    punc <- fitGpunc(ts,minb = 3,pool = pool,cl = list(fnscale = -1.00000001))
+    punc <- fitGpunc(ts,minb = minb,pool = pool,cl = cl)
   }
   grw <- opt.joint.GRW(ts,pool = pool)
   urw <- opt.joint.URW(ts,pool = pool)
-  stasis <- opt.joint.Stasis(ts,pool = pool,cl = list(fnscale = -1.00000001))
+  stasis <- opt.joint.Stasis(ts,pool = pool,cl = cl)
   params <- list(GRW = grw$parameters,
                  URW = urw$parameters,
                  Stasis = stasis$parameters,
@@ -1179,13 +1182,16 @@ modelRepTS <- function(ts) {
 ```{r}
 failTS <- vector(mode="list")
 failTS.index <- data.frame(array(data = NA, dim = c(1,5)))
+
 # datacheck/debug block
+TSboot5[[m]][[n]][[z]][[p]]$table
 i <- length(failTS) + 1
 failTS.index[i,] <- c(m,n,z,p,q)
-TSboot5[[m]][[n]][[z]][[p]]$table
 failTS[[i]] <- TSboot5[[m]][[n]][[z]][[p]]$paleoTS
 
-
+m -> M
+n -> N
+z + 1 -> Z
 ```
 
 ```{r}
