@@ -284,3 +284,27 @@ bootReps <- function(data, reps = 1000, timebins = climateBins) {
   return(result)
 }
 
+modelRepTS <- function(ts) {
+  library(paleoTS)
+  tsLength <- length(ts$tt)
+  if (any(ts$vv == 0)) { pool <- TRUE } else { pool <- FALSE } 
+  if (tsLength <= 5) { minb <- 2 } else { minb <- 3 }
+  cl <- list(fnscale = -1.00000001)
+  if (ts$vv[tsLength] == 0) { 
+    punc <- fitGpunc(pool.var(ts,ret.paleoTS = TRUE),
+                     minb = minb,pool = pool, cl = cl)
+  } else {
+    punc <- fitGpunc(ts,minb = minb,pool = pool,cl = cl)
+  }
+  grw <- opt.joint.GRW(ts,pool = pool)
+  urw <- opt.joint.URW(ts,pool = pool)
+  stasis <- opt.joint.Stasis(ts,pool = pool,cl = cl)
+  params <- list(GRW = grw$parameters,
+                 URW = urw$parameters,
+                 Stasis = stasis$parameters,
+                 Punc = punc$parameters)
+  compare <- compareModels(grw, urw, stasis, punc)
+  rownames(compare)[4] <- paste(rownames(compare)[4], ",Shift=",
+                             punc$parameters[4], sep = "")
+  return(list(compare = compare,params = params))
+}

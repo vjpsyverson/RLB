@@ -1173,7 +1173,7 @@ modelRepTS <- function(ts) {
                  Stasis = stasis$parameters,
                  Punc = punc$parameters)
   compare <- compareModels(grw, urw, stasis, punc)
-  rownames(compare)[4] <- paste(rownames(mods)[4], ",Shift=",
+  rownames(compare)[4] <- paste(rownames(compare)[4], ",Shift=",
                              punc$parameters[4], sep = "")
   return(list(compare = compare,params = params))
 }
@@ -1202,14 +1202,13 @@ for (m in M:length(TSboot5)) {
       TSbootmodels5[[m]][[n]][[z]] <- vector(mode = "list",length = 1000)
       for (p in P:length(TSboot5[[m]][[n]][[z]])) {
         TSbootmodels5[[m]][[n]][[z]][[p]] <- 
-          modelRepTS(TSboot5[[m]][[n]][[z]][[p]]$paleoTS)
+          try(modelRepTS(TSboot5[[m]][[n]][[z]][[p]]$paleoTS))
       }
     }
   } 
 }
-rm(TSboot5)
 save(TSbootmodels5,file = "rep_TS/TSbootmodels5.RData")
-rm(TSbootmodels5)
+rm(TSboot5,TSbootmodels5)
 ```
 
 
@@ -1218,11 +1217,13 @@ load("rep_TS/TSboot10.RData")
 for (m in M:length(TSboot10)) {
   for (n in N:length(TSboot10[[m]])) {
     for (z in Z:length(TSboot10[[m]][[n]])) {
+      TSbootmodels10[[m]][[n]][[z]] <- vector(mode = "list",length = 1000)
       for (p in P:length(TSboot10[[m]][[n]][[z]])) {
         TSbootmodels10[[m]][[n]][[z]][[p]] <- 
-          modelRepTS(TSboot10[[m]][[n]][[z]][[p]]$paleoTS)
-        names(TSbootmodels10[[m]][[n]][[z]][[p]]) <- "meas.long"
+          try(modelRepTS(TSboot10[[m]][[n]][[z]][[p]]$paleoTS))
       }}}}
+save(TSbootmodels10,file = "rep_TS/TSbootmodels10.RData")
+rm(TSboot10,TSbootmodels10)
 ```
 
 
@@ -1231,14 +1232,16 @@ load("rep_TS/TSboot5.pca.RData")
 for (m in M:length(TSboot5.pca)) {
   for (n in N:length(TSboot5.pca[[m]])) {
     for (z in Z:length(TSboot5.pca[[m]][[n]])) {
+      TSbootmodels5.pca[[m]][[n]][[z]] <- vector(mode = "list",length = 1000)
       for (q in Q:length(TSboot5.pca[[m]][[n]][[z]])) {
         if (all(c(m,n) == c(6,3))) {
           break
         } else {
           TSbootmodels5.pca[[m]][[n]][[z]][[q]] <- 
-            modelRepTS(TSboot5.pca[[m]][[n]][[z]][[q]]$paleoTS)
-          names(TSbootmodels5.pca[[m]][[n]][[z]][[q]]) <- "pca.short"
+            try(modelRepTS(TSboot5.pca[[m]][[n]][[z]][[q]]$paleoTS))
         }}}}}
+save(TSbootmodels5.pca,file = "rep_TS/TSbootmodels5.pca.RData")
+rm(TSboot5.pca,TSbootmodels5.pca)
 ```
 
 
@@ -1247,14 +1250,16 @@ load("rep_TS/TSboot10.pca.RData")
 for (m in M:length(TSboot10.pca)) {
   for (n in N:length(TSboot10.pca[[m]])) {
     for (z in Z:length(TSboot10.pca[[m]][[n]])) {
+      TSbootmodels10.pc[[m]][[n]][[z]] <- vector(mode = "list",length = 1000)
       for (p in P:length(TSboot10.pca[[m]][[n]][[z]])) {
         if (all(c(m,n) == c(6,3))) {
           break
         } else {
           TSbootmodels10.pca[[m]][[n]][[z]][[q]] <- 
-            modelRepTS(TSboot10.pca[[m]][[n]][[z]][[q]]$paleoTS)
-          names(TSbootmodels10.pca[[m]][[n]][[z]][[q]]) <- "pca.long"
+            try(modelRepTS(TSboot10.pca[[m]][[n]][[z]][[q]]$paleoTS))
         }}}}}
+save(TSbootmodels10.pca,file = "rep_TS/TSbootmodels10.pca.RData")
+rm(TSboot10.pca,TSbootmodels10.pca)
 ```
 
 
