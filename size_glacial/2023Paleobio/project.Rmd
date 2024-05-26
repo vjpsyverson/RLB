@@ -1208,6 +1208,8 @@ for (m in M:length(TSboot5)) {
   } 
 }
 rm(TSboot5)
+save(TSbootmodels5,file = "rep_TS/TSbootmodels5.RData")
+rm(TSbootmodels5)
 ```
 
 
