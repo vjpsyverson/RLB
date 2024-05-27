@@ -286,11 +286,12 @@ bootReps <- function(data, reps = 1000, timebins = climateBins) {
 
 modelRepTS <- function(ts) {
   library(paleoTS)
+  ts <- ts[[1]]
   tsLength <- length(ts$tt)
-  if (any(ts$vv == 0)) { pool <- TRUE } else { pool <- FALSE } 
+  if (any(as.numeric(ts["vv"]) == 0)) { pool <- TRUE } else { pool <- FALSE } 
   if (tsLength <= 5) { minb <- 2 } else { minb <- 3 }
   cl <- list(fnscale = -1.00000001)
-  if (ts$vv[tsLength] == 0) { 
+  if (ts["vv"] == 0) { 
     punc <- fitGpunc(pool.var(ts,ret.paleoTS = TRUE),
                      minb = minb,pool = pool, cl = cl)
   } else {
