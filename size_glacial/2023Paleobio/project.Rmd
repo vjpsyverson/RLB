@@ -1101,6 +1101,19 @@ rm(TSresults10,TSresults10.pca,TSresults5,TSresults5.pca)
 source("functions.R")
 ```
 
+```{r}
+dimnamelist <- vector(mode = "list",length = length(meas))
+names(dimnamelist) <- names(meas)
+for (m in 1:length(dimnamelist)) {
+  dimnamelist[[m]] <- vector(mode = "list", length = length(meas[[m]]))
+  names(dimnamelist[[m]]) <- names(meas[[m]])
+  for (n in 1:length(dimnamelist[[m]])) {
+    dimnamelist[[m]][[n]] <- colnames(meas[[m]][[n]])[which(!colnames(meas[[m]][[n]]) %in% c("CatNo", "Side", "Sex", "Collection", "Pit", "AssignedAge", "Bin", "repno"))]
+  }
+}
+save(dimnamelist,meas,measpc,climateBins,halfBins,file = "objects.R")
+```
+
 ## make all time series bootstrap replicates
 ```{r}
 TSboot5.pca <- TSboot10.pca <- meas.pca <- TSboot5 <- TSboot10 <- 
@@ -1135,14 +1148,85 @@ for (m in M:length(meas)) {
 ```
 
 
+### reassemble
 ```{r}
-save(TSboot5,file = "rep_TS/TSboot5.RData")
-save(TSboot10,file = "rep_TS/TSboot10.RData")
-save(TSboot5.pca,file = "rep_TS/TSboot5.pca.RData")
-save(TSboot10.pca,file = "rep_TS/TSboot10.pca.RData")
-rm(TSboot5,TSboot5.pca,TSboot10,TSboot10.pca)
+reassemble <- function(element) {
+  #TSboot5[[species]][[element]][[replicate]][[measurement]]$paleoTS
+  result <- vector(mode = "list",length = length(element[[1]]))
+  names(result) <- names(element[[1]])
+  for (i in names(element[[1]])) {
+    result[[i]] <- sapply(element, function(x) {
+      return(x[[i]]$paleoTS)
+    },simplify = F)
+  }
+  return(result)
+}
+
+reassembleDataset <- function(x){
+  result <- x
+  for (m in 1:5) {
+    result[[m]] <- lapply(x[[m]],reassemble)
+  }
+  for (m in 7:length(x)) {
+    result[[m]] <- lapply(x[[m]],reassemble)
+  }
+  result[[6]][[1]] <- reassemble(x[[6]][[1]])
+  result[[6]][[2]] <- reassemble(x[[6]][[2]])
+  result[[6]][[3]] <- list(Length = lapply(x[[6]][[3]], function(z) return(z$paleoTS)))
+  return(result)
+}
+
 ```
 
+```{r}
+load(file = "rep_TS/originalTSboot5.RData")
+TSboot5 <- reassembleDataset(TSboot5)
+for (m in 1:length(TSboot5)) {
+  for (n in 1:length(TSboot5[[m]])) {
+    names(TSboot5[[m]][[n]]) <- dimnamelist[[m]][[n]]
+  }
+}
+save(TSboot5,file = "rep_TS/TSboot5.RData")
+TSboot5 <- list_flatten(list_flatten(TSboot5))
+save(TSboot5,file = "rep_TS/TSboot5_flat.RData")
+rm(TSboot5)
+
+load(file = "rep_TS/originalTSboot10.RData")
+TSboot10 <- reassembleDataset(TSboot10)
+for (m in 1:length(TSboot10)) {
+  for (n in 1:length(TSboot10[[m]])) {
+    names(TSboot10[[m]][[n]]) <- dimnamelist[[m]][[n]]
+  }
+}
+save(TSboot10,file = "rep_TS/TSboot10.RData")
+TSboot10 <- list_flatten(list_flatten(TSboot10))
+save(TSboot10,file = "rep_TS/TSboot10_flat.RData")
+rm(TSboot10)
+
+load(file = "rep_TS/originalTSboot5.pca.RData")
+TSboot5.pca <- reassembleDataset(TSboot5.pca)
+for (m in 1:length(TSboot5.pca)) {
+  for (n in 1:length(TSboot5.pca[[m]])) {
+    names(TSboot5.pca[[m]][[n]]) <- dimnamelist[[m]][[n]]
+  }
+}
+save(TSboot5.pca,file = "rep_TS/TSboot5.pca.RData")
+TSboot5.pca <- list_flatten(list_flatten(TSboot5.pca))
+save(TSboot5.pca,file = "rep_TS/TSboot5.pca_flat.RData")
+rm(TSboot5.pca)
+
+load(file = "rep_TS/originalTSboot10.pca.RData")
+TSboot10.pca <- reassembleDataset(TSboot10.pca)
+for (m in 1:length(TSboot10.pca)) {
+  for (n in 1:length(TSboot10.pca[[m]])) {
+    names(TSboot10.pca[[m]][[n]]) <- dimnamelist[[m]][[n]]
+  }
+}
+save(TSboot10.pca,file = "rep_TS/TSboot10.pca.RData")
+TSboot10.pca <- list_flatten(list_flatten(TSboot10.pca))
+save(TSboot10.pca,file = "rep_TS/TSboot10.pca_flat.RData")
+rm(TSboot10.pca)
+```
 ## get model outcomes for all replicates of all time series
 don't forget to report model parameter estimates
 ```{r}
@@ -1288,5 +1372,10 @@ for (m in M:length(TSboot5)) {
 ## summarize range of model outcomes for each time series
 ```{r}
 
+combineRepsTS(TSboot5[[i]]) -> test
+
+for (i in 1:100) {
+  TSbootmodels5[[1]][[1]][[1]][[1]]$compare$Akaike.wt
+}
 ```
 

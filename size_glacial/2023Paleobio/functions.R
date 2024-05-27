@@ -286,12 +286,11 @@ bootReps <- function(data, reps = 1000, timebins = climateBins) {
 
 modelRepTS <- function(ts) {
   library(paleoTS)
-  ts <- ts[[1]]
   tsLength <- length(ts$tt)
-  if (any(as.numeric(ts["vv"]) == 0)) { pool <- TRUE } else { pool <- FALSE } 
+  if (any(ts$vv == 0)) { pool <- TRUE } else { pool <- FALSE } 
   if (tsLength <= 5) { minb <- 2 } else { minb <- 3 }
   cl <- list(fnscale = -1.00000001)
-  if (ts["vv"] == 0) { 
+  if (pool == TRUE) { 
     punc <- fitGpunc(pool.var(ts,ret.paleoTS = TRUE),
                      minb = minb,pool = pool, cl = cl)
   } else {
@@ -308,4 +307,19 @@ modelRepTS <- function(ts) {
   rownames(compare)[4] <- paste(rownames(compare)[4], ",Shift=",
                              punc$parameters[4], sep = "")
   return(list(compare = compare,params = params))
+}
+
+combineParams <- function(modname,x) {
+  temp <- as.data.frame(sapply(x,function(x) return(unlist(x$params[[modname]]))))
+  result <- rbind(mean = apply(temp,1,mean),sd = apply(temp,1,sd))
+  return(result)
+}
+
+combineRepsTS <- function(tsList){
+  models <- lapply(tsList,function(x) try(modelRepTS(x)))
+  models <- models[which(lapply(models,length) == 2)]
+  akaike <- apply(sapply(models,function(x) return(x$compare$Akaike.wt)),1,mean)
+  params <- lapply(names(models[[1]]$params),combineParams,models)
+  names(akaike) <- names(params) <- names(models[[1]]$params)
+  return(list(akaike = akaike,params = params))
 }
