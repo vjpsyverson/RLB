@@ -483,6 +483,7 @@ test
 ```
 ##fit all models
 ```{r}
+save(TSresults10,TSresults10.pca,TSresults5,TSresults5.pca,file = "combined_TS_results.RData")
 require(paleoTS)
 TSmodels5<-TSmodels10<-TSresults5
 M<-1;N<-1;P<-1;Q<-1
@@ -504,7 +505,7 @@ for (m in M:length(TSresults5)){
       punc<-fitGpunc(ts,minb=3,pool=F,cl=list(fnscale=-1.00000001)) #use if 10 timebins
       mods<-compareModels(
         opt.joint.GRW(ts,pool=F),
-        opt.joint.URW(ts,pool=F),
+        opt.joint.URW(ts,cl=list(fnscale=-1.00000001)),
         opt.joint.Stasis(ts,pool=F,cl=list(fnscale=-1.00000001)),
         punc
       )
@@ -551,7 +552,7 @@ for (m in M:length(TSresults5)){
 #compile results
 ##make two big data frames for all the results
 ```{r}
-model.results5<-model.results10<-data.frame(species=NA,element=NA,measurement=NA,bestModel=NA)
+model.results5<-model.results10<-data.frame(species=NA,element=NA,measurement=NA,GRW=NA,URW=NA,Stasis=NA,Punc=NA,bestModel=NA)
 M<-1;N<-1;P<-1;i<-1
 for (m in M:length(TSmodels5)){
   species<-names(TSmodels5[m])
@@ -559,14 +560,12 @@ for (m in M:length(TSmodels5)){
     element<-names(TSmodels5[[m]][n])
     for (p in P:length(TSmodels5[[m]][[n]])){
       measurement=names(TSmodels5[[m]][[n]][p])
+      wts5 <- TSmodels5[[m]][[n]][[p]]$Akaike.wt
       bestModel5<-rownames(TSmodels5[[m]][[n]][[p]])[which.max(TSmodels5[[m]][[n]][[p]]$Akaike.wt)]
-#      aa<-TSmodels5[[m]][[n]][[p]]
-#      bestModel5<-rownames(subset(aa,aa$K>1))[which.max(subset(aa,aa$K>1)$Akaike.wt)]
-      model.results5[i,]<-c(species,element,measurement,bestModel5)
+      model.results5[i,]<-c(species,element,measurement,wts5,bestModel5)
+      wts10 <- TSmodels10[[m]][[n]][[p]]$Akaike.wt
       bestModel10<-rownames(TSmodels5[[m]][[n]][[p]])[which.max(TSmodels10[[m]][[n]][[p]]$Akaike.wt)]
-#      bb<-TSmodels10[[m]][[n]][[p]]
-#      bestModel10<-rownames(subset(bb,bb$K>1))[which.max(subset(bb,bb$K>1)$Akaike.wt)]
-      model.results10[i,]<-c(species,element,measurement,bestModel10)
+      model.results10[i,]<-c(species,element,measurement,wts10,bestModel10)
       i<-i+1
     }
   }
@@ -576,10 +575,30 @@ for (i in 1:4){
   model.results10[,i]<-as.factor(model.results10[,i])
 }
 ```
+
+## summarize parameters
+```{r}
+param.results <- data.frame(array(dim=c(228,14)))
+data <- TSresults5.pca
+M<-1;N<-1;P<-1;i<-1
+for (m in M:length(data)){
+  species<-names(data[m])
+  for (n in N:length(data[[m]])){
+    element<-names(data[[m]][n])
+    for (p in P:length(data[[m]][[n]])){
+      measurement=names(data[[m]][[n]][p])
+      temp <- modelRepTS(data[[m]][[n]][[p]]$paleoTS)
+      param.results[i,] <- c(species,element,measurement,unlist(temp$params))
+      i <- i + 1
+    }
+  }
+}
+colnames(param.results) <- c("species","element","measurement",names(unlist(temp$params)))
+```
 ##make allBestFits and bestfits
 ```{r}
 model.results<-data.frame(rbind(data.frame(model.results5,L=5),data.frame(model.results10,L=9)))
-#save(model.results,TSresults5,TSresults10,TSresults5.pca,TSresults10.pca,TSmodels5,TSmodels10,file="climateBinsResults.RData")
+save(model.results,TSresults5,TSresults10,TSresults5.pca,TSresults10.pca,TSmodels5,TSmodels10,file="originalResults.RData")
 #load(file="climateBinsResults.RData")
 allBestFits<-model.results
 allBestFits$L<-as.factor(allBestFits$L)
@@ -587,13 +606,51 @@ allBestFits<-allBestFits[order(paste(as.character(allBestFits$species),as.charac
 bestfits<-subset(allBestFits, allBestFits$L==9 & !grepl("PC[3-9]", allBestFits$measurement))
 bestfits<-subset(allBestFits, allBestFits$L==9)
 ```
+
+```{r}
+meas10<-unique(subset(allBestFits,!grepl("^PC",allBestFits$measurement)&allBestFits$L==9))
+meas5<-unique(subset(allBestFits,!grepl("PC",allBestFits$measurement)&allBestFits$L==5))
+pc10<-unique(subset(allBestFits,grepl("PC",allBestFits$measurement)&allBestFits$L==9))
+pc5<-unique(subset(allBestFits,grepl("PC",allBestFits$measurement)&allBestFits$L==5))
+```
+
+## normalize Stasis.omega to variance
+```{r}
+#all5.joined and all10.joined are joins of the appropriate param.results with the appropriate subset of allBestFits
+#they contain the model weights and parameters
+
+data <- all5.joined
+data$Stasis.omega.normalized <- NA
+data$timestep <- NA
+timeseries.set <- TSresults5.pca
+for (i in 1:nrow(data)){
+  m <- which(names(timeseries.set) == data[i,"species"])
+  n <- which(names(timeseries.set[[m]]) == data[i,"element"])
+  p <- which(names(timeseries.set[[m]][[n]]) == data[i,"measurement"])
+  if (length(m) > 0 & length(n) > 0 & length(p) >0){
+    data$timestep[i] <- mean(diff(timeseries.set[[m]][[n]][[p]]$paleoTS$tt),na.rm=T)
+    #if (data[i,"L"] == 5) b <- 4:5 else b <- 7:9
+    #var <- mean(timeseries.set[[m]][[n]][[p]]$paleoTS$vv[b],na.rm = T)
+    #data[i,"Stasis.omega.normalized"] <- sqrt(abs(data[i,"Stasis.omega"]/var))
+  }
+}
+data -> all5.joined
+
+save(all5.joined,all10.joined,file="parameter_datasets.R")
+load(file="parameter_datasets.R")
+
+write.csv(data.frame(rbind(all5.joined,all10.joined)),row.names = F, file = "Figures and Tables/Second submission/Supplementary Table E - Model Parameters.csv")
+```
+
+## examine normalized stasis.omega parameter
+```{r}
+p <- ggplot(rbind(all10.joined,all5.joined),aes(x=bestModel,y=Stasis.omega.normalized)) + facet_grid(cols = vars(L)) + geom_boxplot()
+
+```
+
+
 ##compare percentages
 ```{r}
-meas10<-subset(allBestFits,!grepl("PC",allBestFits$measurement)&allBestFits$L==9)
-meas5<-subset(allBestFits,!grepl("PC",allBestFits$measurement)&allBestFits$L==5)
-pc10<-subset(allBestFits,grepl("PC",allBestFits$measurement)&allBestFits$L==9)
-pc5<-subset(allBestFits,grepl("PC",allBestFits$measurement)&allBestFits$L==5)
-
 compare.percentages<-function(data1,data2){
   tab1<-rlist::list.rbind(by(data1$bestModel,data1$species,table))
   tab1.perc<-data.frame(t(apply(tab1,1,function(x) return((x/sum(x))*100))))
@@ -1050,9 +1107,9 @@ SuppBB[dplyr::between(SuppB$median,hiatusCalBP[2],hiatusCalBP[1]),]
 write.csv(SuppBB,file="Figures and Tables/SuppBB.csv",row.names = F)
 ```
 
-##GRW results (Table 4)
+##GRW results (Supp. Table D)
 ```{r}
-Table4<-data.frame(apply(subset(bestfits,bestfits$bestModel=="GRW")[,1:3],1:2,as.character))
+Table4<-data.frame(apply(subset(allBestFits,allBestFits$bestModel=="GRW")[,1:3],1:2,as.character))
 Table4$direction<-apply(Table4,1,function(x){
   if(grepl("PC",x["measurement"])) {
     data<-TSresults10.pca[[x["species"]]][[x["element"]]][[x["measurement"]]]$table
@@ -1062,19 +1119,29 @@ Table4$direction<-apply(Table4,1,function(x){
   return(sign(lm(data$means~data$ages)$coefficients[2]))
 })
 Table4<-distinct(Table4); Table4->longTable4
-Table4$measurements<-apply(Table4,1,function(x) {
-  {paste0(Table4[which(Table4$species==x["species"] & Table4$element==x["element"] & Table4$direction==as.numeric(x["direction"])),"measurement"], collapse=", ")}
-  })
 
-Table4[which(Table4$measurements==""),"measurements"]<-Table4[which(Table4$measurements==""),"measurement"]
+longTable4$mstep <- NA
+for (i in 1:nrow(longTable4)) {
+  j <- which(all10.joined$species==longTable4$species[i] &
+          all10.joined$element==longTable4$element[i] &
+          all10.joined$measurement==longTable4$measurement[i])
+  longTable4$mstep[i] <- all10.joined$GRW.mstep[j] * 10 / all10.joined$timestep[j] * 1000000
+}
+longTable4 -> Table4
 
-Table4<-dplyr::distinct(Table4[,c("species","element","measurements","direction")])
+#Table4$measurements<-apply(Table4,1,function(x) {
+#  {paste0(Table4[which(Table4$species==x["species"] & Table4$element==x["element"] & Table4$direction==as.numeric(x["direction"])),"measurement"], collapse=", ")}
+#  })
+
+#Table4[which(Table4$measurements==""),"measurements"]<-Table4[which(Table4$measurements==""),"measurement"]
+
+Table4<-dplyr::distinct(Table4[,c("species","element","measurement","direction","mstep")])
 Table4$species<-gsub("_"," ",Table4$species)
 Table4$direction<-gsub("-1","smaller",Table4$direction)
 Table4$direction<-gsub("1","larger",Table4$direction)
 Table4$direction<-gsub("0","",Table4$direction)
-write.csv(Table4,"Figures and Tables/Table4-direction.csv",row.names = F)
 
+write.csv(Table4,file=here("Figures and Tables/Second submission/Supplementary Table D - Trends.csv"),row.names = F)
 ```
 
 ```{r}

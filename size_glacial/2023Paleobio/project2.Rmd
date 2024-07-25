@@ -1,14 +1,84 @@
-# Alternate analysis (following suggestions in review from Hunt)
-## stash old data
-```{r}
-save(TSresults10,TSresults10.pca,TSresults5,TSresults5.pca,file = "combined_TS_results.RData")
-rm(TSresults10,TSresults10.pca,TSresults5,TSresults5.pca)
-```
-
 ## define new functions
 ```{r}
 source("functions.R")
 ```
+
+# Analysis of summed time series
+```{r}
+#rerun with parameters reported
+filenames <- c("TSresults5","TSresults5.pca","TSresults10","TSresults10.pca")
+TSmodels <- vector(mode = "list",length = length(filenames))
+names(TSmodels) <- filenames
+for (i in 1:4) {
+  data <- get(filenames[i])
+  TSmodels[[i]] <- data
+  for (m in 1:length(data)) {
+    for (n in 1:length(data[[m]])) {
+      for (p in 1:length(data[[m]][[n]])) {
+        method <- "Joint"
+        if (i == 1 | (m == 2 & n == 1)) {method <- "AD"}
+        TSmodels[[i]][[m]][[n]][[p]] <- try(modelRepTS(data[[m]][[n]][[p]]$paleoTS,
+                                                       method = method))
+      }
+    }
+  }
+}
+save(TSmodels,file = "combined_models.RData")
+```
+
+```{r}
+#check if they generated correctly
+for (i in 1:4) {
+  for (m in 1:length(TSmodels[[i]])) {
+    for (n in 1:length(TSmodels[[i]][[m]])) {
+      for (p in 1:length(TSmodels[[i]][[m]][[n]])) {
+        if (any(length(TSmodels[[i]][[m]][[n]][[p]]) < 2)) {
+          print(c(i,m,n,p))
+        }
+      }
+    }
+  }
+}
+```
+
+```{r}
+fits.combined <- data.frame(species = NA,element = NA,measurement = NA,bestModel = NA)
+for (i in 1:length(TSmodels)) {
+  for (m in M:length(TSmodels[[i]])) {
+  species <- names(TSmodels[[i]][m])
+    for (n in N:length(TSmodels[[i]][[m]])) {
+      element <- names(TSmodels[[i]][[m]][n])
+      for (p in P:length(TSmodels[[i]][[m]][[n]])) {
+        measurement = names(TSmodels[[i]][[m]][[n]][p])
+        bestModel <- rownames(TSmodels[[i]][[m]][[n]][[p]])[
+          which.max(TSmodels[[i]][[m]][[n]][[p]]$compare$Akaike.wt)]
+        fits.combined[j,] <- c(species,element,measurement,bestModel)
+        j <- j + 1
+      }
+    }
+  }
+}
+for (i in 1:4){
+  fits.combined[,i] <- as.factor(fits.combined[,i])
+}
+
+```
+
+
+```{r}
+for (i in 1:4) {
+  for (m in 1:length(TSmodels[[i]])) {
+    for (n in 1:length(TSmodels[[i]][[m]])) {
+      for (p in 1:length(TSmodels[[i]][[m]][[n]])) {
+        
+      }
+    }
+  }
+}
+```
+
+
+# Alternate analysis (following suggestions in review from Hunt)
 
 ```{r}
 dimnamelist <- dimnamelist.pca <- vector(mode = "list",length = length(meas))
@@ -284,66 +354,116 @@ for (m in M:length(TSboot5)) {
 # summarize range of model outcomes for each time series
 
 ```{r}
-#fix problem with dimension names
-load(file = "rep_TS/TSbootmodels5.RData")
-load(file = "rep_TS/TSboot5_flat.RData")
-names(TSbootmodels5) <- names(TSboot5)
-save(TSbootmodels5,file = "rep_TS/TSbootmodels5.RData")
-rm(TSboot5,TSbootmodels5)
-
-load(file = "rep_TS/TSbootmodels10.RData")
-load(file = "rep_TS/TSboot10_flat.RData")
-names(TSbootmodels10) <- names(TSboot10)
-save(TSbootmodels10,file = "rep_TS/TSbootmodels10.RData")
-rm(TSboot10,TSbootmodels10)
-
-load(file = "rep_TS/TSbootmodels5.pca.RData")
-load(file = "rep_TS/TSboot5.pca_flat.RData")
-names(TSbootmodels5.pca) <- names(TSboot5.pca)
-save(TSbootmodels5.pca,file = "rep_TS/TSbootmodels5.pca.RData")
-rm(TSboot5.pca,TSbootmodels5.pca)
-
-load(file = "rep_TS/TSbootmodels10.pca.RData")
-load(file = "rep_TS/TSboot10.pca_flat.RData")
-names(TSbootmodels10.pca) <- names(TSboot10.pca)
-save(TSbootmodels10.pca,file = "rep_TS/TSbootmodels10.pca.RData")
-rm(TSboot10.pca,TSbootmodels10.pca)
+source("scripts/script1-apply.R")
+source("scripts/script2-apply.R")
+source("scripts/script3-apply.R")
+source("scripts/script4-apply.R")
 ```
 
 ## compile model results
 ```{r}
-require(rlist)
-datanames <- c("TSbootmodels5","TSbootmodels5.pca","TSbootmodels10","TSbootmodels10.pca")
-bestmods <- vector(mode = "list",length = length(datanames))
-params <- vector(mode = "list",length = length(datanames))
-names(bestmods) <- names(params) <- datanames
+require(rlist);require(stringr)
+filenames <- c("TSbootmodels5","TSbootmodels5.pca","TSbootmodels10","TSbootmodels10.pca")
+datanames <- c("TScombinedresults5","TScombinedresults5.pca","TScombinedresults10","TScombinedresults10.pca")
+bestmods <- modelweights <- modelweight.summary <- params <- vector(mode = "list",length = length(datanames))
+names(bestmods) <- names(modelweights) <- names(modelweight.summary) <- names(params) <- datanames
 
 for (i in 1:4) {
-  dataname <- datanames[i]
-  load(file = paste0(c("rep_TS/",dataname,".RData"),collapse = ""))
+  filename <- filenames[i]; dataname <- datanames[i]
+  load(file = paste0(c("rep_TS/",filename,".RData"),collapse = ""))
+  models <- get(filenames[i])
+  modelweights[[i]] <- sapply(models, function(x) {
+    wts <- sapply(x,function(y) return(y[["compare"]]$Akaike.wt))
+    return(t(wts))
+  })
   data <- get(dataname)
   bestmods[[i]] <- data.frame(unname(t(sapply(names(data),function(x) {
     temp <- unlist(strsplit(x,split = "_"))
     return(c(paste0(temp[1:2],collapse = "_"),temp[3],temp[4]))
   }))))
   colnames(bestmods[[i]]) <- c("species","element","measurement")
-  bestmods[[i]]$L <- gsub(".*([[:digit:]]).*","\\1",dataname)
-  bestmods[[i]]$model <- sapply(data,function(x)names(which.max(x$akaike)))
+  bestmods[[i]]$L <- str_extract(dataname,"(?<=s)([[:digit:]]+)")
+  bestmods[[i]]$model <- sapply(data,function(x) names(which.max(x$akaike[1,])))
+  modelweight.summary[[i]] <- bestmods[[i]][,c(1:4)]
+  modelweight.summary[[i]][,5:8] <- t(data.frame(sapply(data, function(x) return(x[["akaike"]][1,]))))
   params[[i]] <- vector(mode = "list",length = length(data))
   names(params[[i]]) <- names(data)
   for (j in 1:length(data)) {
-    params[[j]] <- data.frame(t(cbind(data[[j]]$params$GRW,
+    params[[i]][[j]] <- data.frame(t(cbind(data[[j]]$params$GRW,
                                       data[[j]]$params$URW,
                                       data[[j]]$params$Stasis,
                                       data[[j]]$params$Punc)))
     paramnames <- unlist(sapply(data[[j]]$params,colnames))
-    rownames(params[[j]]) <- apply(cbind(gsub("[[:digit:]]","",names(paramnames)),
+    rownames(params[[i]][[j]]) <- apply(cbind(gsub("[[:digit:]]","",names(paramnames)),
                                       paramnames),1,paste0,collapse = ".")
   }   
 }
+save(bestmods,params,file = "rep_TS/compiled_results.RData")
+```
+
+## summarize results
+```{r}
+test <- list.stack(bestmods)
+
+sapply(bestmods,function(x) table(x$model))
+
+
+bestparams.stack <- sapply(params,list.stack,simplify=F)
 ```
 
 ```{r}
+require(purrr)
+temp <- list_flatten(list_flatten(TSmodels10))
+TSmodels10.flat <- temp[!grepl("PC",names(temp))]
+
+element.index <- 40:46
+par(mfrow = c(4,2), mar = c(1,1,4,1))
+for (i in element.index){
+  boxplot(modelweights$TScombinedresults10[[i]], names = c("GRW","URW","Stasis","Punc"),main = names(modelweights[i]))
+  points(1:4, TSmodels10.flat[[i]]$Akaike.wt, col = "red", pch = 15, cex = 2)
+}
 
 ```
 
+
+```{r}
+plotReps <- TSboot10$Smilodon_fatalis$Humerus$Length
+plotAvg <- TSresults10$Smilodon_fatalis$Humerus$Length
+modIndex <- which(grepl("Smilodon_fatalis_Humerus_Length",names(modelweights)))
+
+yrange <- c(min(sapply(plotReps[1:250], function(x) min(x$mm - sqrt(x$vv/x$nn)))), 
+          max(sapply(plotReps[1:250], function(x) max(x$mm + sqrt(x$vv/x$nn)))))
+xrange <- range(sapply(plotReps[1:250], function(x) range(x$start.age + x$tt)))
+
+#plot starts here
+par(mfrow = c(2,1),mar=c(2,4,4,1))
+plot(0,0, ylim = yrange, xlim = xrange,type = "n",xlab = "Time", ylab = "Trait Mean", main = "Bootstrap replicates vs. average timeseries")
+for (i in 1:250) plot(plotReps[[i]], add = T, col = "lightgrey")
+plot(plotAvg$paleoTS, add = T)
+legend("topleft", bty = "n", lty = 1, pch = 1, col = c("black","grey"), legend = c("Averaged","Replicates"))
+boxplot(modelweights$TScombinedresults10[[modIndex]], names = c("GRW","URW","Stasis","Punc"),main = names(modelweights$TScombinedresults10[modIndex]), ylab="Model weight", border = "grey60", pch = 20)
+points(1:4, TSmodels10.flat[[modIndex]]$Akaike.wt, pch = 7, cex = 1.5)
+legend("topleft",bty = "n", pch = c(7,20), col = c("black","grey60"), legend = c("Averaged","Replicates"))
+```
+
+```{r}
+averages <- meas10
+replicates <- modelweight.summary$TScombinedresults10
+#manually clean these data -- factor levels are not matched for "measurements"
+```
+
+
+```{r}
+require(dplyr);require(ggplot2)
+comp <- inner_join(averages,replicates)
+comp <- comp[,which(!colnames(comp) %in% c("bestModel","L"))]
+colnames(comp) <- gsub("mean","boot",colnames(comp))
+
+colors <- c("black", "grey50")
+names <- c("GRW","","URW","","Stasis","","Punc","")
+boxplot(comp[c(4,8,5,9,6,10,7,11)],border = colors,main="AIC weights for averaged and un-averaged time series", xlab = names)
+legend("topright",legend=c("averaged","separate runs"),col = c("black","grey50"),pch=15)
+```
+
+
+```{r}

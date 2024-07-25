@@ -284,7 +284,8 @@ bootReps <- function(data, reps = 1000, timebins = climateBins) {
   return(result)
 }
 
-modelRepTS <- function(ts) {
+modelRepTS <- function(ts,method = "Joint") {
+  #model fit results for single time series
   library(paleoTS)
   tsLength <- length(ts$tt)
   if (any(ts$vv == 0)) { pool <- TRUE } else { pool <- FALSE } 
@@ -292,13 +293,19 @@ modelRepTS <- function(ts) {
   cl <- list(fnscale = -1.00000001)
   if (pool == TRUE) { 
     punc <- fitGpunc(pool.var(ts,ret.paleoTS = TRUE),
-                     minb = minb,pool = pool, cl = cl)
+                     minb = minb,pool = pool, method = method, cl = cl)
   } else {
-    punc <- fitGpunc(ts,minb = minb,pool = pool,cl = cl)
+    punc <- fitGpunc(ts,minb = minb,pool = pool,method = method,cl = cl)
   }
-  grw <- opt.joint.GRW(ts,pool = pool)
-  urw <- opt.joint.URW(ts,pool = pool)
-  stasis <- opt.joint.Stasis(ts,pool = pool,cl = cl)
+  if (method == "Joint") {
+    grw <- opt.joint.GRW(ts,pool = pool)
+    urw <- opt.joint.URW(ts,pool = pool)
+    stasis <- opt.joint.Stasis(ts,pool = pool,cl = cl)
+  } else if (method == "AD") {
+    grw <- opt.GRW(ts,pool = pool)
+    urw <- opt.URW(ts,pool = pool)
+    stasis <- opt.Stasis(ts,pool = pool,cl = cl)
+  }
   params <- list(GRW = grw$parameters,
                  URW = urw$parameters,
                  Stasis = stasis$parameters,
@@ -315,11 +322,17 @@ combineParams <- function(modname,x) {
   return(result)
 }
 
-combineRepsTS <- function(tsList){
+modelRepsTS <- function(tsList){
   models <- lapply(tsList,function(x) try(modelRepTS(x)))
   models <- models[which(lapply(models,length) == 2)]
-  akaike <- apply(sapply(models,function(x) return(x$compare$Akaike.wt)),1,mean)
+  return(models)
+}
+
+combineRepsTS <- function(models){
+  akaike <- rbind(apply(sapply(models,function(x) return(x$compare$Akaike.wt)),1,mean),
+                  apply(sapply(models,function(x) return(x$compare$Akaike.wt)),1,sd))
   params <- lapply(names(models[[1]]$params),combineParams,models)
-  names(akaike) <- names(params) <- names(models[[1]]$params)
+  colnames(akaike) <- names(params) <- names(models[[1]]$params)
+  rownames(akaike) <- c("mean","sd")
   return(list(akaike = akaike,params = params))
 }
