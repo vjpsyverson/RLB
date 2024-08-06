@@ -336,3 +336,12 @@ combineRepsTS <- function(models){
   rownames(akaike) <- c("mean","sd")
   return(list(akaike = akaike,params = params))
 }
+
+paleoTS.plot.ylims <- function(x, nse = 1) {
+  #this is taken from the code returned by getAnywhere(plot.paleoTS)
+  se <- sqrt(x$vv/x$nn)
+  lci <- x$mm - (nse * se)
+  uci <- x$mm + (nse * se)
+  ylim <- range(c(uci, lci))
+  return(ylim)
+}

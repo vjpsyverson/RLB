@@ -333,7 +333,7 @@ mtext("Age probability distribution by pit",side=3,line=-2,outer=T)
 dev.print(pdf,"Figures and Tables/pitProbDist.pdf",width=8,height=5)
 ```
 
-####print Figure 3
+####print Figure 2
 ```{r}
 #copy and paste
 plot(0,0,type="n",xlim=c(-50000,0),ylim=c(0,1),main="Pit age probability distributions (normalized)",xlab="Age",ylab="",xaxt="n")
@@ -345,8 +345,7 @@ abline(v = unique(unlist(halfBins)),lty=2,lwd=0.5,col="gray50")
 abline(v = unique(unlist(climateBins)),lty=2,lwd=1)
 legend("topleft",legend=paste0("Pit ",names(pitProb)),col=RColorBrewer::brewer.pal(11,"Paired"),bty="n",lty=1,cex=0.7,y.intersp=1.5)
 
-dev.print(pdf,"Figures and Tables/For submission/Figure 3 - pitProbDist-combined.pdf",width=8,height=4)
-dev.print(pdf,"Figures and Tables/pitProbDist-combined.pdf",width=8,height=4)
+dev.print(pdf,"Figures and Tables/Final submission/Figure2_2col.pdf",width=15/cm(1),height=3/cm(1))
 ```
 
 ###define climate bins
@@ -649,7 +648,6 @@ p <- ggplot(rbind(all10.joined,all5.joined),aes(x=bestModel,y=Stasis.omega.norma
 ```
 
 
-##compare percentages
 ```{r}
 compare.percentages<-function(data1,data2){
   tab1<-rlist::list.rbind(by(data1$bestModel,data1$species,table))
@@ -769,11 +767,90 @@ makeplot<-function(i,savePDF=F,bins=9,target="Figures and Tables/TSFigures/"){
   }
 }
 ```
+###special plot function for Figure 4 and 6
+```{r}
+makeplot2 <- function(i,savePDF=F,target="Figures and Tables/Final submission"){
+  #for figures 4 and 6
+  all.series<-dplyr::distinct(bestfits[,1:2])
+  filename<-paste0(target,"/",
+                   as.character(all.series$species[i]),"_",
+                   as.character(all.series$element[i]),".pdf")
+  nspec<-length(which(meas[[as.character(all.series$species[i])]][[as.character(all.series$element[i])]]$Pit%in%goodPits))
+  titletext<-paste0("''~italic('",
+                    gsub("_"," ",as.character(all.series$species[i])),
+                    "')~'",as.character(all.series$element[i]),
+                    " (",nspec," specimens)'")
+  tsdata<-c(TSresults10[[as.character(all.series$species[i])]][[as.character(all.series$element[i])]],
+    TSresults10.pca[[as.character(all.series$species[i])]][[as.character(all.series$element[i])]])
+  percvar<-subset(pcLoadings,pcLoadings$Species==as.character(all.series$species[i]) & pcLoadings$Element==as.character(all.series$element[i]))[,3:(2+(length(tsdata)/2))]
+  hlMods<-gsub("Punc.*","Punc",as.character(subset(allBestFits,
+             allBestFits$species==as.character(all.series$species[i]) & 
+             allBestFits$element==as.character(all.series$element[i]) &
+             allBestFits$L==bins)$bestModel))
+  #plot first Z dimensions
+  Z <- 4
+  mat <- t(matrix(1:Z,ncol=2))
+  
+  layout(mat)
+  #plot named dimensions individually
+  for (z in 1:(Z - 1)) {
+    bgcol <- colorpairs[which(colorpairs$model == hlMods[z]),"Meas"]
+    par(mar = c(2.1,2.1,3,1))
+    plot(0,0,type = "n",ann = F,axes = F)
+    rect(par("usr")[1], par("usr")[3], par("usr")[2], par("usr")[4],
+         col = bgcol)
+    par(mar = c(2.1,2.1,3,1),new = TRUE)
+    plot(tsdata[[z]]$paleoTS,xaxt = "n")
+    abline(v = unique(unlist(climateBins)),lty = 2,lwd = 0.5)
+    axis(1,at = unique(unlist(climateBins)),
+         labels = unique(unlist(climateBins))/(-1000),cex=0.9)
+  }
+  #plot all PCs together
+  z <- Z
+  bgcol <- "white"
+  percvartext <- sapply(percvar, function(x) paste0(round(x,2) * 100, "%", collapse = ""))
+  linecols <- colorpairs[match(hlMods[z:length(tsdata)],colorpairs$model),"Line"]
+  linewidth <- c(1.5,1,0.5)
+
+  par(mar = c(2.1,2.1,3,1))
+  plot(0,0,type = "n",ann = F,axes = F)
+  rect(par("usr")[1],par("usr")[3],par("usr")[2],par("usr")[4],
+       col = bgcol)
+  par(mar = c(2.1,2.1,3,1),new = TRUE)
+  tsdata[[length(tsdata)]]$paleoTS$label <- 
+    paste0("PCs 1-", length(percvar))
+  plot(tsdata[[length(tsdata)]]$paleoTS,xaxt = "n",col = linecols[length(tsdata)-3], lwd = linewidth[length(tsdata)-3],
+       ylim = paleoTS.plot.ylims(tsdata[[z]]$paleoTS))
+  for (j in (length(tsdata) - 1):z) {
+    tsdata[[j]]$paleoTS$label <- ""
+    plot(tsdata[[j]]$paleoTS,add = T,col = linecols[j - z + 1], lwd = linewidth[j - z + 1])
+  }
+  abline(v = unique(unlist(climateBins)),lty=2,lwd=0.5)
+  axis(1,at=unique(unlist(climateBins)),
+       labels=unique(unlist(climateBins))/(-1000),cex=0.9)
+  legendtext <- apply(rbind(names(percvartext),percvartext),2,function(x) paste0(x[1]," (",x[2],")"))
+  legend(x = "topleft",legend = legendtext,col = linecols,lwd = linewidth,bty = "n")
+
+  mtext(parse(text=titletext),side=3,line=-2,outer=T)
+  if (savePDF==T) {dev.print(pdf,filename,width=ncol(mat)*3,
+          height=nrow(mat)*3)}
+}
+
+```
+#### print figure 4 and 6
+```{r}
+all.series<-dplyr::distinct(bestfits[,1:2])
+figlines <- which(all.series$species%in% c("Asio_otus","Tyto_alba","Athene_cunicularia","Haliaeetus_leucocephalus"))
+for (i in 1:4) makeplot2(figlines[i],savePDF = T)
+```
+
+
 ###set color palette
 ```{r}
-colorpairs<-data.frame(model=c("GRW","Punc","Stasis","URW"),
-                       Meas=c("thistle1","mistyrose1","azure1","lightyellow"),
-                       PC=c("thistle2","mistyrose2","azure2","palegoldenrod"))
+colorpairs <- data.frame(model=c("GRW","Punc","Stasis","URW"),
+                  Meas = c("thistle1","mistyrose1","azure1","lightyellow"),
+                  PC = c("thistle2","mistyrose2","azure2","palegoldenrod"),
+                  Line = c("mediumorchid","salmon3","turquoise4","goldenrod4"))
 ```
 ###print all
 ```{r}
@@ -854,7 +931,8 @@ timeline.plot<-gg_vistime(data=timeline,
            linewidth = 14) +
   theme(axis.text.x=element_blank(), axis.ticks.x = element_blank())
 timeline.plot 
-dev.print(pdf, "Figures and Tables/FigA - Climate.pdf", width=12, height=7.5)
+#dev.print(pdf, "Figures and Tables/FigA - Climate.pdf", width=12, height=7.5)
+dev.print(pdf, "Figures and Tables/Fig3_2col.pdf", width=15/cm(1), height=9.5/cm(1))
 ```
 ##new pit age ranges
 ```{r}
@@ -949,9 +1027,13 @@ datevis<-ggplot(data=calDates,mapping = aes(x=median,y=1,color=Type)) +
   xlab("Age (cal YBP)") + ylab ("Pit #") + 
 #  labs(linetype="Primary climate bins","Subdivided time bins") +
   labs(color="Date quality",) + ggtitle("Calibrated 14C dates by pit")
+```
+
+
+```{r}
 datevis
-dev.print(pdf, "Figures and Tables/FigB - Dates - 12x7.5.pdf", width=12, height=7.5)
-dev.print(pdf, "Figures and Tables/FigB - Dates - 8x5.pdf", width=8, height=5)
+#dev.print(pdf, "Figures and Tables/FigB - Dates - 12x7.5.pdf", width=12, height=7.5)
+dev.print(pdf, "Figures and Tables/Final submission/Figure1_2col.pdf", width=15/cm(1), height=9.4/cm(1))
 ```
 
 ```{r}
