@@ -147,6 +147,21 @@ rm(oxcalResults)
 
 #Computing morphometric values by interval
 
+```{r}
+newbirds <- list(buteo_regalis_tmt = read.xlsx(here("newbirds/Buteo_regalis.xlsx"),sheet = "data"),
+                 buteogallus_fragilis_tmt = read.xlsx(here("newbirds/Buteogallus_fragilis.xlsx"),sheet = "data"),
+                 circus_hudsoni_tmt = read.xlsx(here("newbirds/Circus_hudsoni.xlsx"),sheet = "data"),
+                 spizaetus_grinnelli_tmt = read.xlsx(here("newbirds/Spizaetus_grinnelli.xlsx"),sheet = "data")
+                 )
+
+for (i in 1:4) {
+  dbWriteTable(con,name = names(newbirds)[i],value = newbirds[[i]],row.names=F,overwrite=T)
+}
+dbSendQuery(con,paste0("insert into tablenames (tablenames) values ('",paste0(names(newbirds)),"');"))
+
+```
+
+
 ##Load morphometric data set and check pit numbers
 ```{r}
 meas<-cleaned
@@ -1236,5 +1251,19 @@ for (i in 1:nrow(test)){ test[i,which(!colnames(test)==as.character(test[i,"Meas
 }
 sum(test[,5:15]) #smaller: 4.035056; bigger: 3.211288
 
+```
+
+#dump data files for Dryad
+```{r}
+tablenames <- unlist(dbGetQuery(con,"select * from tablenames;"))
+for (i in 1:length(tablenames)) {
+  filename <- paste0(here("Figures\ and\ Tables/Final\ submission/datafiles/"),tablenames[i],".csv")
+  table <- dbGetQuery(con, paste0("select * from ",tablenames[i],";"))
+  write.csv(table, file=filename, row.names = F)
+}
+for (i in 1:4) {
+    filename <- paste0(here("Figures\ and\ Tables/Final\ submission/datafiles/"),names(newbirds)[i],".csv")
+  write.csv(newbirds[[i]],file=filename,row.names=F)
+}
 ```
 
