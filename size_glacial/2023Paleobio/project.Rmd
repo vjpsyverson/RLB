@@ -1266,4 +1266,41 @@ for (i in 1:4) {
   write.csv(newbirds[[i]],file=filename,row.names=F)
 }
 ```
+# extract chronologies for Neotoma
+```{r}
+load("oxcalResults/oxcalResults.Rdata")
+neotomaids <- read.csv("neotoma-ids.csv")
+result <- vector(mode = "list",length = length(oxcalResults))
+names(result) <- names(oxcalResults)
+I <- 1
+for (i in I:length(oxcalResults)){
+  full <- oxcalResults[[i]]
+  if (names(pit[i]) %in% neotomaids$pitnumber) {
+      AUages <- data.frame(analysisunitid = rep(subset(neotomaids$analysisunitid, neotomaids$pitnumber == names(pit[i])),2))
+  } else  {
+    AUages <- data.frame(analysisunitid = rep(names(pit[i]),2))
+  }
+  AUages$chronology.agemodel <- c(
+    rep("event",length(AUages$analysisunitid)/2),
+    rep("bounds",length(AUages$analysisunitid)/2))
+  AUages$sampleages.age <- c(medianProbDist(full$Event$posterior_probabilities,
+                                            quantile = 0.5),"NA")
+  AUages$sampleages.ageolder <- c(
+    medianProbDist(full$Event$posterior_probabilities,quantile = 0.3173),
+    medianProbDist(full$begin$posterior_probabilities,quantile = 0.5))
+  AUages$sampleages.ageyounger <- c(
+    medianProbDist(full$Event$posterior_probabilities,quantile = 0.6827),
+    medianProbDist(full$end$posterior_probabilities,quantile = 0.5))
+  controls <- data.frame(geochronid = rep(NA,length(grep("\\[",names(full),value = T))))
+  controls$geochronology.labnumber <- sapply(grep("\\[",names(full),value = T),
+       function(x) strsplit(strsplit(x,split = "\\[")[[1]],split = "\\]")[[2]])
+  controls$chroncontrols.age <- sapply(full[grepl("\\[",names(full))],
+                       function(x) medianProbDist(x$posterior_probabilities,quantile = 0.5))
+  controls$chroncontrols.agelimitolder <- sapply(full[grepl("\\[",names(full))],
+            function(x) medianProbDist(x$posterior_probabilities,quantile = 0.0455))
+  controls$chroncontrols.agelimityounger <- sapply(full[grepl("\\[",names(full))],
+            function(x) medianProbDist(x$posterior_probabilities,quantile = 0.9545))
+  result[[i]] <- list(sampleages = AUages,chroncontrols = controls)
+}
+```
 

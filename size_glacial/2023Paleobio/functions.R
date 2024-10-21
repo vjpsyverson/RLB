@@ -1,15 +1,15 @@
 unitDates<-function(data){
   #constructs and runs Oxcal script for single phase with begin & end boundaries
   #returns full (parsed) Oxcal output
-  if(nrow(data)>1){
-    dateString<-paste0(apply(data,1,assembleDateString),collapse="\n")
+  if(nrow(data[[1]])>1){
+    dateString<-paste0(apply(data[[1]],1,assembleDateString),collapse="\n")
   } else {
     dateString<-assembleDateString(data[[1]])  
   }
-  code<-paste0("Options()\n   {\n    BCAD=FALSE;\n    Curve(\"IntCal20\",\"IntCal20.14c\");\n   };\n   Plot()\n   {\n    Sequence()\n    {\n     Boundary(\"begin\");\n     Phase(\"Pit ", 
+  code<-paste0(c("Options()\n   {\n    BCAD=FALSE;\n    Curve(\"IntCal20\",\"IntCal20.14c\");\n   };\n   Plot()\n   {\n    Sequence()\n    {\n     Boundary(\"begin\");\n     Phase(\"Pit ", 
                names(data), "\")\n     {",
                dateString, 
-               "\n      Date(\"Event\");\n     };\n     Boundary(\"end\");\n    };\n   };\n  ",collapse="")
+               "\n      Date(\"Event\");\n     };\n     Boundary(\"end\");\n    };\n   };\n  "),collapse="")
   execute<-executeOxcalScript(code)
   result<-parseOxcalOutput(readOxcalOutput(execute),only.R_Date = F)
   return(result)
@@ -60,31 +60,20 @@ assembleDateString<-function(x) {
   paste0("R_Date('",x["SpecNo"],"[",x["SampleNo"],"]',",x["Uncal14CYBP"],",",x["Uncal14CSE"],");",collapse="")
 }
 
-medianProbDist<-function(xy,quantile=0.5){
-  #finds median of a probability distribution
-  #uses a while loop; might suck efficiency-wise but it works
-  #due to oxcAAR BC/AD bug, has been adjusted to subtract 1950 
-  #from the returned median date of the probability distribution
-  #because the BCAD=FALSE argument does not work in oxcAAR
-  pairs<-cbind(xy[-nrow(xy),],xy[-1,])
-  areas<-apply(pairs,1,trapezoid)
-  a_ap<-a_last<-0
-  a<-0.5*length(areas)
-  int<-sum(areas[0:a])
-  while(int!=quantile){
-    if(a_ap == a) {
-      a<-(a_ap+a_last)/2;break
-    }
-    a_ap<-a_last
-    a_last<-a
-    if(int>quantile){
-      a<-a-1
-    } else {
-      a<-a+1
-    }
-    int<-sum(areas[0:a])
-  }
-  result<-(c(floor(xy[a,1]),xy[a,2])+c(-1950,0))*-1
+bc2bp <- function(x) {
+  #adjusts for oxcAAR BC/BP date reporting bug
+  #subtracts 1950 and returns date as a positive value
+  return(round(1950 - x))
+}
+
+medianProbDist <- function(xy, datename = "dates", probname = "probabilities", quantile=0.5) {
+  #new version using cumsum, much more efficient
+  #converts result to BP
+  #xy <- x$posterior_probabilities
+  xy$cum <- unlist(cumsum(xy[probname]))
+  median <- min(which(xy$cum >= quantile*max(xy$cum)))
+  result <- mean(xy[c(median,median - 1),datename])
+  result <- bc2bp(result)
   return(result)
 }
 

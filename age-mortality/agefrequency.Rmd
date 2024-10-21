@@ -6,14 +6,14 @@ Camelops tooth wear plot
 ```{r}
 tooth<-openxlsx::read.xlsx("measurements/CamelopsJaws.xlsx")[,"TOOTH.WEAR"]
 dens<-density(tooth)
-#pdf(file="high res ms figures/fig4-camelops-tooth.pdf",width=3.4,height=3)
+pdf(file="vector pdf figures/fig5-camelops-tooth.pdf",width=3.5,height=7)
 par(mar=c(3,4,2,1),mgp=c(2,1,0),cex=0.9,mfrow=c(2,1),cex=0.8)
 plot(dens,ylim=c(0,max(c(hist(tooth,plot=F,breaks=c(0:18))$density),dens$y)),
      main="Camelops tooth wear",xlab = "Tooth wear stage")
 hist(tooth,add=T,prob=T,breaks=0:18)
 lines(dens)
 plot(ecdf(tooth),main="",xlab = "")
-#dev.off()
+dev.off()
 ```
 Camelops limb bone plots
 ```{r}
@@ -26,19 +26,19 @@ for (i in 1:4){
 names(Camelops)<-c("Humerus","Radius","Femur","Tibia")
 openxlsx::getSheetNames("measurements/Camelops.xlsx")
 Camelops<-Camelops[order(names(Camelops))]
-#pdf(file="high res ms figures/fig5-camelops-bone.pdf",width=7,height=5.5
 
+pdf(file="vector pdf figures/fig6-camelops-bone.pdf",width=7,height=3.5)
 data<-Camelops
 par(mar=c(3,4,2,1),mgp=c(2,1,0),cex=0.9,mfrow=c(2,4),cex=0.6)
 for (i in 1:4) {
   dens<-density(data[[i]],na.rm=T)
   plot(dens,ylim=c(0,max(c(hist(data[[i]],breaks="FD",plot=F)$density),dens$y)),
-    main=paste("Camelops",names(data)[[i]]),sub="",xlab="Count")
+    main=paste("Camelops",names(data)[[i]]),sub="",xlab="diaphyseal length (mm)")
   hist(data[[i]],breaks="FD",add=T,prob=T)
   lines(dens)
 }
 for (i in 1:4) {plot(ecdf(data[[i]]),main="",xlab="",sub="")}
-#dev.off()
+dev.off()
 ```
 Aenocyon limb bone plots
 ```{r}
@@ -50,17 +50,17 @@ for (i in 1:4){
 names(Canis)<-openxlsx::getSheetNames("measurements/Canis.xlsx")
 Canis<-Canis[order(names(Canis))]
 data<-Canis
-#pdf(file="high res ms figures/fig6-canis-bone.pdf",width=7,height=5.5)
+pdf(file="vector pdf figures/fig7-aenocyon-bone.pdf",width=7,height=3.5)
 par(mar=c(3,4,2,1),mgp=c(2,1,0),cex=0.9,mfrow=c(2,4),cex=0.6)
 for (i in 1:4) {
   dens<-density(data[[i]],na.rm=T)
   plot(dens,ylim=c(0,max(c(hist(data[[i]],breaks="FD",plot=F)$density),dens$y)),
-    main=paste("Canis",names(data)[[i]]),sub="")
+    main=paste("Aenocyon",names(data)[[i]]),sub="",xlab="diaphyseal length (mm)")
   hist(data[[i]],breaks="FD",add=T,prob=T)
   lines(dens)
 }
 for (i in 1:4) {plot(ecdf(data[[i]]),main="",xlab="")}
-#dev.off()
+dev.off()
 ```
 Smilodon limb bone plots
 ```{r}
@@ -72,17 +72,17 @@ for (i in 1:4){
 names(Smilodon)<-openxlsx::getSheetNames("measurements/Smilodon.xlsx")
 Smilodon<-Smilodon[order(names(Smilodon))]
 data<-Smilodon
-#pdf(file="high res ms figures/fig7-smilodon-bone.pdf",width=7,height=5.5)
+pdf(file="vector pdf figures/fig8-smilodon-bone.pdf",width=7,height=3.5)
 par(mar=c(3,4,2,1),mgp=c(2,1,0),cex=0.9,mfrow=c(2,4),cex=0.6)
 for (i in 1:4) {
   dens<-density(data[[i]],na.rm=T)
   plot(dens,ylim=c(0,max(c(hist(data[[i]],breaks="FD",plot=F)$density),dens$y)),
-    main=paste("Smilodon",names(data)[[i]]),sub="",xlab="Count")
+    main=paste("Smilodon",names(data)[[i]]),sub="",xlab="diaphyseal length (mm)")
   hist(data[[i]],breaks="FD",add=T,prob=T)
   lines(dens)
 }
 for (i in 1:4) {plot(ecdf(data[[i]]),main="",xlab="")}
-#dev.off()
+dev.off()
 ```
 
 Multimodality test results (output to results/modetest.csv)
