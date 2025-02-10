@@ -1,0 +1,461 @@
+"Institution","SpecNo","Taxon","Element","SampleNo","Pit","Uncal14CYBP","Uncal14CSE","median","max","min","Source","Quality"
+"Scripps",NA,"Cupressus sp.","Wood","55","3",14400,300,17585,18268.5,16742,"Hubbs et al. (1960)","Wood"
+"Scripps",NA,"Plantae","Atlatl shaft","121","61/67",4450,200,5100,5584.5,4572,"Hubbs et al. (1960)","Wood"
+"QC",NA,"Plantae","Wood","424","9",34285,1675,39250,42425.5,36004.5,"Marcus and Berger (1984)","Wood"
+"QC",NA,"Plantae","Wood","425","77",29470,1150,33910,36492.5,31274,"Marcus and Berger (1984)","Wood"
+"QC",NA,"Plantae","Wood","426","4",35300,2500,40460,48184.5,35283,"Marcus and Berger (1984)","Wood"
+"QC",NA,"Plantae","Wood","427","16",19485,275,23465,24091.5,22933.5,"Marcus and Berger (1984)","Wood"
+"QC",NA,"Plantae","Wood","428","16",33870,1350,38805,41728,36146.5,"Marcus and Berger (1984)","Wood"
+"QC",NA,"Plantae","Wood","429","9",13120,230,15750,16433.5,15086,"Marcus and Berger (1984)","Wood"
+"QC",NA,"Plantae","Wood","658","91",35735,4050,42000,54818,35286,"Marcus and Berger (1984)","Wood"
+"QU",NA,"Plantae","Wood","724","9",13430,210,16190,16884.5,15609.5,"Marcus and Berger (1984)","Wood"
+"LACM","HC-35353","Smilodon fatalis","radius","91679","3",12645,40,15080,15216,14940.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-35915","Smilodon fatalis","radius","91680","61/67",11335,35,13225,13306,13127.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-X7098","Pantera atrox","L innominate","91682","61/67",11895,35,13760,13982,13603.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-X7117","Pantera atrox","L innominate","91683","61/67",12225,35,14125,14308.5,14047,"O'Keefe et al. (2023)",NA
+"LACM","HC-K3569","Smilodon fatalis","femur","109442","61/67",12515,25,14865,15010.5,14530,"O'Keefe et al. (2023)",NA
+"LACM","HC-K3593","Smilodon fatalis","femur","109443","61/67",11895,30,13760,13979,13604.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-H1789","Canis dirus","tibia","125320","61/67",12605,40,15030,15180,14840.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-X7113","Pantera atrox","L innominate","125321","61/67",11580,40,13450,13573.5,13336.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-H1872","Canis dirus","tibia","127076","61/67",11820,30,13690,13769.5,13530.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-23970","Bison antiquus","metacarpal","141499","61/67",12355,40,14405,14829.5,14152,"O'Keefe et al. (2023)",NA
+"LACM","HC-23969","Bison antiquus","metacarpal","141500","61/67",12175,40,14080,14190,13876.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z1276","Camelops hesternus","metatarsal","141501","61/67",12370,45,14440,14839.5,14165,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4599","Equus occidentalis","metatarsal","141502","61/67",11820,45,13680,13784.5,13524.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-23974","Bison antiquus","metacarpal","141505","61/67",11520,40,13395,13470.5,13309.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4625","Equus occidentalis","metatarsal","141507","61/67",11310,40,13210,13299,13115,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4612","Equus occidentalis","metatarsal","143011","61/67",12310,45,14270,14809.5,14086,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4602","Equus occidentalis","metatarsal","143012","61/67",11340,30,13230,13301.5,13165,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4649","Equus occidentalis","metatarsal","143013","61/67",11870,40,13710,13794.5,13604,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4620","Equus occidentalis","metatarsal","148044","61/67",11455,40,13335,13446,13193.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4639","Equus occidentalis","metatarsal","148045","61/67",12165,45,14075,14296,13860,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4591","Equus occidentalis","metatarsal","148046","61/67",12395,50,14500,14859.5,14199.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Y5485","Bison antiquus","metacarpal","148048","61/67",12060,60,13925,14059,13799,"O'Keefe et al. (2023)",NA
+"LACM","HC-Y2421","Bison antiquus","metacarpal","148049","61/67",12300,60,14270,14818,14067,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4360","Equus occidentalis","phalanx","148056","3",12595,50,15005,15182.5,14596.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-35350","Smilodon fatalis","radius","180741","3",12500,35,14725,15015.5,14449,"O'Keefe et al. (2023)",NA
+"LACM","HC-35352","Smilodon fatalis","radius","180742","3",12970,35,15520,15661.5,15330,"O'Keefe et al. (2023)",NA
+"LACM","HC-W589","Canis latrans","femur","181074","61/67",11770,30,13635,13750,13509.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-H1865","Canis dirus","tibia","182907","61/67",11895,30,13760,13979,13604.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-35905","Smilodon fatalis","radius","182908","61/67",11570,30,13445,13500,13341,"O'Keefe et al. (2023)",NA
+"LACM","HC-142020","Camelops hesternus","R humerus","182909","61/67",12250,30,14155,14308.5,14069,"O'Keefe et al. (2023)",NA
+"LACM","HC-142021","Camelops hesternus","R humerus","182910","61/67",12540,35,14905,15089,14544.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-142022","Camelops hesternus","R humerus","182911","61/67",12495,35,14700,15009,14434,"O'Keefe et al. (2023)",NA
+"LACM","HC-142023","Camelops hesternus","R humerus","182912","61/67",12630,35,15055,15185.5,14931.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z1279","Camelops hesternus","metatarsal","182913","61/67",12460,30,14635,14948.5,14333.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z1268","Camelops hesternus","metatarsal","182914","61/67",12230,30,14130,14308,14053,"O'Keefe et al. (2023)",NA
+"LACM","HC-35847","Smilodon fatalis","radius","182916","61/67",11350,80,13240,13404.5,13098,"O'Keefe et al. (2023)",NA
+"LACM","HC-35907","Smilodon fatalis","radius","182917","61/67",11440,35,13315,13421.5,13185.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z4636","Equus occidentalis","metatarsal","184037","61/67",11765,35,13620,13752,13505.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Y2432","Bison antiquus","metacarpal","184038","61/67",12115,40,14020,14092.5,13810,"O'Keefe et al. (2023)",NA
+"LACM","HC-27447","Equus occidentalis","femur","184043","61/67",12270,35,14185,14774.5,14072.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-27448","Equus occidentalis","femur","184473","61/67",12060,30,13920,14043.5,13807,"O'Keefe et al. (2023)",NA
+"LACM","HC-64492","Bison antiquus","humerus","184637","61/67",11625,30,13490,13585,13411,"O'Keefe et al. (2023)",NA
+"LACM","HC-64493","Bison antiquus","humerus","184638","61/67",12140,30,14055,14107,13869.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-64494","Bison antiquus","humerus","184639","61/67",12375,30,14445,14830.5,14201.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-64496","Bison antiquus","humerus","184640","61/67",11935,30,13805,14013.5,13610.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-64495","Bison antiquus","humerus","184666","61/67",12055,30,13925,14039.5,13806.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-3201-R-2","Canis latrans","dentary","207018","61/67",12430,35,14565,14886.5,14295.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6191","Canis latrans","dentary","207021","61/67",9665,25,11115,11192,10814.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-57347","Canis latrans","dentary","207054","61/67",9765,25,11210,11239,11174.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-57349","Canis latrans","dentary","207056","61/67",12440,45,14590,14930.5,14303,"O'Keefe et al. (2023)",NA
+"LACM","HC-57350","Canis latrans","dentary","207057","61/67",9515,25,10795,11068.5,10689,"O'Keefe et al. (2023)",NA
+"LACM","HC-57352","Canis latrans","dentary","207058","61/67",10535,25,12540,12670,12479.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6172","Canis latrans","dentary","209412","3",12650,35,15080,15207.5,14954,"O'Keefe et al. (2023)",NA
+"LACM","HC-6201","Canis latrans","dentary","209413","61/67",11190,25,13120,13162,13086.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-56859","Canis latrans","dentary","209424","3",12540,30,14910,15080,14559.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-57389","Canis latrans","dentary","209428","61/67",12075,30,13925,14055,13809,"O'Keefe et al. (2023)",NA
+"LACM","HC-57391","Canis latrans","dentary","209433","61/67",11390,30,13270,13317.5,13177.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-57392","Canis latrans","dentary","209434","61/67",11880,30,13720,13797,13605,"O'Keefe et al. (2023)",NA
+"LACM","HC-57401","Canis latrans","dentary","209435","61/67",11635,30,13500,13588,13434,"O'Keefe et al. (2023)",NA
+"LACM","HC-6243","Canis latrans","dentary","209641","61/67",11360,25,13240,13302.5,13174,"O'Keefe et al. (2023)",NA
+"LACM","HC-57388","Canis latrans","dentary","209642","61/67",12120,50,14015,14102.5,13808,"O'Keefe et al. (2023)",NA
+"LACM","HC-56860","Canis latrans","dentary","211035","3",11915,30,13785,14004,13606,"O'Keefe et al. (2023)",NA
+"LACM","HC-56861","Canis latrans","dentary","211036","3",12550,35,14930,15103.5,14563.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-57015","Canis latrans","dentary","212472","10",9215,25,10370,10492,10256,"O'Keefe et al. (2023)",NA
+"LACM","HC-57023","Canis latrans","dentary","212474","10",10280,25,11990,12429,11829.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-544","Smilodon fatalis","dentary","212476","61/67",12100,30,13985,14074.5,13811.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-585","Smilodon fatalis","dentary","212477","61/67",12480,30,14675,14985.5,14369.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-611","Smilodon fatalis","dentary","212478","61/67",11090,30,13020,13094.5,12920,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-624","Smilodon fatalis","dentary","212479","61/67",11755,30,13595,13746,13502,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-693","Smilodon fatalis","dentary","212480","61/67",11200,30,13120,13164,13089,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-694","Smilodon fatalis","dentary","212481","61/67",11385,25,13260,13312.5,13178.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-834","Smilodon fatalis","dentary","212482","61/67",12395,30,14480,14843,14248,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-842","Smilodon fatalis","dentary","212483","61/67",12395,30,14480,14843,14248,"O'Keefe et al. (2023)",NA
+"LACM","HC-29702","Smilodon fatalis","dentary","212486","61/67",12370,35,14440,14831,14183.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-29754","Smilodon fatalis","dentary","212487","61/67",11130,25,13085,13109.5,12932.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-863","Smilodon fatalis","dentary","212493","61/67",11545,30,13420,13481,13327,"O'Keefe et al. (2023)",NA
+"LACM","HC-6469","Bison antiquus","dentary","214086","61/67",12190,30,14095,14175.5,14027.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6470","Bison antiquus","dentary","214087","61/67",11575,30,13450,13502,13344,"O'Keefe et al. (2023)",NA
+"LACM","HC-6612","Bison antiquus","dentary","214088","61/67",12000,30,13915,14022,13793,"O'Keefe et al. (2023)",NA
+"LACM","HC-6690","Bison antiquus","dentary","214089","61/67",12435,30,14575,14885,14306.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6691","Bison antiquus","dentary","214090","61/67",11675,30,13550,13595,13468,"O'Keefe et al. (2023)",NA
+"LACM","HC-6697","Bison antiquus","dentary","214091","61/67",12140,30,14055,14107,13869.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6771","Bison antiquus","dentary","214092","61/67",12100,30,13985,14074.5,13811.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6775","Bison antiquus","dentary","214093","61/67",11260,30,13145,13231.5,13095.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6778","Bison antiquus","dentary","214094","61/67",12200,30,14095,14294.5,14032.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z260","Bison antiquus","dentary","214095","61/67",12470,30,14660,14966,14355,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-15","Canis dirus","dentary","214096","61/67",11720,30,13550,13733,13487.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-23","Canis dirus","dentary","214097","61/67",12385,30,14465,14836,14221,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-48","Canis dirus","dentary","214098","61/67",11475,30,13355,13449,13254,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-57","Canis dirus","dentary","214099","61/67",12355,35,14400,14825,14162.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-66","Canis dirus","dentary","214100","61/67",12470,30,14660,14966,14355,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-182","Canis dirus","dentary","214101","61/67",11195,30,13120,13163,13087.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-483","Canis dirus","dentary","214102","61/67",11135,30,13085,13151.5,12928,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-516","Canis dirus","dentary","214103","61/67",12485,30,14685,14990,14435,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-538","Canis dirus","dentary","214104","61/67",12500,30,14780,15003.5,14480,"O'Keefe et al. (2023)",NA
+"LACM","HC-55509","Canis dirus","dentary","214105","61/67",11695,30,13550,13599.5,13484.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-55510","Canis dirus","dentary","214109","61/67",11535,40,13410,13481.5,13315,"O'Keefe et al. (2023)",NA
+"LACM","HC-55511","Canis dirus","dentary","214110","61/67",12130,30,14045,14099,13861,"O'Keefe et al. (2023)",NA
+"LACM","HC-55512","Canis dirus","dentary","214111","61/67",12550,30,14935,15099,14579,"O'Keefe et al. (2023)",NA
+"LACM","HC-55700","Canis dirus","dentary","214112","61/67",11415,30,13280,13349,13178.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-55710","Canis dirus","dentary","214113","61/67",11450,35,13330,13437.5,13193.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-55719","Canis dirus","dentary","214114","61/67",12105,30,14005,14079.5,13812.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-55720","Canis dirus","dentary","214115","61/67",11920,30,13790,14006.5,13607,"O'Keefe et al. (2023)",NA
+"LACM","HC-141914","Canis dirus","dentary","214116","61/67",11725,30,13555,13735,13490,"O'Keefe et al. (2023)",NA
+"LACM","HC-6822","Equus occidentalis","dentary","214117","61/67",11345,30,13235,13301,13167.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-7047","Equus occidentalis","dentary","214119","61/67",11100,30,13030,13097,12925,"O'Keefe et al. (2023)",NA
+"LACM","HC-7066","Equus occidentalis","dentary","214120","61/67",12445,30,14600,14920,14314.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-21290","Equus occidentalis","dentary","214122","61/67",12165,35,14070,14160,13879.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-21295","Equus occidentalis","dentary","214123","61/67",12070,30,13920,14051.5,13808,"O'Keefe et al. (2023)",NA
+"LACM","HC-21313","Equus occidentalis","dentary","214124","61/67",12125,30,14045,14094.5,13858.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-21321","Equus occidentalis","dentary","214125","61/67",11575,35,13440,13570,13339.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z5301","Equus occidentalis","dentary","214126","61/67",11430,35,13305,13412.5,13181.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6727","Bison antiquus","dentary","215757","3",12930,30,15460,15602,15304,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-224","Canis dirus","dentary","215767","3",12245,30,14150,14309.5,14064.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-478","Canis dirus","dentary","215771","3",12990,30,15565,15689,15358.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2301-L-506","Canis dirus","dentary","215773","3",12685,30,15135,15246,14994,"O'Keefe et al. (2023)",NA
+"LACM","HC-53845","Canis dirus","dentary","215778","3",12580,30,15000,15137.5,14659.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-53849","Canis dirus","dentary","215781","3",12595,30,15020,15146,14866,"O'Keefe et al. (2023)",NA
+"LACM","HC-53851","Canis dirus","dentary","215783","3",12580,30,15000,15137.5,14659.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-12","Smilodon fatalis","dentary","215787","3",12460,35,14635,14953,14326.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-11534","Sylvilagus",NA,"216760","10",5925,20,6750,6794,6669.5,"Fox et al. (2023)",NA
+"LACM","HC-11587","Otospermophilus",NA,"216761","10",11105,25,13050,13099,12925.5,"Fox et al. (2023)",NA
+"LACM","HC-142763","Sylvilagus",NA,"216763","16",36880,660,41670,42384.5,40814.5,"Fox et al. (2023)",NA
+"LACM","HC-142764","Sylvilagus",NA,"216764","16",36350,620,41350,42201.5,40386,"Fox et al. (2023)",NA
+"LACM","HC-142766","Sylvilagus",NA,"216765","16",28600,240,32840,33674.5,32014.5,"Fox et al. (2023)",NA
+"LACM","V-2173","Sylvilagus",NA,"216771","16",30320,290,34765,35323,34288,"Fox et al. (2023)",NA
+"LACM","V-4531","Otospermophilus",NA,"216780","16",30900,320,35275,36013.5,34623,"Fox et al. (2023)",NA
+"LACM","HC-6483","Bison antiquus","dentary","217028","3",12885,30,15400,15559,15262.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6722","Bison antiquus","dentary","217032","3",12535,30,14905,15066,14548,"O'Keefe et al. (2023)",NA
+"LACM","HC-6726","Bison antiquus","dentary","217034","3",12650,35,15080,15207.5,14954,"O'Keefe et al. (2023)",NA
+"LACM","HC-7052","Equus occidentalis","dentary","217047","61/67",11825,25,13685,13764.5,13598,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z5357","Equus occidentalis","dentary","217065","3",12520,30,14870,15032.5,14520.5,"O'Keefe et al. (2023)",NA
+"LACM","V-2174","Sylvilagus",NA,"217078","16",28500,240,32680,33522.5,31900,"Fox et al. (2023)",NA
+"LACM","HC-7088","Equus occidentalis","dentary","217449","3",11480,25,13365,13439.5,13303,"O'Keefe et al. (2023)",NA
+"LACM","HC-6198","Canis latrans","dentary","222272","61/67",11470,25,13350,13441.5,13256.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6200","Canis latrans","dentary","222273","61/67",12425,25,14535,14853.5,14304.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-57379","Canis latrans","dentary","222276","61/67",12140,25,14055,14098.5,13876,"O'Keefe et al. (2023)",NA
+"LACM","HC-57386","Canis latrans","dentary","222277","61/67",12015,25,13915,14021.5,13798,"O'Keefe et al. (2023)",NA
+"LACM","HC-57393","Canis latrans","dentary","222278","61/67",12195,25,14090,14165,14037.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-57395","Canis latrans","dentary","222279","61/67",12215,30,14115,14303.5,14043,"O'Keefe et al. (2023)",NA
+"LACM","HC-57396","Canis latrans","dentary","222280","61/67",9740,25,11200,11235,11114.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6698","Bison antiquus","dentary","222281","61/67",12680,30,15125,15239.5,14988.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6699","Bison antiquus","dentary","222282","61/67",12660,30,15100,15210.5,14969.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-55660","Canis dirus","dentary","222283","61/67",11820,25,13690,13765,13595.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-6821","Equus occidentalis","dentary","222284","61/67",11710,25,13555,13602,13492,"O'Keefe et al. (2023)",NA
+"LACM","HC-6823","Equus occidentalis","dentary","222285","61/67",11630,30,13495,13587,13425.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-7068","Equus occidentalis","dentary","222286","61/67",11925,25,13795,14007.5,13609.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-747","Smilodon fatalis","dentary","222448","61/67",12545,30,14925,15089,14567.5,"O'Keefe et al. (2023)",NA
+"LACM","RLP-R30909","Smilodon fatalis","dentary","222450","91",11730,30,13560,13737.5,13491.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-705","Smilodon fatalis","dentary","222677","61/67",11645,30,13510,13590,13447.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-11584","Otospermophilus",NA,"223493","10",4505,20,5160,5294.5,5049.5,"Fox et al. (2023)",NA
+"LACM","V-2644","Sylvilagus",NA,"223525","4",31460,260,35825,36291,35314,"Fox et al. (2023)",NA
+"LACM","V-4509","Otospermophilus",NA,"223528","10",6155,25,7060,7158,6959.5,"Fox et al. (2023)",NA
+"LACM","RLP-R36743","Canis dirus","dentary","228959","91",11845,30,13690,13779.5,13604.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-7085","Equus occidentalis","dentary","228961","3",12605,35,15035,15164,14869.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-548","Smilodon fatalis","dentary","228963","61/67",11330,30,13225,13303,13160,"O'Keefe et al. (2023)",NA
+"LACM","HC-2002-L-700","Smilodon fatalis","dentary","228965","61/67",11260,30,13145,13231.5,13095.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-142019","Camelops hesternus","R humerus","236961","61/67",11820,30,13690,13769.5,13530.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-143550","Camelops hesternus","R humerus","236962","61/67",12535,35,14895,15082,14535.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-143551","Camelops hesternus","R humerus","236963","61/67",11880,30,13720,13797,13605,"O'Keefe et al. (2023)",NA
+"LACM","HC-143552","Camelops hesternus","R humerus","236964","61/67",12550,30,14935,15099,14579,"O'Keefe et al. (2023)",NA
+"LACM","HC-143553","Camelops hesternus","R humerus","236965","61/67",12480,30,14675,14985.5,14369.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-143554","Camelops hesternus","R humerus","236966","61/67",12555,30,14945,15104.5,14589.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-143555","Camelops hesternus","R humerus","236967","61/67",12395,30,14480,14843,14248,"O'Keefe et al. (2023)",NA
+"LACM","HC-143556","Camelops hesternus","R humerus","236968","61/67",12495,35,14700,15009,14434,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z1273","Camelops hesternus","metatarsal","236969","61/67",12205,30,14105,14297.5,14036.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-Z1281","Camelops hesternus","metatarsal","236970","61/67",12575,30,14985,15131.5,14647,"O'Keefe et al. (2023)",NA
+"LACM","HC-X7109","Pantera atrox","L innominate","259718","60",12465,30,14650,14957.5,14343,"O'Keefe et al. (2023)",NA
+"LACM","HC-14610","Pantera atrox","R radius","259724","61/67",11160,30,13105,13163.5,13002.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-14613","Pantera atrox","L radius","259725","77",11240,30,13140,13174.5,13094.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-14628","Pantera atrox","L ulna","259727","61/67",11405,30,13270,13334.5,13178.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-X6957","Pantera atrox","L radius","259730","4",12675,30,15115,15233,14982.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-1702-L-11","Paramylodon harlani","L tibia","264033","61/67",12175,30,14075,14164,14013.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-1702-L-19","Paramylodon harlani","L tibia","264034","61/67",12375,30,14445,14830.5,14201.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-1702-L-22","Paramylodon harlani","L tibia","264035","61/67",11960,30,13870,14019,13762.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-1702-L-23","Paramylodon harlani","L tibia","264036","61/67",12185,30,14085,14170,14024.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-1702-L-26","Paramylodon harlani","L tibia","264037","61/67",12020,30,13915,14021,13799.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-1702-L-42","Paramylodon harlani","L tibia","264038","61/67",11940,30,13810,14017,13611,"O'Keefe et al. (2023)",NA
+"LACM","HC-1702-L-44","Paramylodon harlani","L tibia","264039","61/67",12560,30,14960,15112,14600.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-12107","Paramylodon harlani","L tibia","264042","61/67",12265,30,14170,14754.5,14071.5,"O'Keefe et al. (2023)",NA
+"LACM","RLP-3311E","Dicheirus sp.","","135934","91",7265,25,8105,8169.5,8014.5,"Holden et al. (2016)","Chitin"
+"LACM","RLP-12854","Coleoptera","Prothorax","137678","91",26710,130,30990,31164,30751.5,"Holden et al. (2016)","Chitin"
+"LACM","RLP-12854","Coleoptera","Prothorax","137685","91",26670,130,30970,31149.5,30460.5,"Holden et al. (2016)","Chitin"
+"LACM",NA,"Juniperus sp.","Wood","1660A","91",40690,550,43745,44559.5,42932,"Ward et al. (2005)","Wood"
+"LACM","RLP 15181E ","Dicheirus dilatatus",NA,"167057","91",135,30,120,275.5,7,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15151E ","Dicheirus dilatatus",NA,"167060","91",180,20,195,289,NA,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15180E ","Dicheirus dilatatus",NA,"167061","91",9480,45,10740,11068.5,10577.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15194E ","Dicheirus dilatatus",NA,"167062","91",9765,35,11205,11249,11150,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15147E ","Dicheirus dilatatus",NA,"167063","91",230,25,275,313,NA,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15185E ","Dicheirus dilatatus",NA,"167065","91",36580,960,41435,42534.5,39915.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15184E ","Dicheirus dilatatus",NA,"167066","91",39200,1700,43355,47054.5,41039.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15112E ","Dicheirus dilatatus",NA,"167067","91",40900,3800,46325,NA,41661.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 2214E ","Dicheirus dilatatus",NA,"167068","91",24880,230,29125,29806.5,28694,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15108E","Dicheirus dilatatus",NA,"167072","91",25950,280,30270,30971.5,29731.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15109E ","Dicheirus dilatatus",NA,"167073","91",25870,610,30160,31189.5,28989,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15204E ","Dicheirus dilatatus",NA,"169884","91",40300,1900,44155,49339,41632,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15210E","Dicheirus dilatatus",NA,"169885","91",38600,2800,43805,54444.5,39299.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15216E ","Dicheirus dilatatus",NA,"169889","91",35700,2400,40780,47904,35778,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15224E","Dicheirus dilatatus",NA,"170072","91",38600,1300,42740,44835,41155,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15227E ","Dicheirus dilatatus",NA,"170073","91",38900,1600,43090,46216.5,40929.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15114E","Dicheirus dilatatus",NA,"170074","91",9510,160,10835,11232,10377.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15186E ","Dicheirus dilatatus",NA,"170088","91",10730,160,12700,13084.5,12103.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15165E ","Dicheirus dilatatus",NA,"170090","91",230,25,275,313,NA,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15170E ","Dicheirus dilatatus",NA,"170091","91",10310,60,12130,12468.5,11832.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15171E ","Dicheirus dilatatus",NA,"170092","91",1275,30,1230,1285,1128,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15187E ","Dicheirus dilatatus",NA,"170096","91",350,30,400,488.5,314,"Holden et al. (2017)","Chitin"
+"LACM","RLP 669E ","Dicheirus dilatatus",NA,"170111","91",10020,210,11615,12479,10874.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15173E","Dicheirus dilatatus",NA,"170112","91",10010,210,11600,12475,10826.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15174E ","Dicheirus dilatatus",NA,"170113","91",10120,140,11725,12447,11248.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15195E","Dicheirus dilatatus",NA,"170114","91",11840,90,13700,14002,13498.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15263E","Dicheirus dilatatus",NA,"170736","91",39100,3200,44550,54836.5,39741,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15264E ","Dicheirus dilatatus",NA,"170737","91",39900,1900,43925,48868.5,41262,"Holden et al. (2017)","Chitin"
+"LACM","RLP 476E ","Dicheirus dilatatus",NA,"170738","91",39100,2000,43505,48995.5,40461.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15101E","Dicheirus dilatatus",NA,"170740","91",10015,45,11510,11737,11280.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15200E","Dicheirus dilatatus",NA,"170744","91",33800,2200,38940,44077.5,34503.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15087E ","Dicheirus dilatatus",NA,"170745","91",10070,310,11725,12681.5,10779,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15091E ","Dicheirus dilatatus",NA,"170746","91",10510,760,12235,14320,10197,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15095E","Dicheirus dilatatus",NA,"170747","91",10060,70,11585,11828,11278.5,"Holden et al. (2017)","Chitin"
+"LACM","RLP 15099E ","Dicheirus dilatatus",NA,"170748","91",11080,330,13015,13758,12104.5,"Holden et al. (2017)","Chitin"
+"Yale",NA,"Cupressus sp.","Wood","354A","3",14500,210,17710,18214,17131,"Deevey et al. (1959)","Wood"
+"Yale",NA,"Cupressus sp.","Wood","354B","3",15390,230,18680,19129.5,18233.5,"Deevey et al. (1959)","Wood"
+"Yale",NA,"Cupressus sp.","Wood","355A","3",14110,420,17180,18247.5,16027,"Deevey et al. (1959)","Wood"
+"Yale",NA,"Cupressus sp.","Wood","355B","3",13890,280,16850,17729.5,16049,"Deevey et al. (1959)","Wood"
+"Yale",NA,"Cupressus sp.","Wood","422A","3",15200,150,18495,18781.5,18237.5,"Marcus and Berger (1984)","Wood"
+"Yale",NA,"Cupressus sp.","Wood","422B","3",14500,140,17700,18156,17345.5,"Marcus and Berger (1984)","Wood"
+"QC",NA,"Plantae","Wood","427R","16",18430,500,22350,23711,21035.5,"Marcus and Berger (1984)","Wood"
+"UCLA",NA,"Plantae","Wood","773A","4",33700,1600,38675,41984,35567.5,"Berger and Libby (1966)","Wood"
+"UCLA",NA,"Plantae","Wood","773C","77",37000,2660,42150,51337,36834.5,"Berger and Libby (1966)","Wood"
+"UCLA",NA,"Plantae","Wood","773D","9",13300,160,16005,16494.5,15540.5,"Berger and Libby (1966)","Wood"
+"LACM","HC-X9982","Canis latrans","Ulna R","ACRF814","16",29860,190,34365,34667.5,34023.5,"Coltrain et al. (2004)","1"
+"LACM","HC-133499","Ovis sp.","Atlas","ACRF816","4",185,30,185,296.5,NA,"Coltrain et al. (2004)","1"
+"LACM","RLP-R42063","Arctodus simus","Vertebra cervical VI","ACRF819","91",28350,470,32595,33900,31445,"Coltrain et al. (2004)","1"
+"LACM","RLP-R19258","Arctodus simus","Humerus L","ACRF820","91",27330,140,31325,31624.5,31120,"Coltrain et al. (2004)","1"
+"LACM","HC-Z4484","Equus sp.","Toe","ACRF8231","4",28600,190,32840,33567.5,32083.5,"Coltrain et al. (2004)","1"
+"LACM","HC-Z4579","Equus sp.","Metatarsal L","ACRF826","60",26320,240,30590,31029.5,30121.5,"Coltrain et al. (2004)","1"
+"LACM","HC-A883","Smilodon fatalis","Femur R","ACRF827","3",14360,35,17460,17768.5,17327,"Coltrain et al. (2004)","1"
+"LACM","HC-V5203","Canis familiaris","Mandible","ACRF829","61/67",6360,20,7290,7324,7172,"Coltrain et al. (2004)","1"
+"LACM","HC-Z4450","Equus sp.","Toe","ACRF830","3",14250,40,17320,17429.5,17110,"Coltrain et al. (2004)","1"
+"LACM","HC-28501","Equus sp.","Toe","ACRF832","3",14745,40,18095,18215.5,17917.5,"Coltrain et al. (2004)","1"
+"LACM","HC-Z4360","Equus sp.","Toe","ACRF833","3",12820,90,15320,15603.5,15055.5,"Coltrain et al. (2004)","1"
+"LACM","RLP-R50477","Arctodus simus","Metatarsal R","ACRF834","91",28130,330,32265,33231.5,31372,"Coltrain et al. (2004)","1"
+"Page",NA,"Juniperus sp.","Wood","L-13","3",36840,430,41685,42190,41127.5,"Ward et al. (2005)","Wood"
+"Page",NA,"Juniperus sp.","Wood","L-17","81",24130,100,28310,28640,27925.5,"Ward et al. (2005)","Wood"
+"Page",NA,"Juniperus sp.","Wood","L-18","13",14160,50,17215,17367.5,17068,"Ward et al. (2005)","Wood"
+"Page",NA,"Juniperus sp.","Wood","L-19","9",12450,40,14615,14939.5,14315,"Ward et al. (2005)","Wood"
+"Page",NA,"Juniperus sp.","Wood","L-22","9",35820,30,40975,41157,40738.5,"Ward et al. (2005)","Wood"
+"LACM",NA,"Juniperus sp.","Wood","L-24","91",38880,550,42630,43268,42133.5,"Ward et al. (2005)","Wood"
+"Page",NA,"Juniperus sp.","Wood","L-25","77",30370,200,34785,35249.5,34409.5,"Ward et al. (2005)","Wood"
+"Page",NA,"Juniperus sp.","Wood","L-26","60",28100,170,32075,32888.5,31668.5,"Ward et al. (2005)","Wood"
+"Page",NA,"Juniperus sp.","Wood","L-5","13",7665,35,8450,8538.5,8390,"Ward et al. (2005)","Wood"
+"LACM","HC-Y5611","Bison antiquus","Metatarsal R","QC278","16",24400,535,28640,29898.5,27704,"Marcus and Berger (1984)","2"
+"LACM","HC-A667","Smilodon fatalis","Femur L","QC279","3",13035,275,15620,16520,14566.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A686","Smilodon fatalis","Femur L","QC280","60",27900,2700,33530,43811.5,27369.5,"Marcus and Berger (1984)","2"
+"LACM","HC-K3407","Smilodon fatalis","Femur R","QC283","3",19555,820,23695,25762.5,22024,"Marcus and Berger (1984)","2"
+"LACM","HC-A979","Smilodon fatalis","Femur L","QC302A","61/67",11640,135,13510,13789.5,13240.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A979","Smilodon fatalis","Femur L","QC302B","61/67",11980,260,13950,14884.5,13339.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A1089","Smilodon fatalis","Femur R","QC339","13",15360,480,18690,19835.5,17501,"Marcus and Berger (1984)","2"
+"LACM","HC-6139","Paramylodon harlani","Rib","QC361","60",23420,350,27640,28516,27132,"Marcus and Berger (1984)","2"
+"LACM","HC-Y2451","Bison antiquus","Metacarpal","QC371","16",12275,775,14660,16949.5,12827.5,"Marcus and Berger (1984)","2"
+"LACM","HC-Z3245","Equus sp.","Radius L","QC384","91",8850,455,10005,11245.5,8773.5,"Marcus and Berger (1984)","0"
+"LACM","HC-6167","Smilodon fatalis","Femur L","QC386","4",26995,4000,34530,52157,25931.5,"Marcus and Berger (1984)","2"
+"LACM","HC-6166","Smilodon fatalis","Femur L","QC401","3",13820,840,16760,18904,14253.5,"Marcus and Berger (1984)","2"
+"LACM","HC-6131","Equus sp.","Tibia","QC405b","81",14415,3250,19780,44587,10187.5,"Marcus and Berger (1984)","2"
+"LACM","HC-6131","Equus sp.","Tibia","QC405a","81",10940,510,12820,14020.5,11325,"Marcus and Berger (1984)","0"
+"LACM","HC-6124","Equus sp.","Tibia R","QC410","60",24900,3360,31530,49303.5,23745.5,"Marcus and Berger (1984)","2"
+"LACM","HC-6152","Equus sp.","Femur L","QC412","4",22000,1200,26410,29149.5,23843,"Marcus and Berger (1984)","2"
+"LACM","HC-6129","Smilodon fatalis","Humerus R","QC413","61/67",11130,275,13060,13595.5,12505,"Marcus and Berger (1984)","2"
+"LACM","HC-6161","Smilodon fatalis","Humerus R","QC414","3",13745,275,16655,17393.5,15842,"Marcus and Berger (1984)","2"
+"LACM","HC-6156","Bison antiquus","Femur R","QC420","13",14310,920,17420,19961.5,14966.5,"Marcus and Berger (1984)","2"
+"LACM","HC-133","Ursus arctos","Femur L","QC916R","10",5270,155,6055,6391,5660,"Marcus and Berger (1984)","2"
+"LACM","RLP-R50546","Canis dirus","Tibia L","SR-5271","91",28310,170,32450,33064.5,31855,"Friscia et al. (2008)","2"
+"LACM","RLP-R14492","Canis dirus","Radius R","SR-5272","91",14040,50,17080,17326,16961,"Friscia et al. (2008)","2"
+"LACM","RLP-R37351","Canis dirus","Humerus R","SR-5273","91",39090,580,42735,43857,42206.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R28227","Canis dirus","Humerus R","SR-5274","91",27660,120,31570,31823,31259,"Friscia et al. (2008)","2"
+"LACM","RLP-R34802","Smilodon fatalis","Humerus R","SR-5275","91",28170,160,32190,32925,31738.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R25591","Smilodon fatalis","Tibia L","SR-5276","91",25710,140,30025,30296.5,29731.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R32497","Canis dirus","Tibia L","SR-5444","91",23060,90,27325,27603.5,27202,"Friscia et al. (2008)","2"
+"LACM","RLP-R16837","Canis dirus","Radius L","SR-5445","91",27560,130,31480,31749.5,31209.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R39004","Canis dirus","Humerus R","SR-5446","91",41940,790,44775,46051.5,43272,"Friscia et al. (2008)","2"
+"LACM","RLP-R23621","Canis dirus","Femur L","SR-5447","91",28360,160,32510,33094.5,31915,"Friscia et al. (2008)","2"
+"LACM","RLP-R22719","Smilodon fatalis","Humerus L","SR-5449","91",27220,140,31245,31566.5,31078.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R16695","Smilodon fatalis","Radius R","SR-5586","91",27350,120,31335,31615.5,31134.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R26134","Smilodon fatalis","Tibia R","SR-5587","91",28320,140,32460,33024.5,31904.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R27932","Smilodon fatalis","Vertebra caudal","SR-5588","91",25740,100,30035,30191,29893,"Friscia et al. (2008)","2"
+"LACM","RLP-R36962","Canis dirus","Humerus R","SR-5589","91",28070,130,31995,32850,31644.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R42645","Smilodon fatalis","Metacarpal L II","SR-5590","91",44300,850,46745,48584.5,45150,"Friscia et al. (2008)","2"
+"LACM","RLP-R49462","Canis dirus","Innominate L","SR-5591","91",43000,720,45540,46982.5,44458.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R15199","Canis dirus","Ulna L","SR-5821","91",44650,2830,48370,NA,44408.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R21648","Smilodon fatalis","Astragalus R","SR-5822","91",24930,240,29185,29859.5,28729.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R23755","Smilodon fatalis","Tibia L","SR-5823","91",28150,360,32310,33325.5,31319.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R29823","Canis dirus","Humerus R","SR-5824","91",28580,380,32835,33924,31798,"Friscia et al. (2008)","2"
+"LACM","RLP-R35212","Smilodon fatalis","Humerus L","SR-5825","91",26150,280,30460,30994,30000.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R26201","Smilodon fatalis","Calcaneum L","SR-5826","91",26120,280,30435,30985,29980.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R39292 ","Canis dirus","Radius R","SR-5827","91",28510,380,32735,33848,31737,"Friscia et al. (2008)","2"
+"LACM","RLP-R15406","Canis dirus","Tibia R","SR-5999","91",41800,800,44655,45960.5,43205,"Friscia et al. (2008)","2"
+"LACM","RLP-R22376","Smilodon fatalis","Radius R","SR-6000","91",28240,160,32335,32985,31800.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R34667","Canis dirus","Vertebra thoracic VII","SR-6001","91",35800,400,40920,41659,40063.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R39320","Canis dirus","Humerus R","SR-6002","91",28620,200,32880,33624,32094.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R45830","Smilodon fatalis","Vertebra thoracic VIII","SR-6003","91",27820,150,31740,32083.5,31314.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R48706","Smilodon fatalis","Astragalus R","SR-6004","91",27620,150,31525,31824,31215,"Friscia et al. (2008)","2"
+"LACM","RLP-R49462","Canis dirus","Innominate L","SR-6005","91",44600,1100,47130,49913.5,45013,"Friscia et al. (2008)","2"
+"LACM","RLP-R22420","Canis dirus","Radius L","SR-6136","91",27460,130,31410,31682,31172.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R41785","Canis dirus","Radius L","SR-6137","91",28430,140,32570,33132,32016.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R18896","Canis dirus","Radius L","SR-6138","91",41010,580,43970,44822.5,43010,"Friscia et al. (2008)","2"
+"LACM","RLP-R27065","Canis dirus","Radius L","SR-6139","91",28400,130,32540,33088,32003.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R50952","Canis dirus","Radius R","SR-6140","91",27890,130,31805,32159,31443.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R39006","Canis dirus","Radius L","SR-6141","91",28270,130,32375,32968,31864,"Friscia et al. (2008)","2"
+"LACM","RLP-R50699","Canis dirus","Radius L","SR-6142","91",27860,140,31775,32127,31370,"Friscia et al. (2008)","2"
+"LACM","RLP-R54035","Canis dirus","Radius R","SR-6143","91",27680,140,31590,31871,31249,"Friscia et al. (2008)","2"
+"LACM","RLP-R30312","Canis dirus","Radius L","SR-6144","91",28330,200,32480,33132,31829,"Friscia et al. (2008)","2"
+"LACM","RLP-R29708","Canis dirus","Radius L","SR-6146","91",26840,120,31065,31179.5,30893.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R36388","Nothrotheriops shastensis","Cuboid L","SR-6711","91",28590,240,32820,33663.5,32005,"Friscia et al. (2008)","2"
+"LACM","RLP-R38722","Nothrotheriops shastensis","Astragalus R","SR-6712","91",28530,240,32715,33579,31942,"Friscia et al. (2008)","2"
+"LACM","RLP-R22385","Nothrotheriops shastensis","Calcaneum L","SR-6713","91",28350,240,32515,33240,31774.5,"Friscia et al. (2008)","2"
+"LACM","RLP-R22811","Puma concolor","Humerus L","SR-6714","91",28650,250,32940,33751,32040,"Friscia et al. (2008)","2"
+"LACM","RLP-R54033","Puma concolor","Radius L","SR-6715","91",28650,240,32940,33733.5,32057.5,"Friscia et al. (2008)","2"
+"LACM","HC-K3569","Smilodon fatalis",NA,"UCIAMS109442","61/67",12540,45,14895,15110,14510,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-K3593","Smilodon fatalis",NA,"UCIAMS109443","61/67",11795,40,13665,13764,13514.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-K3593","Smilodon fatalis",NA,"UCIAMS111956","61/67",11855,35,13695,13787.5,13604.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-K3569","Smilodon fatalis",NA,"UCIAMS115585","61/67",12455,35,14625,14945,14321.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-K3593","Smilodon fatalis",NA,"UCIAMS115586","61/67",11915,35,13785,14005,13605.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-K3569","Smilodon fatalis",NA,"UCIAMS115591","61/67",12520,35,14860,15050,14505,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-K3593","Smilodon fatalis",NA,"UCIAMS115592","61/67",11935,30,13805,14013.5,13610.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-K3569","Smilodon fatalis",NA,"UCIAMS125335","61/67",12560,40,14945,15123,14564.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-K3593","Smilodon fatalis",NA,"UCIAMS125336","61/67",11940,40,13825,14020,13609.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-Z1078","Mammut americanum",NA,"UCIAMS91642","3",14250,35,17330,17426,17117,"Fuller et al. (2014)","Not ultrafiltered"
+"LACM","HC-60247","Mammut americanum",NA,"UCIAMS91643","3",14335,35,17425,17764,17296,"Fuller et al. (2014)","Not ultrafiltered"
+"LACM","HC-85217","Mammut americanum",NA,"UCIAMS91644","61/67",12265,30,14170,14754.5,14071.5,"Fuller et al. (2014)","Not ultrafiltered"
+"LACM","HC-85216","Mammut americanum",NA,"UCIAMS91645","61/67",12410,30,14505,14847,14279,"Fuller et al. (2014)","Not ultrafiltered"
+"LACM","HC-85219","Mammut americanum",NA,"UCIAMS91646","61/67",12380,35,14460,14836.5,14198.5,"Fuller et al. (2014)","Not ultrafiltered"
+"LACM","HC-35353","Smilodon fatalis",NA,"UCIAMS91647","3",12965,30,15515,15646.5,15332,"Fuller et al. (2014)","Not ultrafiltered"
+"LACM","HC-35915","Smilodon fatalis",NA,"UCIAMS91648","61/67",11590,30,13460,13571.5,13352.5,"Fuller et al. (2014)","Not ultrafiltered"
+"LACM","RLP-R17668","Smilodon fatalis",NA,"UCIAMS91649","91",26270,130,30550,30888.5,30182,"Fuller et al. (2014)","Not ultrafiltered"
+"LACM","HC-X7098","Panthera atrox",NA,"UCIAMS91650","61/67",12055,30,13925,14039.5,13806.5,"Fuller et al. (2014)","Not ultrafiltered"
+"LACM","HC-X7117","Panthera atrox",NA,"UCIAMS91651","61/67",12465,30,14650,14957.5,14343,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-85217","Mammut americanum",NA,"UCIAMS91652","61/67",14270,80,17345,17724.5,17076,"Fuller et al. (2014)","&gt;30 kDa"
+"LACM","HC-85219","Mammut americanum",NA,"UCIAMS91653","61/67",16840,70,20365,20519.5,20169.5,"Fuller et al. (2014)","&gt;30 kDa"
+"LACM","HC-35915","Smilodon fatalis",NA,"UCIAMS91654","61/67",13950,60,16975,17109.5,16684.5,"Fuller et al. (2014)","&gt;30 kDa"
+"LACM","RLP-R17668","Smilodon fatalis",NA,"UCIAMS91655","91",28100,210,32125,32967,31622,"Fuller et al. (2014)","&gt;30 kDa"
+"LACM","HC-Z1078","Mammut americanum",NA,"UCIAMS91674","3",14050,45,17100,17324.5,16984.5,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-60247","Mammut americanum",NA,"UCIAMS91675","3",14020,45,17055,17316.5,16929.5,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-85217","Mammut americanum",NA,"UCIAMS91676","61/67",12095,40,13945,14073,13808.5,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-85216","Mammut americanum",NA,"UCIAMS91677","61/67",12035,35,13915,14029.5,13802,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-85219","Mammut americanum",NA,"UCIAMS91678","61/67",11970,35,13890,14021.5,13767,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-35353","Smilodon fatalis",NA,"UCIAMS91679","3",12645,40,15080,15216,14940.5,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-35915","Smilodon fatalis",NA,"UCIAMS91680","61/67",11335,35,13225,13306,13127.5,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","RLP-R17668","Smilodon fatalis",NA,"UCIAMS91681","91",26370,200,30630,31036.5,30196,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-X7098","Panthera atrox",NA,"UCIAMS91682","61/67",11895,35,13760,13982,13603.5,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-X7117","Panthera atrox",NA,"UCIAMS91683","61/67",12225,35,14125,14308.5,14047,"Fuller et al. (2014)","&lt;30 kDa"
+"LACM","HC-A511","Smilodon fatalis","Femur L","UCLA1292Ab","3",21400,560,25695,27033.5,24374.5,"Marcus and Berger (1984)","2"
+"LACM","HC-Y6738","Bison latifrons","Scapula L","UCLA1292Ac","4",13500,170,16290,16855.5,15784.5,"Marcus and Berger (1984)","2"
+"LACM","HC-1268","Mammut americanum","Tibia L","UCLA1292AA","3",14430,200,17630,18157.5,17097,"Marcus and Berger (1984)","2"
+"LACM","HC-A642","Smilodon fatalis","Femur L","UCLA1292B","3",12650,160,15010,15552.5,14293,"Marcus and Berger (1984)","2"
+"LACM","HC-1323","Homo sapiens","Femur L","UCLA1292BB","10",9000,80,10145,10366.5,9788.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A398","Smilodon fatalis","Femur L","UCLA1292C","3",14500,190,17710,18212,17146.5,"Marcus and Berger (1984)","2"
+"LACM","HC-6945","Equus sp.","Femur L","UCLA1292CC","10",15700,530,19090,20431,17968.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A411","Smilodon fatalis","Femur L","UCLA1292D","4",28000,1400,32605,36104.5,29915,"Marcus and Berger (1984)","2"
+"LACM","HC-A835","Smilodon fatalis","Femur R","UCLA1292E","3",14400,2100,18005,25199,12756,"Marcus and Berger (1984)","2"
+"LACM","HC-A797","Smilodon fatalis","Femur L","UCLA1292F","13",14950,430,18215,19130.5,17106,"Marcus and Berger (1984)","2"
+"LACM","HC-A846","Smilodon fatalis","Femur L","UCLA1292G","4",26700,900,30975,33283.5,29183.5,"Berger and Libby (1968)","2"
+"LACM","HC-A4435","Smilodon fatalis","Femur R","UCLA1292H","60",23700,600,28020,29267,26520,"Marcus and Berger (1984)","2"
+"LACM","HC-A4436","Smilodon fatalis","Femur R","UCLA1292I","13",15300,200,18580,18939.5,18224.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A511","Smilodon fatalis","Femur L","UCLA1292J","3",20500,900,24745,26932,22919.5,"Marcus and Berger (1984)","2"
+"LACM","HC-K3407","Smilodon fatalis","Femur R","UCLA1292K","3",19300,395,23310,24154.5,22439,"Marcus and Berger (1984)","2"
+"LACM","HC-T6101","Smilodon fatalis","Tibia L","UCLA1292La","4",15200,800,18535,20595,16515.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A502","Smilodon fatalis","Femur L","UCLA1292Lb","61/67",12200,200,14255,14999,13611,"Marcus and Berger (1984)","2"
+"LACM","HC-A1077","Smilodon fatalis","Femur R","UCLA1292N","4",12760,150,15220,15716.5,14515.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A768","Smilodon fatalis","Femur L","UCLA1292O","4",29600,1100,34045,36599.5,31527.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A657","Smilodon fatalis","Femur L","UCLA1292R","4",19800,300,23840,24579.5,23064.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A1176","Smilodon fatalis","Femur L","UCLA1292S","4",35500,2200,40510,46021,35971.5,"Marcus and Berger (1984)","2"
+"LACM","HC-Z6009","Mammut americanum","Ulna R","UCLA1292T","3",14350,175,17520,18039.5,17044.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A465","Smilodon fatalis","Femur L","UCLA1292U","77",33100,600,37880,39385.5,36355.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A439","Smilodon fatalis","Femur L","UCLA1292Wb","77",31300,1350,36110,39862.5,33289.5,"Marcus and Berger (1984)","2"
+"LACM","HC-A677","Smilodon fatalis","Femur L","UCLA1292Wa","77",28200,980,32620,34851,30765,"Marcus and Berger (1984)","2"
+"LACM","HC-A498","Smilodon fatalis","Femur L","UCLA1292X","61/67",12000,125,13895,14165.5,13522.5,"Marcus and Berger (1984)","2"
+"LACM","HC-Y5664","Bison antiquus","Axis","UCLA1292Z","4",27000,1600,31665,35890.5,28355.5,"Marcus and Berger (1984)","2"
+"LACM","RLP-R51289","Smilodon fatalis","Sacrum","UCLA1718","91",30800,600,35240,36407,34219.5,"Marcus and Berger (1984)","2"
+"LACM","RLP-R51288","Smilodon fatalis","Humerus R","UCLA1738A","91",25100,850,29420,31055,27799.5,"Marcus and Berger (1984)","2"
+"LACM","RLP-R51287","Smilodon fatalis","Humerus L","UCLA1738B","91",33000,1750,38075,41844.5,34669.5,"Marcus and Berger (1984)","2"
+"LACM","RLP-R51289","Smilodon fatalis","Femur R","UCLA1738C","91",29100,1200,33530,36272,31116,"Marcus and Berger (1984)","2"
+"LACM","RLP-R51285","Smilodon fatalis","Femur R","UCLA1738D","91",32600,2800,38285,47999.5,31754.5,"Marcus and Berger (1984)","2"
+"LACM","RLP-R51286","Smilodon fatalis","Tibia","UCLA1738F","91",25100,1100,29465,31725.5,27305,"Marcus and Berger (1984)","2"
+"LACM","RLP-R42645","Smilodon fatalis",NA,"fake13","91",41800,1400,44840,47907.5,42737.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R49462","Canis dirus",NA,"fake14","91",41300,1200,44340,46627.5,42658,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R42645","Smilodon fatalis",NA,"fake15","91",39800,960,43355,44682.5,42289,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R34802","Smilodon fatalis",NA,"fake25","91",28660,330,32945,33923.5,31929.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R22811c","Puma concolor",NA,"fake26","91",28650,250,32940,33751,32040,"Fuller et al. (2014)","XAD Amino Acids"
+"LACM","RLP-R54033","Puma concolor",NA,"fake27","91",28650,240,32940,33733.5,32057.5,"Fuller et al. (2014)","XAD Amino Acids"
+"LACM","RLP-R34802","Smilodon fatalis",NA,"fake28","91",28590,300,32830,33769.5,31904.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R36388","Nothrotheriops shastensis",NA,"fake29","91",28590,240,32820,33663.5,32005,"Fuller et al. (2014)","XAD Amino Acids"
+"LACM","RLP-R38722","Nothrotheriops shastensis",NA,"fake30","91",28530,240,32715,33579,31942,"Fuller et al. (2014)","XAD Amino Acids"
+"LACM","170752","Pterostichus illustris",NA,"fake31","91",28390,160,32540,33123,31944,"Holden et al. (2017)","Chitin"
+"LACM","RLP-R22385","Nothrotheriops shastensis",NA,"fake32","91",28350,240,32515,33240,31774.5,"Fuller et al. (2014)","XAD Amino Acids"
+"LACM","HC-123491","Nothrotheriops shastensis",NA,"fake33","91",28290,230,32440,33152,31754,"Fuller et al. (2014)","XAD Amino Acids"
+"LACM","RLP-R34802","Smilodon fatalis",NA,"fake34","91",28220,260,32365,33161.5,31659,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R16695","Smilodon fatalis",NA,"fake35","91",28200,1400,32785,36174.5,30024,"Fuller et al. (2014)","3–30 kDa"
+"LACM","170739","Calathus ruficollis",NA,"fake36","91",28200,1500,32835,36752,29886.5,"Holden et al. (2017)","Chitin"
+"LACM","170751","Calathus ruficollis",NA,"fake37","91",28100,1700,32850,37530.5,29205,"Holden et al. (2017)","Chitin"
+"LACM","RLP-R16695","Smilodon fatalis",NA,"fake38","91",27800,240,31740,32811.5,31186.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R34802","Smilodon fatalis",NA,"fake39","91",27500,240,31465,31874,31119.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R24956","Canis dirus",NA,"fake40","91",27500,280,31480,31998.5,31089,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R16695","Smilodon fatalis",NA,"fake41","91",27180,250,31275,31703.5,30979,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R16695","Smilodon fatalis",NA,"fake42","91",27070,250,31190,31651.5,30863.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R16695","Smilodon fatalis",NA,"fake43","91",27030,220,31150,31582,30871.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-H1908","Canis dirus",NA,"fake45","60",25230,220,29535,29994.5,29115.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R27398","Canis dirus",NA,"fake47","91",24830,210,29055,29690.5,28658,"Fuller et al. (2014)","3–30 kDa"
+"LACM","RLP-R14493","Canis dirus",NA,"fake59","91",14280,60,17365,17706.5,17086,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-A642","Smilodon fatalis","femur","fake61","3",12650,160,15010,15552.5,14293,"O'Keefe et al. (2023)",NA
+"LACM","HC-H1789","Canis dirus",NA,"fake62","61/67",12605,40,15030,15180,14840.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-A503","Smilodon fatalis","femur","fake63","61/67",12200,200,14255,14999,13611,"O'Keefe et al. (2023)",NA
+"LACM","HC-A498","Smilodon fatalis","femur","fake64","61/67",12000,125,13895,14165.5,13522.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-H1872","Canis dirus",NA,"fake65","61/67",11820,30,13690,13769.5,13530.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","HC-A979","Smilodon fatalis","femur","fake66","61/67",11640,135,13510,13789.5,13240.5,"O'Keefe et al. (2023)",NA
+"LACM","HC-X7113","Panthera atrox",NA,"fake67","61/67",11580,40,13450,13573.5,13336.5,"Fuller et al. (2014)","3–30 kDa"
+"LACM","172359","Apsena laticornis",NA,"fake68","81",10520,30,12550,12664.5,12474.5,"Holden et al. (2017)","Chitin"
+"LACM","170734","Pterostichus illustris",NA,"fake69","91",9425,40,10660,10762.5,10514,"Holden et al. (2017)","Chitin"
+"LACM","172342","Apsena laticornis",NA,"fake75","81",3060,25,3280,3357.5,3182,"Holden et al. (2017)","Chitin"
+"LACM","172343","Apsena laticornis",NA,"fake77","9",2705,25,2810,2850.5,2757,"Holden et al. (2017)","Chitin"
+"LACM","172360","Eleodes acuticaudus",NA,"fake78","81",2655,25,2770,2844.5,2738,"Holden et al. (2017)","Chitin"
+"LACM","172361","Eleodes acuticaudus",NA,"fake79","81",2635,25,2755,2777,2727.5,"Holden et al. (2017)","Chitin"
+"LACM","172364","Eleodes acuticaudus",NA,"fake81","81",2555,25,2725,2749.5,2515.5,"Holden et al. (2017)","Chitin"
+"LACM","172341","Apsena laticornis",NA,"fake82","4",2390,25,2405,2490,2345.5,"Holden et al. (2017)","Chitin"
+"LACM","173026","Eleodes acuticaudus",NA,"fake97","9",1175,15,1105,1178.5,1002.5,"Holden et al. (2017)","Chitin"
+"LACM","170079","Tanystoma maculicolle",NA,"fake98","91",1165,30,1085,1177.5,974,"Holden et al. (2017)","Chitin"
+"LACM","172344","Apsena laticornis",NA,"fake99","9",1105,25,1010,1061.5,955,"Holden et al. (2017)","Chitin"
+"LACM","173025","Eleodes acuticaudus",NA,"fake101","2",1060,20,950,1050.5,923.5,"Holden et al. (2017)","Chitin"
+"LACM","170086","Calathus ruficollis",NA,"fake106","91",765,35,700,731.5,660.5,"Holden et al. (2017)","Chitin"
+"LACM","170087","Tanystoma maculicolle",NA,"fake130","91",330,25,390,465.5,310.5,"Holden et al. (2017)","Chitin"
+"LACM","170083","Tanystoma maculicolle",NA,"fake131","91",305,25,390,453,299.5,"Holden et al. (2017)","Chitin"
+"LACM","170735","Tanystoma maculicolle",NA,"fake142","91",245,15,300,309,154.5,"Holden et al. (2017)","Chitin"
+"LACM","167050","Tanystoma maculicolle",NA,"fake143","91",230,20,290,309.5,149.5,"Holden et al. (2017)","Chitin"
+"LACM","170076","Tanystoma maculicolle",NA,"fake145","91",225,25,210,310,NA,"Holden et al. (2017)","Chitin"
+"LACM","170084","Tanystoma maculicolle",NA,"fake146","91",220,20,195,306,NA,"Holden et al. (2017)","Chitin"
+"LACM","170089","Tanystoma maculicolle",NA,"fake148","91",205,25,190,301.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170103","Tanystoma maculicolle",NA,"fake149","91",205,20,185,298.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170107","Tanystoma maculicolle",NA,"fake150","91",205,20,185,298.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","167052","Tanystoma maculicolle",NA,"fake151","91",195,20,190,292.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170085","Tanystoma maculicolle",NA,"fake152","91",195,20,190,292.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170099","Tanystoma maculicolle",NA,"fake153","91",195,25,190,299,NA,"Holden et al. (2017)","Chitin"
+"LACM","170097","Tanystoma maculicolle",NA,"fake154","91",190,20,190,290.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170104","Tanystoma maculicolle",NA,"fake155","91",190,20,190,290.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170105","Tanystoma maculicolle",NA,"fake156","91",190,20,190,290.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170098","Tanystoma maculicolle",NA,"fake158","91",180,20,195,289,NA,"Holden et al. (2017)","Chitin"
+"LACM","170101","Tanystoma maculicolle",NA,"fake159","91",175,20,195,288.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170108","Tanystoma maculicolle",NA,"fake160","91",175,20,195,288.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","167064","Tanystoma maculicolle",NA,"fake161","91",165,30,175,288.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170078","Tanystoma maculicolle",NA,"fake162","91",165,30,175,288.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170102","Tanystoma maculicolle",NA,"fake163","91",165,20,185,284,NA,"Holden et al. (2017)","Chitin"
+"LACM","167051","Tanystoma maculicolle",NA,"fake164","91",160,20,180,283.5,NA,"Holden et al. (2017)","Chitin"
+"LACM","170100","Tanystoma maculicolle",NA,"fake165","91",150,25,150,282.5,NA,"Holden et al. (2017)","Chitin"
